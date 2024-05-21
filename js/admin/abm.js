@@ -1,3 +1,4 @@
+import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
 import { PeliculaSerie } from "./PeliculaSerie.js";
 
 export const agregarPeliculaSerie = (
@@ -18,7 +19,7 @@ export const agregarPeliculaSerie = (
   );
 
   //1. Traemos desde LS lo que haya guardado
-  const peliculasSeries = JSON.parse(localStorage.getItem("peliculasSeries")) || [];
+  const peliculasSeries = obtenerPeliculasSeriesDeLS();
 
   //2. Agregamos a lo que estaba guardado, lo nuevo
   peliculasSeries.push(peliculaSerie);
