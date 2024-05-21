@@ -1,3 +1,4 @@
+import { agregarPeliculaSerie } from "./abm.js";
 import { validateTitle, validateUrl } from "./validators.js";
 
 //Seleccion de objetos
@@ -13,15 +14,20 @@ const $inputEstaPublicada = document.getElementById("input-estaPublicada");
 $form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const title = $inputTitle.value;
-  const type = $inputType.value;
-  const image = $inputImage.value;
-  const category = $inputCategory.value;
-  const drescription = $inputDescription.value;
-  const estaPublicada = $inputEstaPublicada.value;
-
+  // Validar los campos
   if (!validateTitle($inputTitle) || !validateUrl($inputImage)) {
     alert("Revisar los campos");
     return;
   }
+
+  //Todo ok, conseguir valores
+  const title = $inputTitle.value;
+  const type = $inputType.value;
+  const image = $inputImage.value;
+  const category = $inputCategory.value;
+  const description = $inputDescription.value;
+  const estaPublicada = $inputEstaPublicada.value;
+
+  agregarPeliculaSerie(title, type, image, category, description, estaPublicada)
+
 });

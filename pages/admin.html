@@ -83,7 +83,7 @@
             />
             <div class="invalid-feedback">Ingrese un Titulo valido</div>
           </div>
-          <div class="mb-2">
+          <!-- <div class="mb-2">
             <label for="input-type" class="form-label"
               >Tipo (serie o pelicula)</label
             >
@@ -94,7 +94,21 @@
               class="form-control"
             />
             <div class="invalid-feedback">Ingrese un tipo valido</div>
+          </div> -->
+          <div class="mb-2">
+            <div class="mb-2">
+              <label for="input-type" class="form-label"
+                >Tipo</label
+              >
+              <select class="form-select" id="input-type" required>
+                <option selected disabled value="">Choose...</option>
+                <option>Pelicula</option>
+                <option>Serie</option>
+              </select>
+              <div class="invalid-feedback">Seleccione una opcion valida</div>
+            </div>
           </div>
+          
           <div class="mb-2">
             <label for="input-image" class="form-label">Caratula</label>
             <input
