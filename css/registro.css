@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color:#070707 !important;
+}
+.containerRegistro{
+    width: 500px;
+    height: 350px;
+    background-color: #2e2e2e;
+    border-radius: 10%;
+    box-shadow: 16px 14px 20px #0000008c;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerRegistro::before{
+    content: "";
+    position: absolute;
+    height: 340px;
+    width: 490px;
+    background-image: conic-gradient(rgb(243, 115, 115) 20deg, transparent 120deg);
+    animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+.containerRegistro::after{
+    content: "";
+    position: absolute;
+    height: 340px;
+    width: 490px;
+    background-color:#23252b;
+    border-radius: 10%;
+    box-shadow: inset 16px 14px 20px #2b2b2be7;
+}
+
+.inputField{
+    position: relative;
+    margin: 12px;
+    z-index: 2;
+}
+.iniciarSesion {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    z-index: 2;
+}
+
+.inputField input {
+    width: 350px;
+    height: 60px;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 5px 15px;
+    border-bottom: 2px solid rgb(243, 106, 106);
+    border-top: #000000;
+    border-left: #060b23;
+    border-right: #060b23;
+    background: transparent;
+    color: rgb(202, 202, 202);
+    outline: none;
+    z-index: 2;
+}
+.inputField label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: white;
+    pointer-events: none;
+    transition: .3s;
+    z-index: 2;
+}
+input:focus ~ label {
+    top: 0;
+    left: 15px;
+    font-size: 12px;
+    padding: 0 2px;
+    background: #23252b;
+    z-index: 2;
+}
+input:valid ~ label{
+    top: 0;
+    left: 15px;
+    font-size: 14px;
+    padding: 0 2px;
+    background: #23252b;
+    border-radius: 5px;
+    padding: 2px;
+    color: white;
+    z-index: 2;
+}
