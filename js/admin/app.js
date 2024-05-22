@@ -1,5 +1,9 @@
 import { agregarPeliculaSerie } from "./abm.js";
+import { cargarTabla } from "./utils.js";
 import { validateTitle, validateUrl } from "./validators.js";
+
+//Cargar tabla
+cargarTabla();
 
 //Seleccion de objetos
 const $form = document.getElementById("formMoviesSeries");
