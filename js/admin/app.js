@@ -1,6 +1,6 @@
 import { agregarPeliculaSerie } from "./abm.js";
 import { cargarTabla } from "./utils.js";
-import { validateTitle, validateUrl } from "./validators.js";
+import { validateDescription, validateTitle, validateUrl } from "./validators.js";
 
 //Cargar tabla
 cargarTabla();
@@ -27,7 +27,7 @@ $inputCategory.addEventListener("blur", () => {
     validateTitle($inputCategory)
 })
 $inputDescription.addEventListener("blur", () => {
-    validateTitle($inputDescription)
+    validateDescription($inputDescription)
 })
 $inputEstaPublicada.addEventListener("blur", () => {
     validateTitle($inputEstaPublicada)
@@ -61,6 +61,9 @@ $form.addEventListener("submit", (event) => {
   $inputCategory.classList.remove("is-valid","is-invalid")
   $inputDescription.classList.remove("is-valid","is-invalid")
   $inputEstaPublicada.classList.remove("is-valid","is-invalid")
+
+  //Actualizar tabla
+  cargarTabla()
 
   //Notificar al usuario
   alert(`Pelicula/Serie agregada bajo el titulo de ${title}`)

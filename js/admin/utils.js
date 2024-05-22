@@ -50,11 +50,17 @@ const cargarFilaTabla = (peliculaSerie, indice) => {
   const $btnDelete = document.createElement("button");
   const $btnHighlight = document.createElement("button");
   $btnEdit.classList.add("btn", "btn-sm", "btn-primary");
-  $btnDelete.classList.add("btn", "btn-sm", "btn-danger");
+  $btnDelete.classList.add("btn", "btn-sm", "btn-danger", "mx-2");
   $btnHighlight.classList.add("btn", "btn-sm", "btn-warning");
   $btnEdit.textContent = "Editar";
   $btnDelete.textContent = "Eliminar";
   $btnHighlight.textContent = "Destacar";
+  $btnEdit.onclick = () => {
+    
+  }
+  $btnDelete.onclick = () => {
+
+  }
   $tdActions.appendChild($btnEdit);
   $tdActions.appendChild($btnDelete);
   $tdActions.appendChild($btnHighlight);
@@ -68,6 +74,8 @@ export const cargarTabla = () => {
   const peliculasSeries = obtenerPeliculasSeriesDeLS();
 
   //2. Vaciar la tabla de los datos anteriores
+  const $tbody = document.getElementById("tbodyMovieSeries");
+  $tbody.innerHTML = "";
 
   //3. Crear una fila (tr) por cada pelicula o serie
   peliculasSeries.forEach((peliculaSerie, indice) => {
