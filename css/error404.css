@@ -17,24 +17,18 @@
     
 }
 
-.btn-inicio {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    background-color:rgb(243, 108, 33);
-    color: #000000;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    border-width: 0;
-    border-radius: 10px;
-    width: 9rem;
-    height: 2.5rem;
-    margin: 0 10px 0 2px;
-    cursor: pointer;
-    transition: background-color ease-in-out 0.25s;
 
-    &:hover {
-        background-color: #FF944D;
-      }
+.btn-orange {
+    background-color: rgb(243, 108, 33); /* Color de fondo naranja */
+    border-color: rgb(243, 108, 33); /* Color del borde */
+    color: rgb(3, 3, 3); /* Color del texto */
+    font-weight: 600;
+}
+
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active {
+    background-color: #FF944D; 
+    border-color:  #FF944D; 
+    color: rgb(0, 0, 0); 
 }
