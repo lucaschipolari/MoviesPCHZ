@@ -1,0 +1,40 @@
+.body-dark {
+    background-color: #000000;
+}
+
+.section404 {
+    padding: 60px 40px;
+    margin-top: 56px;
+}
+
+.img-saitama {
+    width: 100px; 
+    max-width: 50%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+    object-fit: cover;
+    
+}
+
+.btn-inicio {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color:rgb(243, 108, 33);
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border-width: 0;
+    border-radius: 10px;
+    width: 9rem;
+    height: 2.5rem;
+    margin: 0 10px 0 2px;
+    cursor: pointer;
+    transition: background-color ease-in-out 0.25s;
+
+    &:hover {
+        background-color: #FF944D;
+      }
+}
