@@ -1,4 +1,5 @@
 import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
+import { eliminarPeliculaSerie } from "./abm.js";
 
 const cargarFilaTabla = (peliculaSerie, indice) => {
   const $tbody = document.getElementById("tbodyMovieSeries");
@@ -55,12 +56,10 @@ const cargarFilaTabla = (peliculaSerie, indice) => {
   $btnEdit.textContent = "Editar";
   $btnDelete.textContent = "Eliminar";
   $btnHighlight.textContent = "Destacar";
-  $btnEdit.onclick = () => {
-    
-  }
+  $btnEdit.onclick = () => {};
   $btnDelete.onclick = () => {
-
-  }
+    eliminarPeliculaSerie(peliculaSerie.code, peliculaSerie.title);
+  };
   $tdActions.appendChild($btnEdit);
   $tdActions.appendChild($btnDelete);
   $tdActions.appendChild($btnHighlight);

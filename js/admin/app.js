@@ -66,6 +66,13 @@ $form.addEventListener("submit", (event) => {
   cargarTabla()
 
   //Notificar al usuario
-  alert(`Pelicula/Serie agregada bajo el titulo de ${title}`)
 
+  swal.fire({
+    title: "Exito",
+    text: "Pelicula/Serie agregada bajo el titulo de ${title}",
+    icon: "success",
+    showConfimButton: true,
+    showCancelButton: false,
+    confirmButtonText: "tremedo",
+  })
 });

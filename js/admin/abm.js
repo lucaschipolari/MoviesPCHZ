@@ -1,5 +1,6 @@
 import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
 import { PeliculaSerie } from "./PeliculaSerie.js";
+import { cargarTabla } from "./utils.js";
 
 export const agregarPeliculaSerie = (
   title,
@@ -30,4 +31,41 @@ export const agregarPeliculaSerie = (
 
 export const editarPeliculaSerie = () => {};
 
-export const eliminarPeliculaSerie = () => {};
+export const eliminarPeliculaSerie = (idPeliculaSerie, tituloPeliculaSerie) => {
+  swal
+    .fire({
+      title: "Atencion",
+      text: `¿Estas seguro que deseas eliminar ${tituloPeliculaSerie}?`,
+      icon: "warning",
+      showConfimButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Si, elminar",
+      cancelButtonText: "No, cancelar",
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+        const peliculasSeries = obtenerPeliculasSeriesDeLS();
+        const nuevasPeliculasSeries = peliculasSeries.filter(
+          (peliculaSerie) => {
+            return peliculaSerie.code != idPeliculaSerie;
+          }
+        );
+
+        localStorage.setItem(
+          "peliculasSeries",
+          JSON.stringify(nuevasPeliculasSeries)
+        );
+
+        cargarTabla();
+
+        swal.fire({
+          title: "Exito",
+          text: `${tituloPeliculaSerie} eliminado correctamente`,
+          icon: "success",
+          showConfimButton: true,
+          showCancelButton: false,
+          confirmButtonText: "tremedo",
+        })
+      }
+    });
+};
