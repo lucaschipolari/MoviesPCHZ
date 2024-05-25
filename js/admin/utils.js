@@ -56,10 +56,13 @@ const cargarFilaTabla = (peliculaSerie, indice) => {
   $btnEdit.textContent = "Editar";
   $btnDelete.textContent = "Eliminar";
   $btnHighlight.textContent = "Destacar";
-  $btnEdit.onclick = () => {};
+  $btnEdit.onclick = () => {
+    prepararEdicion(peliculaSerie);
+  };
   $btnDelete.onclick = () => {
     eliminarPeliculaSerie(peliculaSerie.code, peliculaSerie.title);
   };
+  $btnHighlight.onclick = () => {};
   $tdActions.appendChild($btnEdit);
   $tdActions.appendChild($btnDelete);
   $tdActions.appendChild($btnHighlight);
@@ -81,4 +84,36 @@ export const cargarTabla = () => {
     // Crear fila
     cargarFilaTabla(peliculaSerie, indice + 1);
   });
+};
+
+export const prepararEdicion = (peliculaSerie) => {
+  const $inputTitle = document.getElementById("input-title");
+  const $inputType = document.getElementById("input-type");
+  const $inputImage = document.getElementById("input-image");
+  const $inputCategory = document.getElementById("input-category");
+  const $inputDescription = document.getElementById("input-drescription");
+  const $inputEstaPublicada = document.getElementById("input-estaPublicada");
+
+  $inputTitle.value = peliculaSerie.title;
+  $inputType.value = peliculaSerie.type;
+  $inputImage.value = peliculaSerie.image;
+  $inputCategory.value = peliculaSerie.category;
+  $inputDescription.value = peliculaSerie.description;
+  $inputEstaPublicada.value = peliculaSerie.estaPublicada;
+
+  sessionStorage.setItem("idPeliSerie", peliculaSerie.code);
+
+  const $alert = document.getElementById("alert-edicion");
+  const $spanPeliculaSerie = document.getElementById("nombre-pelicula-serie");
+  $alert.classList.remove("d-none");
+  $spanPeliculaSerie.textContent = peliculaSerie.title;
+
+  const $buttonCancelar = document.getElementById("btn-cancelar");
+  $buttonCancelar.classList.remove("d-none");
+};
+
+export const estaEditando = () => {
+  const id = sessionStorage.getItem("idPeliSerie");
+
+  return !!id;
 };

@@ -1,6 +1,10 @@
-import { agregarPeliculaSerie } from "./abm.js";
-import { cargarTabla } from "./utils.js";
-import { validateDescription, validateTitle, validateUrl } from "./validators.js";
+import { agregarPeliculaSerie, editarPeliculaSerie } from "./abm.js";
+import { cargarTabla, estaEditando } from "./utils.js";
+import {
+  validateDescription,
+  validateTitle,
+  validateUrl,
+} from "./validators.js";
 
 //Cargar tabla
 cargarTabla();
@@ -15,23 +19,23 @@ const $inputDescription = document.getElementById("input-drescription");
 const $inputEstaPublicada = document.getElementById("input-estaPublicada");
 
 $inputTitle.addEventListener("blur", () => {
-    validateTitle($inputTitle)
-})
+  validateTitle($inputTitle);
+});
 $inputType.addEventListener("blur", () => {
-    validateTitle($inputType)
-})
+  validateTitle($inputType);
+});
 $inputImage.addEventListener("blur", () => {
-    validateUrl($inputImage)
-})
+  validateUrl($inputImage);
+});
 $inputCategory.addEventListener("blur", () => {
-    validateTitle($inputCategory)
-})
+  validateTitle($inputCategory);
+});
 $inputDescription.addEventListener("blur", () => {
-    validateDescription($inputDescription)
-})
+  validateDescription($inputDescription);
+});
 $inputEstaPublicada.addEventListener("blur", () => {
-    validateTitle($inputEstaPublicada)
-})
+  validateTitle($inputEstaPublicada);
+});
 
 //Event Listener del submit
 $form.addEventListener("submit", (event) => {
@@ -51,28 +55,57 @@ $form.addEventListener("submit", (event) => {
   const description = $inputDescription.value;
   const estaPublicada = $inputEstaPublicada.value;
 
-  agregarPeliculaSerie(title, type, image, category, description, estaPublicada)
+  if (estaEditando()) {
+    console.log("editando");
+    editarPeliculaSerie(
+      title,
+      type,
+      image,
+      category,
+      description,
+      estaPublicada
+    );
+  } else {
+    agregarPeliculaSerie(
+      title,
+      type,
+      image,
+      category,
+      description,
+      estaPublicada
+    );
+  }
 
   //Resetear formulario
   $form.reset();
-  $inputTitle.classList.remove("is-valid","is-invalid")
-  $inputType.classList.remove("is-valid","is-invalid")
-  $inputImage.classList.remove("is-valid","is-invalid")
-  $inputCategory.classList.remove("is-valid","is-invalid")
-  $inputDescription.classList.remove("is-valid","is-invalid")
-  $inputEstaPublicada.classList.remove("is-valid","is-invalid")
+  $inputTitle.classList.remove("is-valid", "is-invalid");
+  $inputType.classList.remove("is-valid", "is-invalid");
+  $inputImage.classList.remove("is-valid", "is-invalid");
+  $inputCategory.classList.remove("is-valid", "is-invalid");
+  $inputDescription.classList.remove("is-valid", "is-invalid");
+  $inputEstaPublicada.classList.remove("is-valid", "is-invalid");
 
   //Actualizar tabla
-  cargarTabla()
+  cargarTabla();
 
   //Notificar al usuario
 
+  let mensaje = `Pelicula/Serie agregada bajo el titulo de ${title}`;
+  if (estaEditando()) mensaje = "Pelicula/Serie editada exitosamente";
   swal.fire({
     title: "Exito",
-    text: "Pelicula/Serie agregada bajo el titulo de ${title}",
+    text: mensaje,
     icon: "success",
     showConfimButton: true,
     showCancelButton: false,
     confirmButtonText: "tremedo",
-  })
+  });
+});
+
+
+document.getElementById("btn-cancelar").addEventListener("click", () => {
+  document.getElementById("formMoviesSeries").reset(); // Restablece el formulario
+  document.getElementById("btn-cancelar").classList.add("d-none"); // Oculta el botón Cancelar
+  document.getElementById("alert-edicion").classList.add("d-none"); // Oculta el mensaje de edición
+  document.getElementById("formMoviesSeries").onsubmit = agregarPeliculaSerie; // Restaura el evento de submit para agregar una película o serie
 });

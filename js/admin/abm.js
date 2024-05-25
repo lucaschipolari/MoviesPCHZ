@@ -29,7 +29,48 @@ export const agregarPeliculaSerie = (
   localStorage.setItem("peliculasSeries", JSON.stringify(peliculasSeries));
 };
 
-export const editarPeliculaSerie = () => {};
+export const editarPeliculaSerie = (
+  title,
+  type,
+  image,
+  category,
+  description,
+  estaPublicada
+) => {
+  const peliculasSeries = obtenerPeliculasSeriesDeLS();
+  const idPeliculaSerie = sessionStorage.getItem("idPeliSerie");
+
+  const posicionPeliculaSerie = peliculasSeries.findIndex((peliculaSerie) => {
+    return peliculaSerie.code === idPeliculaSerie;
+  });
+
+  if (posicionPeliculaSerie === -1) {
+    alert("La pelicula o serie no se encontro");
+    sessionStorage.removeItem("idPeliSerie");
+    return;
+  }
+
+  const nuevaPeliculasSerie = new PeliculaSerie(
+    title,
+    type,
+    image,
+    category,
+    description,
+    estaPublicada
+  );
+
+  peliculasSeries.splice(posicionPeliculaSerie, 1, nuevaPeliculasSerie);
+
+  localStorage.setItem("peliculasSeries", JSON.stringify(peliculasSeries));
+
+  sessionStorage.removeItem("idPeliSerie");
+
+  const $alert = document.getElementById("alert-edicion");
+  $alert.classList.add("d-none");
+
+  const $buttonCancelar = document.getElementById("btn-cancelar");
+  $buttonCancelar.classList.add("d-none");
+};
 
 export const eliminarPeliculaSerie = (idPeliculaSerie, tituloPeliculaSerie) => {
   swal
@@ -65,7 +106,7 @@ export const eliminarPeliculaSerie = (idPeliculaSerie, tituloPeliculaSerie) => {
           showConfimButton: true,
           showCancelButton: false,
           confirmButtonText: "tremedo",
-        })
+        });
       }
     });
 };
