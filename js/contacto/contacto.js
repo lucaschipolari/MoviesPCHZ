@@ -47,6 +47,9 @@ import { saveToLocalStorage, loadFromLocalStorage, clearLocalStorage } from './c
         }).then(() => {
            // clearLocalStorage();  // Clear the data if needed after successful submission
             $form.reset();
+            $inputControl.forEach(element => {
+                element.classList.remove('success');
+            });
         });
     }
 });
@@ -58,7 +61,6 @@ const validateInputs = () => {
     const isAsuntoValid = validateAsunto($asunto);
     const isMensajeValid = validateMensaje($mensaje);
     
-    $inputControl.classList.remove('success');
     return isNameValid && isEmailValid && isAsuntoValid && isMensajeValid;
   };
   

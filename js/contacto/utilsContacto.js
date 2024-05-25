@@ -1,4 +1,4 @@
 export const obtenerFormDeLS = () => {
-    return JSON.parse(localStorage.getItem('contactos')) || [];
+    return JSON.parse(localStorage.getItem('formData')) || [];
 };
   
