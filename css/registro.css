@@ -245,6 +245,18 @@
     margin-bottom:20px;
     margin-right: 5px;
 }
+.warning {
+    color: white;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    transition: color 0.2s ease;
+}
+
+.warning.valid {
+    color: #09c372;
+}
 
 .links a {
     text-decoration: none;

@@ -25,10 +25,14 @@ export function validateName(input) {
     if (cadenaNoVacia(input)) {
         setError(input, 'El nombre no puede estar vacio');
         return false;
-    } else {
-        setSuccess(input);
-        return true;
+    } 
+
+    if(input.value.trim().length < 3){
+        setError(input, 'Ingrese al menos 3 caracteres');
+        return false;
     }
+    setSuccess(input);
+    return true;
 }
 
 const isValidEmail = email => {
@@ -56,23 +60,21 @@ export function validateAsunto(input) {
         setError(input, 'El asunto no puede estar vacio');
         return false;
     }
-    if(input.value.trim().lenght < 5){
-        setError(input, 'El asunto no puede contener menos de 5 caracteres');
+    if(input.value.trim().length < 5){
+        setError(input, 'Ingrese al menos 5 caracteres');
         return false;
     }
         setSuccess(input);
         return true;
-    
 }
 
 export function validateMensaje(input) {
-    
     if (cadenaNoVacia(input)) {
         setError(input, 'El mensaje no puede estar vacio');
         return false;
     } 
-    if(input.value.trim().lenght < 20){
-        setError(input, 'El mensaje no puede tener menos de 20 caracteres');
+    if(input.value.trim().length < 20 || input.value.trim().length > 100){
+        setError(input, 'Ingrese entre 20 y 100 caracteres');
         return false;
     }
     setSuccess(input);

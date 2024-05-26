@@ -1,9 +1,9 @@
 
-import { obtenerFormDeLS } from "./utilsContacto.js";
+import { obtenerInfoDeLS } from "./utilsContacto.js";
 export function saveToLocalStorage(formulario) {
    
         // 1. Traemos desde LS lo que haya guardado
-        const formData = obtenerFormDeLS();
+        const formData = obtenerInfoDeLS('formData');
       
         // 2. Agregamos a lo que estaba guardado, lo nuevo
         formData.push(formulario);

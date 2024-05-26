@@ -1,4 +1,4 @@
-export const obtenerFormDeLS = () => {
-    return JSON.parse(localStorage.getItem('formData')) || [];
+export const obtenerInfoDeLS = (formData) => {
+    return JSON.parse(localStorage.getItem(formData)) || [];
 };
   

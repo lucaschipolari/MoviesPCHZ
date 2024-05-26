@@ -11,7 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/contactobien.css">
+    <link rel="stylesheet" href="../css/formContacto.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link
       defer
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -24,7 +25,7 @@
       crosso300px;"anonymous"
     ></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script defer type="module" src="../js/contacto/contacto.js"></script>
+    <script defer type="module" src="../js/contacto/formContacto.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -86,7 +87,7 @@
         </div>
       </div>
     </nav>
-    <main class="mainRegistro d-flex flex-column">
+    <main class="mainRegistro d-flex flex-column pb-5">
       <div class="container">
         <form class="form" id="form" action="/">
           <div class="title">
@@ -100,7 +101,7 @@
             <span>O</span>
           </div>
           <div class="containerRegistro">
-            <!-- <img class="imgGoku" src="../goku.png" alt="goku"> -->
+           <img class="imgHinata" src="../hinata.png" alt="hinata">
             <div id="input-control-1" class="input-control first-input mb-3">
               <input
                 type="text"
@@ -137,13 +138,77 @@
                 <div for="name" class="input-container-label">
                   Mensaje
                 </div>
-                <div class="error"></div>
+                <div class="error error-mensaje"></div>
               </div>
             </div>
             </div>
             <button type="submit" class="btn-enviar">Enviar</button>
           </form>
         </main>
+        <footer class="footer mt-auto py-5 bg-dark text-white">
+          <div class="container p-3">
+            <div class="row g-5">
+              <!-- Navegación -->
+              <div class="col-sm-12 col-md-3 border-top">
+                  <div class="row py-3">
+                      <h5 class="col-sm-6 col-md-12">Navegación</h5>
+                      <ul class="col-sm-6 col-md-12 list-unstyled">
+                          <li><a href="#"  class="link">Explorar lo más popular</a></li>
+                          <li><a href="#"  class="link">Explorar los Simulcasts</a></li>
+                          <li><a href="#"  class="link">Calendario de lanzamientos</a></li>
+                          <li><a href="#"  class="link">Noticias</a></li>
+                          <li><a href="#"  class="link">Juegos</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- Conecta con nosotros -->
+              <div class="col-sm-12 col-md-3 border-top">
+                  <div class="row py-3">
+                      <h5 class="col-sm-6 col-md-12">Conecta con nosotros</h5>
+                      <ul class="col-sm-6 col-md-12 list-unstyled">
+                          <li><a href="https://www.youtube.com/user/crunchyrollspanish/featured" class="link"><i class="fa-brands fa-youtube"></i> Youtube</a></li>
+                          <li><a href="https://www.facebook.com/Crunchyroll.la/" class="link"><i class="fa-brands fa-square-facebook"></i> Facebook</a></li>
+                          <li><a href="https://twitter.com/crunchyroll_la" class="link"><i class="fa-brands fa-x-twitter"></i> Twitter</a></li>
+                          <li><a href="https://www.instagram.com/crunchyroll_la/" class="link"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                          <li><a href="https://www.tiktok.com/@crunchyroll_la" class="link"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- Crunchyroll -->
+              <div class="col-sm-12 col-md-3 border-top">
+                  <div class="row py-3">
+                      <h5 class="col-sm-6 col-md-12">Crunchyroll</h5>
+                      <ul class="col-sm-6 col-md-12 list-unstyled">
+                          <li><a href="#" class="freeTrial"> <i class="fa-solid fa-crown"></i> Comienza tu Prueba Gratuita</a></li>
+                          <li><a href="#" class="link">Acerca</a></li>
+                          <li><a href="#" class="link">Ayuda/FAQ</a></li>
+                          <li><a href="#" class="link">Términos de Uso</a></li>
+                          <li><a href="#" class="link">Política de Privacidad</a></li>
+                          <li><a href="#" class="link">Herramienta de aceptación de cookies</a></li>
+                          <li><a href="#" class="link">Contacto de prensa</a></li>
+                          <li><a href="#" class="link">Hazte con nuestras aplicaciones</a></li>
+                          <li><a href="#" class="link">Canjear Tarjeta Regalo</a></li>
+                          <li><a href="#" class="link">Empleo</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- Cuenta -->
+              <div class="col-md-3 d-none d-md-block border-top">
+                
+              <h5 class="py-3">Cuenta</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="link" >Crear cuenta</a></li>
+                  <li><a href="#" class="link" >Acceder</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col text-center">
+                <p>&copy; Crunchyroll, LLC | SONY PICTURES</p>
+              </div>
+            </div>
+          </div>
+        </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

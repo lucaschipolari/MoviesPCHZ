@@ -1,6 +1,7 @@
 import { validateName, validateEmail, validateAsunto, validateMensaje } from './contactoValidaciones.js';
-import { saveToLocalStorage, loadFromLocalStorage, clearLocalStorage } from './contactoStorage.js';
-  
+import { saveToLocalStorage, loadFromLocalStorage, clearLocalStorage } from './formContactoStorage.js';
+import { FormularioContacto } from './FormularioContacto.js';  
+
   const $form = document.getElementById("form");
   const $name = document.getElementById("name");
   const $email = document.getElementById("email");
@@ -12,16 +13,10 @@ import { saveToLocalStorage, loadFromLocalStorage, clearLocalStorage } from './c
     document.getElementById('input-control-3'),
     document.getElementById('input-control-4')
   ];
-  
- /* window.addEventListener('load', () => {
-    const formData = loadFromLocalStorage();
-    if (formData) {
-        $name.value = formData.name;
-        $email.value = formData.email;
-        $asunto.value = formData.asunto;
-        $mensaje.value = formData.mensaje;
-    }
-});*/
+  //En caso de querer eliminar el contenido en localstorage
+//   document.addEventListener('DOMContentLoaded', function (){
+//   clearLocalStorage();
+// });
 
   
   $name.addEventListener("blur", () => validateName($name));
@@ -32,20 +27,16 @@ import { saveToLocalStorage, loadFromLocalStorage, clearLocalStorage } from './c
   $form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (validateInputs()) {
-        const formData = {
-            name: $name.value,
-            email: $email.value,
-            asunto: $asunto.value,
-            mensaje: $mensaje.value,
-        };
-        saveToLocalStorage(formData);
+
+        const formContacto = new FormularioContacto($name.value,$email.value,$asunto.value,$mensaje.value);
+        saveToLocalStorage(formContacto);
         Swal.fire({
             title: 'Exito',
             text: "Has enviado tu mensaje correctamente!!",
             icon: 'success',
             showConfirmButton: true,
         }).then(() => {
-           // clearLocalStorage();  // Clear the data if needed after successful submission
+           
             $form.reset();
             $inputControl.forEach(element => {
                 element.classList.remove('success');

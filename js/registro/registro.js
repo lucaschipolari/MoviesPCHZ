@@ -3,27 +3,33 @@ import {
   validatePassword,
   validatePasswordConfirmation,
 } from "./registroValidaciones.js";
-import { Usuario } from "../admin/Usuario.js";
 import { saveToLocalStorage, loadFromLocalStorage, clearLocalStorage } from './registroStorage.js';
+import { Usuario } from "./Usuario.js";
 
+// document.addEventListener('DOMContentLoaded', function (){
+
+//   clearLocalStorage();
+// });
 
 const $form = document.getElementById("form");
 const $email = document.getElementById("email");
 const $password = document.getElementById("password");
 const $password2 = document.getElementById("password2");
-const $inputControl = document.getElementById("input-control");
 
-window.addEventListener('load', () => {
-  const userData = loadFromLocalStorage();
-  if (formData) {
-      $name.value = formData.name;
-      $email.value = formData.email;
-      $asunto.value = formData.asunto;
-      $mensaje.value = formData.mensaje;
-  }
-});
+const $validPassword = [
+  document.getElementById('length-warning'),
+  document.getElementById('uppercase-warning'),
+  document.getElementById('lowercase-warning'),
+  document.getElementById('number-warning'),
+  document.getElementById('special-warning')
+];
 
-const usuarioPreCreado = new Usuario('admin@admin.com', 'admin');
+const $inputControl = [
+  document.getElementById('input-control-1'),
+  document.getElementById('input-control-2'),
+  document.getElementById('input-control-3')
+];
+
 
 $email.addEventListener("blur", () => {
   validateEmail($email);
@@ -32,7 +38,7 @@ $password.addEventListener("blur", () => {
   validatePassword($password);
 });
 $password2.addEventListener("blur", () => {
-  validatePasswordConfirmation($password2);
+  validatePasswordConfirmation($password,$password2);
 });
 
 $form.addEventListener("submit", (e) => {
@@ -42,23 +48,27 @@ $form.addEventListener("submit", (e) => {
       email: $email.value,
       password: $password.value
     }
-    saveToLocalStorage(userData);
+    const usuario = new Usuario(userData.email, userData.password);
+    saveToLocalStorage(usuario);
     Swal.fire({
       title: 'Exito',
       text: "Has creado tu cuenta correctamente!!",
       icon:'success',
       showConfirmButton: true,
       showCancelButton: false,
-      confirmButtonText: 'Oka',
+      confirmButtonText: 'Okey',
     }).then(() => {
-     // clearLocalStorage();  // Clear the data if needed after successful submission
       $form.reset();
-      $inputControl.classList.remove("success","error");
+      $inputControl.forEach(element => {
+        element.classList.remove('success');
+    });
+      $validPassword.forEach(element => { 
+        element.classList.remove('valid');
+      });
 
   });
   };
 });
-
 
 export const validateInputs = () => {
 
