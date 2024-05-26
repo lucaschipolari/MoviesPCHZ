@@ -1,0 +1,22 @@
+.body-dark {
+    background-color: #000000;
+}
+
+.fontSZSM{
+    font-size: small;
+}
+
+.btn-orange {
+    background-color: rgb(243, 108, 33); /* Color de fondo naranja */
+    border-color: rgb(243, 108, 33); /* Color del borde */
+    color: rgb(3, 3, 3); /* Color del texto */
+    font-weight: 600;
+}
+
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active {
+    background-color: #FF944D; 
+    border-color:  #FF944D; 
+    color: rgb(0, 0, 0); 
+}
