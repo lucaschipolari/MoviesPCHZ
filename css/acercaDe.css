@@ -1,61 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 .body-dark {
-    background-color: #000000;
+  background-color: #000000;
+  font-family: "Lato", sans-serif;
 }
 
-.fontSZSM{
-    font-size: small;
+.fontSZSM {
+  font-size: small;
 }
 
 .btn-orange {
-    background-color: rgb(243, 108, 33); /* Color de fondo naranja */
-    border-color: rgb(243, 108, 33); /* Color del borde */
-    color: rgb(3, 3, 3); /* Color del texto */
-    font-weight: 600;
+  background-color: rgb(243, 108, 33); /* Color de fondo naranja */
+  border-color: rgb(243, 108, 33); /* Color del borde */
+  color: rgb(3, 3, 3); /* Color del texto */
+  font-weight: 600;
 }
 
 .btn-orange:hover,
 .btn-orange:focus,
 .btn-orange:active {
-    background-color: #FF944D; 
-    border-color:  #FF944D; 
-    color: rgb(0, 0, 0); 
+  background-color: #ff944d;
+  border-color: #ff944d;
+  color: rgb(0, 0, 0);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-.footer{
-    padding: 20px;
+.footer {
+  padding: 20px;
 }
 .link {
-    color: #ffffffab;
-    text-decoration: none;
-    font-family: "Lato", sans-serif;
-    font-size:16px;
+  color: #ffffffab;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
 }
 
 .link:hover {
-    color: orange;
+  color: orange;
 }
-.freeTrial{
+.freeTrial {
   color: rgb(202, 132, 0);
   text-decoration: none;
   font-size: 17px;
 }
-.freeTrial:hover{
-    color: rgb(255, 166, 0);
+.freeTrial:hover {
+  color: rgb(255, 166, 0);
 }
 .footer h5 {
-    font-size: 25px;
-    margin-bottom: 20px;
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
 .footer ul {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .footer li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer p {
-    margin: 0;
+  margin: 0;
 }
