@@ -82,112 +82,113 @@
       </nav>
     </header>
     <!-- Comienzo del main -->
-    <main class="container ">
+    <main class="container">
       <h1 class="text-center">Cargar pelicula o serie</h1>
       <hr />
       <!-- Section formulario -->
-      
-      <section class="main-form">
-      <section class="p-3 rounded text-light w-50 form-section">
-        <article id="alert-edicion" class="alert alert-warning d-none">
-          Atencion! estas editando <span id="nombre-pelicula-serie"></span>
-        </article>
-        <form id="formMoviesSeries">
-          <div class="mb-2">
-            <label for="input-title" class="form-label">Titulo</label>
-            <input
-              placeholder="Harry Potter"
-              type="text"
-              id="input-title"
-              class="form-control"
-            />
-            <div class="invalid-feedback">Ingrese un Titulo valido</div>
-          </div>
-          
-          <div class="mb-2">
-            <div class="mb-2">
-              <label for="input-type" class="form-label">Tipo</label>
-              <select class="form-select" id="input-type" required>
-                <option selected disabled value="">Choose...</option>
-                <option>Pelicula</option>
-                <option>Serie</option>
-              </select>
-              <div class="invalid-feedback">Seleccione una opcion valida</div>
-            </div>
-          </div>
 
-          <div class="mb-2">
-            <label for="input-image" class="form-label">Caratula</label>
-            <input
-              placeholder="https://google.com"
-              type="text"
-              id="input-image"
-              class="form-control"
-            />
-            <div class="invalid-feedback">Ingrese un enlace valido</div>
-          </div>
-          <div class="mb-2">
-            <label for="input-category" class="form-label">Categoria</label>
-            <select class="form-select" id="input-category" required>
-              <option selected disabled value="">Choose...</option>
-              <option>...</option>
-            </select>
-            <div class="invalid-feedback">Seleccione una categoria valida</div>
-          </div>
-          <div class="mb-2">
-            <label for="input-drescription" class="form-label"
-              >Descripción</label
-            >
-            <textarea id="input-drescription" class="form-control"></textarea>
-            <div class="invalid-feedback">Ingrese una descripcion valida</div>
-          </div>
-          <div class="mb-2">
+      <section class="main-form">
+        <section class="p-3 rounded text-light w-50 form-section">
+          <article id="alert-edicion" class="alert alert-warning d-none">
+            Atencion! estas editando <span id="nombre-pelicula-serie"></span>
+          </article>
+          <form id="formMoviesSeries">
             <div class="mb-2">
-              <label for="input-estaPublicada" class="form-label"
-                >Publicada</label
-              >
-              <select class="form-select" id="input-estaPublicada" required>
-                <option selected disabled value="">Choose...</option>
-                <option>Si</option>
-                <option>No</option>
-              </select>
-              <div class="invalid-feedback">Seleccione una opcion valida</div>
+              <label for="input-title" class="form-label">Titulo</label>
+              <input
+                placeholder="Harry Potter"
+                type="text"
+                id="input-title"
+                class="form-control"
+              />
+              <div class="invalid-feedback">Ingrese un Titulo valido</div>
             </div>
-          </div>
-          <div class="text-end mt-3">
-            <button class="btn  btn-orange" type="submit">Guardar</button>
-            <button
-              class="btn btn-outline-warning btn-orange-cancelar d-none"
-              type="button"
-              id="btn-cancelar"
-            >
-              Cancelar Edicion
-            </button>
-          </div>
-        </form>
+
+            <div class="mb-2">
+              <div class="mb-2">
+                <label for="input-type" class="form-label">Tipo</label>
+                <select class="form-select" id="input-type" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Pelicula</option>
+                  <option>Serie</option>
+                </select>
+                <div class="invalid-feedback">Seleccione una opcion valida</div>
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label for="input-image" class="form-label">Caratula</label>
+              <input
+                placeholder="https://google.com"
+                type="text"
+                id="input-image"
+                class="form-control"
+              />
+              <div class="invalid-feedback">Ingrese un enlace valido</div>
+            </div>
+            <div class="mb-2">
+              <label for="input-category" class="form-label">Categoria</label>
+              <select class="form-select" id="input-category" required>
+                <option selected disabled value="">Choose...</option>
+                <option>...</option>
+              </select>
+              <div class="invalid-feedback">
+                Seleccione una categoria valida
+              </div>
+            </div>
+            <div class="mb-2">
+              <label for="input-drescription" class="form-label"
+                >Descripción</label
+              >
+              <textarea id="input-drescription" class="form-control"></textarea>
+              <div class="invalid-feedback">Ingrese una descripcion valida</div>
+            </div>
+            <div class="mb-2">
+              <div class="mb-2">
+                <label for="input-estaPublicada" class="form-label"
+                  >Publicada</label
+                >
+                <select class="form-select" id="input-estaPublicada" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>Si</option>
+                  <option>No</option>
+                </select>
+                <div class="invalid-feedback">Seleccione una opcion valida</div>
+              </div>
+            </div>
+            <div class="text-end mt-3">
+              <button class="btn btn-orange" type="submit">Guardar</button>
+              <button
+                class="btn btn-outline-warning btn-orange-cancelar d-none"
+                type="button"
+                id="btn-cancelar"
+              >
+                Cancelar Edicion
+              </button>
+            </div>
+          </form>
+        </section>
       </section>
-    </section>
       <!-- Section tabla -->
       <section>
-      <section class="table-responsive mt-3">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Caratula</th>
-              <th>Titulo</th>
-              <th>Tipo</th>
-              <th>Categoria</th>
-              <th>Descripcion</th>
-              <th>Publicada</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody id="tbodyMovieSeries"></tbody>
-        </table>
+        <section class="table-responsive mt-3">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Caratula</th>
+                <th>Titulo</th>
+                <th>Tipo</th>
+                <th>Categoria</th>
+                <th>Descripcion</th>
+                <th>Publicada</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyMovieSeries"></tbody>
+          </table>
+        </section>
       </section>
-    </section>
-
     </main>
     <!-- Fin del main -->
     <footer class="footer mt-auto py-5 bg-dark text-white">

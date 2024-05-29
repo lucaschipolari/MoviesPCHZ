@@ -1,65 +1,97 @@
 import { obtenerPeliculasSeriesDestacadasDeLS } from "../commons/utilities.js";
 
 export const cargarPeliculasDestacadas = () => {
-    const peliculasDestacadas = obtenerPeliculasSeriesDestacadasDeLS();
-    const $carouselInner = document.getElementById("destacar")
-    $carouselInner.innerHTML="";
+  const peliculasDestacadas = obtenerPeliculasSeriesDestacadasDeLS();
+  const $swiperContainer = document.querySelector(".swiper-wrapper");
+  $swiperContainer.innerHTML = "";
 
-    peliculasDestacadas.forEach((pelicula,index) => {
-        const $item = document.createElement("div");
-        $item.classList.add("carousel-item");
-        if(index === 0) $item.classList.add("active");
+  peliculasDestacadas.forEach((pelicula) => {
+    const $swiperSlide = document.createElement("div");
+    $swiperSlide.classList.add("swiper-slide");
 
-        const $img = document.createElement("img");
-        $img.src = pelicula.image;
-        $img.classList.add("d-block","w-100","carosel-img");
-        $img.alt = pelicula.title
+    const $imgSwiper = document.createElement("img");
+    $imgSwiper.src = pelicula.image;
+    $imgSwiper.alt = pelicula.title;
 
-        const $caption = document.createElement("div");
-        $caption.classList.add("carousel-caption", "d-none", "d-md-block");
+    const $overlaySwiper = document.createElement("div");
+    $overlaySwiper.classList.add("overlay");
 
-        const $captionContent = document.createElement("div");
+    const $titleSwiper = document.createElement("h1");
+    $titleSwiper.classList.add("title");
+    $titleSwiper.textContent = pelicula.title;
 
-        const $title = document.createElement("h1")
-        $title.classList.add("display-4");
-        $title.textContent = pelicula.title;
+    const $descriptionSwiper = document.createElement("p");
+    $descriptionSwiper.classList.add("description");
+    $descriptionSwiper.textContent = pelicula.description;
 
-        const $description = document.createElement("p")
-        $description.classList.add("lead")
-        $description.textContent = pelicula.description;
+    const $highlightButtonSwiper = document.createElement("div");
+    $highlightButtonSwiper.classList.add("buttons");
 
-        $captionContent.appendChild($title)
-        $captionContent.appendChild($description)
+    const $btnReproducirSwiper = document.createElement("a");
+    $btnReproducirSwiper.href = "#";
+    $btnReproducirSwiper.classList.add(
+      "btn",
+      "btn-primary",
+      "btn-lg",
+      "btn-orange"
+    );
+    const $iconoReproducirSwiper = document.createElement("i");
+    $iconoReproducirSwiper.classList.add(
+      "fa-regular",
+      "fa-circle-play",
+      "me-1"
+    );
+    $btnReproducirSwiper.appendChild($iconoReproducirSwiper);
+    $btnReproducirSwiper.appendChild(document.createTextNode("Reproducir"));
 
-        const $higlighButtons = document.createElement("div")
-        $higlighButtons.classList.add("highlight-buttons")
+    const $btnInfoSwiper = document.createElement("a");
+    $btnInfoSwiper.href = "#";
+    $btnInfoSwiper.classList.add(
+      "btn",
+      "btn-outline-secondary",
+      "btn-orange-outline",
+      "btn-lg"
+    );
+    const $iconoInfoSwiper = document.createElement("i");
+    $iconoInfoSwiper.classList.add("ri-error-warning-line", "me-1");
+    $btnInfoSwiper.appendChild($btnReproducirSwiper);
+    $btnInfoSwiper.appendChild(document.createTextNode("Ver más"));
 
-        const $btnReproducir = document.createElement("a")
-        $btnReproducir.classList.add("btn", "btn-primary", "btn-lg", "btn-orange")
-        const $iconoReproducir = document.createElement("i")
-        $iconoReproducir.classList.add("fa-regular", "fa-circle-play", "me-1")
-        $btnReproducir.appendChild($iconoReproducir)
-        $btnReproducir.appendChild(document.createTextNode("Reproducir"))
-        
+    $highlightButtonSwiper.appendChild($btnReproducirSwiper);
+    $highlightButtonSwiper.appendChild($btnInfoSwiper);
 
-        const $btnInfo = document.createElement("a")
-        $btnInfo.classList.add("btn", "btn-outline-secondary", "btn-orange-outline", "btn-lg")
-        const $iconoInfo = document.createElement("i")
-        $iconoInfo.classList.add("fa-solid", "fa-circle-exclamation", "me-1")
-        $btnInfo.appendChild($iconoInfo)
-        $btnInfo.appendChild(document.createTextNode("Ver Más"))
-        
+    $overlaySwiper.appendChild($titleSwiper);
+    $overlaySwiper.appendChild($descriptionSwiper);
+    $overlaySwiper.appendChild($highlightButtonSwiper);
 
-        $higlighButtons.appendChild($btnReproducir)
-        $higlighButtons.appendChild($btnInfo)
+    $swiperSlide.appendChild($imgSwiper);
+    $swiperSlide.appendChild($overlaySwiper);
 
-        $caption.appendChild($captionContent)
-        $caption.appendChild($higlighButtons)
+    $swiperContainer.appendChild($swiperSlide);
+  });
+};
 
-        $item.appendChild($img)
-        $item.appendChild($caption)
-
-
-        $carouselInner.appendChild($item)
-    });
-}
+new Swiper('.swiper-hero', {
+    
+    direction: 'horizontal',
+    loop: true,
+    effect: "fade",
+   autoplay: {
+     delay: 10000,
+     pauseOnMouseEnter: true,
+     disableOnInteraction: false,
+   },
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: "true",
+      dynamicBullets: "true",
+    },
+  
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });

@@ -1,187 +1,175 @@
-.carousel-inner {
-  height: 100vh; /* Ajusta la altura del carrusel */
-}
-
-.carousel-item {
+.swiper-hero {
   width: 100%;
 }
 
-/* .carousel-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(51, 51, 51, 0.5);
-    pointer-events: none;
-  } */
-
-.carousel-item .carousel-img {
-  height: 70vh;
-  width: auto;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-.carousel-caption h1,
-p {
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-.carousel-caption .highlight-buttons .btn {
-  margin-right: 10px;
-}
-
-.btn-orange {
-  background-color: rgb(243, 108, 33); /* Color de fondo naranja */
-  border-color: rgb(243, 108, 33); /* Color del borde */
-  color: rgb(3, 3, 3); /* Color del texto */
-  font-weight: 600;
-}
-
-.btn-orange:hover,
-.btn-orange:focus,
-.btn-orange:active {
-  background-color: #ff944d;
-  border-color: #ff944d;
-  color: rgb(0, 0, 0);
-}
-
-.btn-orange-outline {
-  border-color: rgb(243, 108, 33); /* Color del borde */
-  color: rgb(243, 108, 33); /* Color del texto */
-  font-weight: 600;
-}
-
-.btn-orange-outline:hover,
-.btn-orange-outline:focus,
-.btn-orange-outline:active {
-  background-color: #ff944d;
-  border-color: #ff944d;
-  color: rgb(0, 0, 0);
-}
-
-.card {
+.swiper-hero .swiper-slide {
   position: relative;
-  width: 200px;
-  height: 400px; /* Ajusta la altura según sea necesario */
-  overflow: hidden; /* Para asegurar que nada salga del contenedor */
- 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: para sombra */
-  margin: 0 10px; /* Margen entre las cards */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.card img {
+.swiper-hero img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Para que la imagen cubra la card manteniendo la proporción */
-  /* Asegúrate de que la imagen también tenga bordes redondeados si los usas */
+  height: 500px;
+  object-fit: cover;
+  
 }
 
-.overlay {
+.swiper-hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5); /* Semitransparent black background */
   color: white;
   display: flex;
-  flex-direction: column; /* Para que el texto esté en columna */
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  padding:  20px; 
+}
+
+.overlay .title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.overlay .description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.overlay .buttons .btn {
+  margin: 5px;
+}
+
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next {
+  --swiper-navigation-size: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 20px;
-  box-sizing: border-box; /* Para incluir el padding en el tamaño total */
+  transition: opacity 0.3s;
 }
 
-.card:hover .overlay {
+.swiper-hero .swiper-button-prev {
+  border-radius: 0 65px 65px 0;
+  left: -10px;
+  --swiper-navigation-color: rgb(243, 108, 33);
+}
+.swiper-hero .swiper-button-next {
+  border-radius: 65px 0 0 65px;
+  right: -10px;
+  --swiper-navigation-color: rgb(243, 108, 33);
+}
+
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next {
   opacity: 1;
 }
 
-.text {
-  text-align: left; /* Alinea el texto a la izquierda */
-  font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
-  overflow: hidden;
+.swiper-hero .swiper-pagination {
+  --swiper-pagination-color: rgb(243, 108, 33);
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
 }
 
-.text h5 {
-  margin: 0 0 10px 0;
-  font-size: 18px; /* Ajusta el tamaño del título */
-}
-
-.text p {
-  margin: 5px 0;
-  line-height: 1.4; /* Ajusta la altura de línea para mejor legibilidad */
-}
-
-.text p.details {
-  color: #d3d3d3; /* Color gris para los detalles específicos */
-}
-
-.swiper-button-prev::after,
-.swiper-button-netx::after {
-  content: "";
-}
-
-.swiper-button-prev,
-.swiper-button-netx {
-  width: initial;
-  height: initial;
-  font-size: 3rem;
-  display: none;
-}
-
-.swiper-button-prev {
-  left: 0;
-}
-
-.swiper-button-next {
-  right: 0;
-}
-
-.swiper-pagination-bullets {
-  background-color: #ff944d;
-  opacity: 1;
-}
-
-.swiper-pagination-bullets-active {
-  background-color: grey;
-}
-
-@media screen and(max-width: 320px) {
-  .overlay {
-    padding: 1rem;
+.btn-orange {
+    background-color: rgb(243, 108, 33); /* Color de fondo naranja */
+    border-color: rgb(243, 108, 33); /* Color del borde */
+    color: rgb(3, 3, 3); /* Color del texto */
+    font-weight: 600;
+    border-radius: 0;
   }
-}
-
-@media screen and (min-width: 768px) {
-  .card-content {
-    margin-inline: 3rem;
+  
+  .btn-orange:hover,
+  .btn-orange:focus,
+  .btn-orange:active {
+    background-color: #ff944d;
+    border-color: #ff944d;
+    color: rgb(0, 0, 0);
+    
+  }
+  
+  .btn-orange-outline {
+    border-color: rgb(243, 108, 33); /* Color del borde */
+    color: rgb(243, 108, 33); /* Color del texto */
+    font-weight: 600;
+    border-radius: 0;
+  }
+  
+  .btn-orange-outline:hover,
+  .btn-orange-outline:focus,
+  .btn-orange-outline:active {
+    background-color: #ff944d;
+    border-color: #ff944d;
+    color: rgb(0, 0, 0);
   }
 
-  .swiper-button-netx,
-  .swiper-button-prev {
-    display: block;
+  .swiper-cards {
+    width: 100%;
+    
+    overflow: hidden; 
   }
-}
 
-/* @media screen and (min-width: 1120px) {
-    .card-container{
-        max-width: 1120px;
-    }
+  .swiper-cards .card {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 10px; 
+  }
+  
+  .swiper-cards .card img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+  }
+  
+  .swiper-cards .overlay-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box; 
+    transition: transform 0.3s ease; 
+    transform: translateY(100%);
+  }
+  
+  .card:hover .overlay-card {
+    transform: translateY(0); 
+  }
+  
+  .text {
+    text-align: left; 
+  }
+  
+  .text h5 {
+    margin: 0 0 10px 0;
+  }
+  
+  .text p {
+    margin: 5px 0;
+  }
+  
+  .text p.details {
+    color: #d3d3d3; 
+  }
 
-    .swiper-button-netx {
-        right: -1rem;
-    }
-    .swiper-button-prev {
-        left: -1rem;
-    }
-} */
+  .swiper-cards .swiper-slide{
+   width: 250px;
+  }
