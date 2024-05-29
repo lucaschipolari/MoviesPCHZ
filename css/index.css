@@ -1,0 +1,187 @@
+.carousel-inner {
+  height: 100vh; /* Ajusta la altura del carrusel */
+}
+
+.carousel-item {
+  width: 100%;
+}
+
+/* .carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.5);
+    pointer-events: none;
+  } */
+
+.carousel-item .carousel-img {
+  height: 70vh;
+  width: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption h1,
+p {
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption .highlight-buttons .btn {
+  margin-right: 10px;
+}
+
+.btn-orange {
+  background-color: rgb(243, 108, 33); /* Color de fondo naranja */
+  border-color: rgb(243, 108, 33); /* Color del borde */
+  color: rgb(3, 3, 3); /* Color del texto */
+  font-weight: 600;
+}
+
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active {
+  background-color: #ff944d;
+  border-color: #ff944d;
+  color: rgb(0, 0, 0);
+}
+
+.btn-orange-outline {
+  border-color: rgb(243, 108, 33); /* Color del borde */
+  color: rgb(243, 108, 33); /* Color del texto */
+  font-weight: 600;
+}
+
+.btn-orange-outline:hover,
+.btn-orange-outline:focus,
+.btn-orange-outline:active {
+  background-color: #ff944d;
+  border-color: #ff944d;
+  color: rgb(0, 0, 0);
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 400px; /* Ajusta la altura según sea necesario */
+  overflow: hidden; /* Para asegurar que nada salga del contenedor */
+ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: para sombra */
+  margin: 0 10px; /* Margen entre las cards */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para que la imagen cubra la card manteniendo la proporción */
+  /* Asegúrate de que la imagen también tenga bordes redondeados si los usas */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column; /* Para que el texto esté en columna */
+  justify-content: flex-start;
+  align-items: flex-start;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box; /* Para incluir el padding en el tamaño total */
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
+  overflow: hidden;
+}
+
+.text h5 {
+  margin: 0 0 10px 0;
+  font-size: 18px; /* Ajusta el tamaño del título */
+}
+
+.text p {
+  margin: 5px 0;
+  line-height: 1.4; /* Ajusta la altura de línea para mejor legibilidad */
+}
+
+.text p.details {
+  color: #d3d3d3; /* Color gris para los detalles específicos */
+}
+
+.swiper-button-prev::after,
+.swiper-button-netx::after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-netx {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullets {
+  background-color: #ff944d;
+  opacity: 1;
+}
+
+.swiper-pagination-bullets-active {
+  background-color: grey;
+}
+
+@media screen and(max-width: 320px) {
+  .overlay {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-content {
+    margin-inline: 3rem;
+  }
+
+  .swiper-button-netx,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+
+/* @media screen and (min-width: 1120px) {
+    .card-container{
+        max-width: 1120px;
+    }
+
+    .swiper-button-netx {
+        right: -1rem;
+    }
+    .swiper-button-prev {
+        left: -1rem;
+    }
+} */
