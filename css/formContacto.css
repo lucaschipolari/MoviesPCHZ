@@ -7,19 +7,18 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 body, html {
     min-height: 100vh;
 }
 
-.mainRegistro {
+.mainContacto {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     background: rgb(14, 12, 12);
 }
 
-.containerRegistro {
+.containerContacto {
     width: 90%;
     height: 400px;
     max-width: 400px;
