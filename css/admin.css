@@ -85,7 +85,7 @@ label{
 }
 
 .btn-orange-cancelar:hover,
-.btn-orange-camcelar:focus,
+.btn-orange-cancelar:focus,
 .btn-orange-cancelar:active {
     background-color: #FF944D; 
     border-color:  #FF944D; 

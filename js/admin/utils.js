@@ -1,5 +1,6 @@
-import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
+import { obtenerPeliculasSeriesDeLS, obtenerPeliculasSeriesDestacadasDeLS } from "../commons/utilities.js";
 import { eliminarPeliculaSerie } from "./abm.js";
+import { destacarPeliculaSerie } from "./destacarPeliculasSeries.js";
 
 const cargarFilaTabla = (peliculaSerie, indice) => {
   const $tbody = document.getElementById("tbodyMovieSeries");
@@ -55,14 +56,20 @@ const cargarFilaTabla = (peliculaSerie, indice) => {
   $btnHighlight.classList.add("btn", "btn-sm", "btn-warning");
   $btnEdit.textContent = "Editar";
   $btnDelete.textContent = "Eliminar";
-  $btnHighlight.textContent = "Destacar";
+
+  const peliculasDestacadas = obtenerPeliculasSeriesDestacadasDeLS();
+  const esDestacada = peliculasDestacadas.some(p => p.code === peliculaSerie.code)
+  $btnHighlight.textContent = esDestacada ? "Quitar Destacado" : "Destacar";
+ 
   $btnEdit.onclick = () => {
     prepararEdicion(peliculaSerie);
   };
   $btnDelete.onclick = () => {
     eliminarPeliculaSerie(peliculaSerie.code, peliculaSerie.title);
   };
-  $btnHighlight.onclick = () => {};
+  $btnHighlight.onclick = () => {
+    destacarPeliculaSerie(peliculaSerie.code);
+  };
   $tdActions.appendChild($btnEdit);
   $tdActions.appendChild($btnDelete);
   $tdActions.appendChild($btnHighlight);

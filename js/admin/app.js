@@ -102,7 +102,7 @@ $form.addEventListener("submit", (event) => {
   });
 });
 
-
+// Cancelar edicion
 document.getElementById("btn-cancelar").addEventListener("click", () => {
   document.getElementById("formMoviesSeries").reset(); // Restablece el formulario
   document.getElementById("btn-cancelar").classList.add("d-none"); // Oculta el botón Cancelar
