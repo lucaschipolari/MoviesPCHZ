@@ -11,9 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/registro.css" />
+    <link rel="stylesheet" href="../css/formContacto.css">
     <link rel="stylesheet" href="../css/footer.css">
-
     <link
       defer
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -23,10 +22,10 @@
     />
     <script 
       src="https://kit.fontawesome.com/d0041885e5.js"
-      crossorigin="anonymous"
+      crosso300px;"anonymous"
     ></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script defer type="module" src="../js/registro/registro.js"></script>
+    <script defer type="module" src="../js/contacto/formContacto.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -88,98 +87,62 @@
         </div>
       </div>
     </nav>
-    <main class="mainRegistro d-flex flex-column">
+    <main class="mainContacto d-flex flex-column pb-5">
       <div class="container">
         <form class="form" id="form" action="/">
           <div class="title">
             <span>C</span>
-            <span>R</span>
-            <span>E</span>  
-            <span>A</span>
-            <span>R</span>
-            <span>-</span>
-            <span>C</span>
-            <span>U</span>
-            <span>E</span>
-            <span>N</span>
+            <span>O</span>
+            <span>N</span>  
             <span>T</span>
             <span>A</span>
+            <span>C</span>
+            <span>T</span>
+            <span>O</span>
           </div>
-          <div class="containerRegistro">
-            <img class="imgGoku" src="../assets/goku.png" alt="goku">
-            <div id="input-control-1" class="input-control first mb-3">
+          <div class="containerContacto">
+           <img class="imgHinata" src="../assets/hinata.png" alt="hinata">
+            <div id="input-control-1" class="input-control first-input mb-3">
               <input
                 type="text"
-                id="email"
-                name="email"
-                required="required"
+                id="name"
+                required = "required"
               />
-              <div for="name" class="input-container-label">Email</div>
+              <div for="name" class="input-container-label">Nombre</div>
               <div class="error"></div>
             </div>
             <div id="input-control-2" class="input-control mb-3">
-              <input
-                id="password"
-                name="password"
-                type="password"
-                required="required"
-              />
-              <div for="name" class="input-container-label">Contraseña</div>
-              <div class="error"></div>
-            </div>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  required="required"
+                />
+                <div for="name" class="input-container-label">Email</div>
+                <div class="error"></div>
+              </div>
             <div id="input-control-3" class="input-control mb-3">
               <input
-                id="password2"
-                name="password2"
-                type="password"
+                id="asunto"
+                name="asunto"
+                type="text"
                 required="required"
               />
               <div for="name" class="input-container-label">
-                Repetir Contraseña
+                Asunto
               </div>
               <div class="error"></div>
             </div>
-            <div class="links text-white">
-              ¿Ya tienes una cuenta?<a href="">Iniciar Sesion</a>
-            </div>
-            <div class="termAndCoditions">
-              <input
-                type="checkbox"
-                class="mx-1"
-                id="termAndCoditions"
-                required="required"
-              />
-              <label for="termAndCoditions"
-                >Acepto los términos y condiciones
-                <a href="" class="text-warning text-reset">Politica de Privacidad</a></label
-              >
-              
-            </div>
-              <p class="warning" id="length-warning"><i class="fa-regular fa-circle-check"></i> Debe tener al menos 8 caracteres</p>
-              <p class="warning" id="uppercase-warning"><i class="fa-regular fa-circle-check"></i> Debe tener al menos una letra mayúscula</p>
-              <p class="warning" id="lowercase-warning"><i class="fa-regular fa-circle-check"></i> Debe tener al menos una letra minúscula</p>
-              <p class="warning" id="number-warning"><i class="fa-regular fa-circle-check"></i> Debe tener al menos un número</p>
-              <p class="warning" id="special-warning"><i class="fa-regular fa-circle-check"></i> Debe tener al menos un carácter especial</p>
-          </div>
-          <span class="politics"
-          ><p class="">
-            Al crear una cuenta muestras tu conformidad con nuestras
-            Condiciones de uso y nuestra Política de privacidad, confirmando
-              además que tienes 16 años o más.
-            </p></span
-            >
-            <div class="text-center">
-              <button type="submit"  class="btn-registrarse w-30">Crear cuenta</button>
-              <div class="loginWidth w-100 mt-3 border-top py-2">
-                <button type="button" class="btn btn-light w-30 my-2">
-                  <i class="fa-brands fa-google"></i> Ingresar con Google
-                </button>
-                <button type="button" class="btn btn-light w-30">
-                  <i class="fa-brands fa-facebook"></i> Ingresar con Facebook
-                </button>
-              </div>
+            <div id="input-control-4" class="input-control mb-3">
+                <textarea name="mensaje" id="mensaje" rows="2" type="text" required="required"></textarea>
+                <div for="name" class="input-container-label">
+                  Mensaje
+                </div>
+                <div class="error error-mensaje"></div>
               </div>
             </div>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar</button>
           </form>
         </main>
         <footer class="footer mt-auto py-5 bg-dark text-white">

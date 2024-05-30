@@ -92,12 +92,16 @@
 .title > span:nth-child(12){
     animation-delay: 2.2s;
 }
+.title > span:nth-child(13){
+    animation-delay: 2.4s;
+}
 
 
 .btn-registrarse {
     padding: 12px;
     margin-top: 12px;
     margin-bottom: 12px;
+    font-size: 16px;
     color: black;
     background-color: rgb(255, 174, 0);
     border: none;

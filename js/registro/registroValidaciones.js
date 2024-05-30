@@ -30,12 +30,12 @@ const isValidEmail = email => {
 export const validateEmail = (e)=>{
     //no estar vacio
     if(cadenaNoVacia(e)){
-        setError(e, 'Email is required');
+        setError(e, 'El email no puede estar vacio');
         return false;
     }
     //tiene que tener patron de email
     if (!isValidEmail(e.value.trim())) {
-        setError(e, 'Provide a valid email address');
+        setError(e, 'El email es invalido');
         return false;
     } 
     //tiene que n
@@ -43,29 +43,73 @@ export const validateEmail = (e)=>{
     return true;
 }
 export const validatePassword = (e) => {
-    // no estar vacío
-    if (cadenaNoVacia(e)) {
-        setError(e, 'Password is required');
-        return false;
-    }
-    // mínimo 8 caracteres
-    if (e.value.length < 8) {
-        setError(e, 'Password must be at least 8 characters');
-        return false;
-    }
-    setSuccess(e);
-    return true;
-};
+    const password = e.value;
 
+    const lengthWarning = document.getElementById('length-warning');
+    const uppercaseWarning = document.getElementById('uppercase-warning');
+    const lowercaseWarning = document.getElementById('lowercase-warning');
+    const numberWarning = document.getElementById('number-warning');
+    const specialWarning = document.getElementById('special-warning');
+
+    let isValid = true;
+
+    // mínimo 8 caracteres
+    if (password.length < 8) {
+        lengthWarning.classList.remove('valid');
+        isValid = false;
+    } else {
+        lengthWarning.classList.add('valid');
+    }
+
+    // al menos una letra mayúscula
+    if (!/[A-Z]/.test(password)) {
+        uppercaseWarning.classList.remove('valid');
+        isValid = false;
+    } else {
+        uppercaseWarning.classList.add('valid');
+    }
+
+    // al menos una letra minúscula
+    if (!/[a-z]/.test(password)) {
+        lowercaseWarning.classList.remove('valid');
+        isValid = false;
+    } else {
+        lowercaseWarning.classList.add('valid');
+    }
+
+    // al menos un número
+    if (!/\d/.test(password)) {
+        numberWarning.classList.remove('valid');
+        isValid = false;
+    } else {
+        numberWarning.classList.add('valid');
+    }
+
+    // al menos un carácter especial
+    if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+        specialWarning.classList.remove('valid');
+        isValid = false;
+    } else {
+        specialWarning.classList.add('valid');
+    }
+
+    if (isValid) {
+        setSuccess(e);
+    } else {
+        setError(e, 'La contraseña no cumple con todas las condiciones');
+    }
+
+    return isValid;
+};
 export const validatePasswordConfirmation = (password, password2) => {
     // no estar vacío
     if (cadenaNoVacia(password2)) {
-        setError(password2, 'Please confirm your password');
+        setError(password2, 'Por favor, confima tu contraseña');
         return false;
     }
     // coincidir con la contraseña
     if (password2.value !== password.value) {
-        setError(password2, "Passwords don't match");
+        setError(password2, "Las contraseñas ingresadas no coinciden");
         return false;
     }
     setSuccess(password2);
