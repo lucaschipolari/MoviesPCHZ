@@ -1,3 +1,6 @@
-export const obtenerUsuariosDeLS = () => {
-    return ordenarLista(JSON.parse(localStorage.getItem('usuarios')) || []);
-  };
+export const obtenerPeliculasSeriesDeLS = () => {
+  return JSON.parse(localStorage.getItem("peliculasSeries")) || [];
+};
+
+
+

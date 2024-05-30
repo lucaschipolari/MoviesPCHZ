@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas y Series</title>
+</head>
+<body>
+    <h1>Películas y Series</h1>
+    <div id="list"></div>
+
+    <script>
+        // Función para obtener las películas y series desde localStorage
+        const obtenerPeliculasSeriesDeLS = () => {
+            return JSON.parse(localStorage.getItem("peliculasSeries")) || [];
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const listContainer = document.getElementById('list');
+            const moviesAndSeries = obtenerPeliculasSeriesDeLS();
+
+            moviesAndSeries.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.textContent = item.title;
+                itemElement.style.cursor = 'pointer';
+                itemElement.addEventListener('click', () => {
+                    window.location.href = `detail.html?id=${item.id}`;
+                });
+                listContainer.appendChild(itemElement);
+            });
+        });
+    </script>
+</body>
+</html>
