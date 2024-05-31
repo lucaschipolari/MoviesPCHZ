@@ -10,7 +10,7 @@ export const cargarPeliculasDestacadas = () => {
     $swiperSlide.classList.add("swiper-slide");
 
     const $imgSwiper = document.createElement("img");
-    $imgSwiper.src = pelicula.image;
+    $imgSwiper.src = pelicula.banner;
     $imgSwiper.alt = pelicula.title;
 
     const $overlaySwiper = document.createElement("div");

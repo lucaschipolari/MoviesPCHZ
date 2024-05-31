@@ -8,7 +8,9 @@ export const agregarPeliculaSerie = (
   image,
   category,
   description,
-  estaPublicada
+  estaPublicada,
+  banner,
+  video
 ) => {
   const peliculaSerie = new PeliculaSerie(
     title,
@@ -16,7 +18,9 @@ export const agregarPeliculaSerie = (
     image,
     category,
     description,
-    estaPublicada
+    estaPublicada,
+    banner,
+    video
   );
 
   //1. Traemos desde LS lo que haya guardado
@@ -35,7 +39,9 @@ export const editarPeliculaSerie = (
   image,
   category,
   description,
-  estaPublicada
+  estaPublicada,
+  banner,
+  video
 ) => {
   const peliculasSeries = obtenerPeliculasSeriesDeLS();
   const idPeliculaSerie = sessionStorage.getItem("idPeliSerie");
@@ -66,6 +72,8 @@ export const editarPeliculaSerie = (
   peliculasSeries[posicionPeliculaSerie].category = category;
   peliculasSeries[posicionPeliculaSerie].description = description;
   peliculasSeries[posicionPeliculaSerie].estaPublicada = estaPublicada;
+  peliculasSeries[posicionPeliculaSerie].banner = banner;
+  peliculasSeries[posicionPeliculaSerie].video = video;
 
 
   localStorage.setItem("peliculasSeries", JSON.stringify(peliculasSeries));
