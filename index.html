@@ -25,9 +25,10 @@
       src="https://kit.fontawesome.com/d0041885e5.js"
       crossorigin="anonymous"
     ></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin="">
     <title>Document</title>
   </head>
-  <body class="bg-dark">
+  <body>
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -75,185 +76,991 @@
       </nav>
     </header>
 
-    <main>
-      <div
-        id="carouselDestacado"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner" id="destacar">
-          <!-- Primer elemento destacado -->
-          <div class="carousel-item active" data-bs-interval="10000">
+    <main class="bg-main">
+      <!-- Slider main container -->
+      <div class="swiper swiper-hero">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
             <img
-              src="https://i.pinimg.com/originals/37/39/c8/3739c86374875ee63a6fa747b1a59f02.png"
-              class="d-block w-100 carousel-img"
-              alt="Película 1"
+              src=""
+              alt=""
             />
-            <div class="carousel-caption d-none d-md-block">
-              <div>
-                <h1 class="display-4">Nombre de la Película/Serie 1</h1>
-                <p class="lead">Descripción breve de la película o serie 1.</p>
-              </div>
-
-              <div class="highlight-buttons">
+            <div class="overlay">
+              <h1 class="title"></h1>
+              <p class="description"></p>
+              <div class="buttons">
                 <a
-                  href="URL_DE_REPRODUCCION_1"
+                  href=""
                   class="btn btn-primary btn-lg btn-orange"
-                  role="button"
-                  ><i class="fa-regular fa-circle-play me-1"></i>Reproducir</a
                 >
+                  <i class="fa-regular fa-circle-play me-1"></i>Reproducir
+                </a>
                 <a
-                  href="URL_DE_MAS_INFORMACION_1"
+                  href=""
                   class="btn btn-outline-secondary btn-orange-outline btn-lg"
-                  role="button"
-                  ><i class="fa-solid fa-circle-exclamation me-1"></i>Ver Más</a
                 >
+                <i class="ri-error-warning-line"></i>Ver Más
+                </a>
               </div>
             </div>
           </div>
-          
-         
+          <div class="swiper-slide">
+            <img
+              src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f993868-5417-4268-9c23-1c6f0fc60b91/df8haw3-70a26ab5-982b-417f-85f7-ac77a19eb836.png/v1/fill/w_1600,h_517,q_80,strp/dbz_bt3___banner_by_evilzgaruda_df8haw3-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTE3IiwicGF0aCI6IlwvZlwvNWY5OTM4NjgtNTQxNy00MjY4LTljMjMtMWM2ZjBmYzYwYjkxXC9kZjhoYXczLTcwYTI2YWI1LTk4MmItNDE3Zi04NWY3LWFjNzdhMTllYjgzNi5wbmciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Y1fUgcgqROf887vNHyYVNobWFqFiu4r7_BEtDKGmd9A"
+              alt="Titulo de la Película/Serie"
+            />
+            <div class="overlay">
+              <h1 class="title">Titulo de la Película/Serie</h1>
+              <p class="description">
+                Descripción breve de la película o serie.
+              </p>
+              <div class="buttons">
+                <a
+                  href="URL_DE_REPRODUCCION"
+                  class="btn btn-primary btn-lg btn-orange"
+                >
+                  <i class="fa-regular fa-circle-play me-1"></i>Reproducir
+                </a>
+                <a
+                  href="URL_DE_MAS_INFORMACION"
+                  class="btn btn-outline-secondary btn-orange-outline btn-lg"
+                >
+                  <i class="ri-error-warning-line me-1"></i>Ver Más
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.bizak.es/wp-content/uploads/2018/09/BANNER-26-POKEMON-1920X700-1170x427.jpg"
+              alt="Titulo de la Película/Serie"
+            />
+            <div class="overlay">
+              <h1 class="title">Titulo de la Película/Serie</h1>
+              <p class="description">
+                Descripción breve de la película o serie.
+              </p>
+              <div class="buttons">
+                <a
+                  href="URL_DE_REPRODUCCION"
+                  class="btn btn-primary btn-lg btn-orange"
+                >
+                  <i class="fa-regular fa-circle-play me-1"></i>Reproducir
+                </a>
+                <a
+                  href="URL_DE_MAS_INFORMACION"
+                  class="btn btn-outline-secondary btn-orange-outline btn-lg"
+                >
+                  <i class="ri-error-warning-line me-1"></i>Ver Más
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Controles del carrusel -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselDestacado"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselDestacado"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
+        
+        <div class="swiper-pagination"></div>
+
+        
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
 
-      
-      <section class=" mt-5">
-        <div class="card-container swiper">
-          <div class="card-content mb-5">
-            <div class="swiper-wrapper">
-              <div class="card swiper-slide">
-                <img
-                  src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
-                  alt="Imagen de la card"
-                />
-                <div class="overlay">
-                  <div class="text">
-                    <h5>JUJUTSU KAISEN</h5>
-                    <p>4.9 (382.9k)</p>
-                    <p class="details">3 Temporadas</p>
-                    <p class="details">48 Episodios</p>
-                    <p>
-                      JUJUTSU KAISEN es un manga con historia y dibujo de Gege
-                      Akutami que se publica en la weekly Shonen jump. Poco
-                      despues de su debut se estrenaba la adaptacion...
-                    </p>
+      <!-- Slider main peliculas -->
+      <section class="container-fluid">
+        <!-- Slide 1 -->
+        <div>
+        <h3 class="text-light mt-3 text-center">Accion</h3>
+        
+      <div class="swiper swiper-cards mt-3 ">
+        <div class="swiper-wrapper" id="wrapper-cards">
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src=""
+                alt=""
+              />
+              <div class="overlay-card card">
+                <div class="text card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text mb-4"></p>
+                  <div class="botones-card mt-auto d-flex justify-content-around">
+                    <a href=""><i class="ri-play-large-line"></i></a>
+                    <a href=""><i class="ri-bookmark-line"></i></a>
+                    <a href=""><i class="ri-add-line"></i></a>
                   </div>
-                </div>
-              </div>
-
-              <div class="card swiper-slide">
-                <img
-                  src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
-                  alt="Imagen de la card"
-                />
-                <div class="overlay">
-                  <div class="text">
-                    <h5>JUJUTSU KAISEN</h5>
-                    <p>4.9 (382.9k)</p>
-                    <p class="details">3 Temporadas</p>
-                    <p class="details">48 Episodios</p>
-                    <p>
-                      JUJUTSU KAISEN es un manga con historia y dibujo de Gege
-                      Akutami que se publica en la weekly Shonen jump. Poco
-                      despues de su debut se estrenaba la adaptacion...
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card swiper-slide">
-                <img
-                  src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
-                  alt="Imagen de la card"
-                />
-                <div class="overlay">
-                  <div class="text">
-                    <h5>JUJUTSU KAISEN</h5>
-                    <p>4.9 (382.9k)</p>
-                    <p class="details">3 Temporadas</p>
-                    <p class="details">48 Episodios</p>
-                    <p>
-                      JUJUTSU KAISEN es un manga con historia y dibujo de Gege
-                      Akutami que se publica en la weekly Shonen jump. Poco
-                      despues de su debut se estrenaba la adaptacion...
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="card swiper-slide">
-                <img
-                  src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
-                  alt="Imagen de la card"
-                />
-                <div class="overlay">
-                  <div class="text">
-                    <h5>JUJUTSU KAISEN</h5>
-                    <p>4.9 (382.9k)</p>
-                    <p class="details">3 Temporadas</p>
-                    <p class="details">48 Episodios</p>
-                    <p>
-                      JUJUTSU KAISEN es un manga con historia y dibujo de Gege
-                      Akutami que se publica en la weekly Shonen jump. Poco
-                      despues de su debut se estrenaba la adaptacion...
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="card swiper-slide">
-                <img
-                  src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
-                  alt="Imagen de la card"
-                />
-                <div class="overlay">
-                  <div class="text">
-                    <h5>JUJUTSU KAISEN</h5>
-                    <p>4.9 (382.9k)</p>
-                    <p class="details">3 Temporadas</p>
-                    <p class="details">48 Episodios</p>
-                    <p>
-                      JUJUTSU KAISEN es un manga con historia y dibujo de Gege
-                      Akutami que se publica en la weekly Shonen jump. Poco
-                      despues de su debut se estrenaba la adaptacion...
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="swiper-button-prev">
-            <i class="fa-solid fa-angle-left"></i>
-          </div>
-          <div class="swiper-button-next">
-            <i class="fa-solid fa-angle-right"></i>
-          </div>
-
-          <div class="swiper-pagination"></div>
-        
         </div>
-      </section>
 
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
+      </div>
 
+    </div>
+    <!-- Slide 2 -->
+        <div>
+        <h3 class="text-light mt-3 text-center">Accion</h3>
+      <div class="swiper swiper-cards mt-3 container">
+        <div class="swiper-wrapper" id="wrapper-cards">
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+                alt="Imagen de la card"
+              />
+              <div class="overlay-card">
+                <div class="text">
+                  <h5>JUJUTSU KAISEN</h5>
+                  <p>4.9 (382.9k)</p>
+                  <p class="details">3 Temporadas</p>
+                  <p class="details">48 Episodios</p>
+                  <p>
+                    JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                    Akutami que se publica en la weekly Shonen jump. Poco
+                    despues de su debut se estrenaba la adaptacion...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+    </div>
+    <!-- Slide 3 -->
+    <div>
+      <h3 class="text-light mt-3 text-center">Accion</h3>
+    <div class="swiper swiper-cards mt-3 container">
+      <div class="swiper-wrapper" id="wrapper-cards">
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+              alt="Imagen de la card"
+            />
+            <div class="overlay-card">
+              <div class="text">
+                <h5>JUJUTSU KAISEN</h5>
+                <p>4.9 (382.9k)</p>
+                <p class="details">3 Temporadas</p>
+                <p class="details">48 Episodios</p>
+                <p>
+                  JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                  Akutami que se publica en la weekly Shonen jump. Poco
+                  despues de su debut se estrenaba la adaptacion...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+  </div>
+  <!-- Slide 4 -->
+  <div>
+    <h3 class="text-light mt-3 text-center">Accion</h3>
+  <div class="swiper swiper-cards mt-3 container">
+    <div class="swiper-wrapper" id="wrapper-cards">
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card">
+          <img
+            src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpe"
+            alt="Imagen de la card"
+          />
+          <div class="overlay-card">
+            <div class="text">
+              <h5>JUJUTSU KAISEN</h5>
+              <p>4.9 (382.9k)</p>
+              <p class="details">3 Temporadas</p>
+              <p class="details">48 Episodios</p>
+              <p>
+                JUJUTSU KAISEN es un manga con historia y dibujo de Gege
+                Akutami que se publica en la weekly Shonen jump. Poco
+                despues de su debut se estrenaba la adaptacion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+</div>
+    </section>
+
+    
     </main>
 
     <footer class="footer mt-auto py-5 bg-dark text-white">

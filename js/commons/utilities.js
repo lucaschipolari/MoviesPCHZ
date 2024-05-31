@@ -9,3 +9,4 @@ export const obtenerPeliculasSeriesDestacadasDeLS = () => {
 export const guardarPeliculasDestacadasEnLS = (peliculasDestacadas) => {
   localStorage.setItem("peliculasDestacadas", JSON.stringify(peliculasDestacadas));
 }
+
