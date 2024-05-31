@@ -89,51 +89,55 @@ export const editarPeliculaSerie = (
   $buttonCancelar.classList.add("d-none");
 };
 
-export const eliminarPeliculaSerie = (idPeliculaSerie, tituloPeliculaSerie) => {
-  swal
-    .fire({
-      title: "Atencion",
-      text: `¿Estas seguro que deseas eliminar ${tituloPeliculaSerie}?`,
-      icon: "warning",
-      showConfimButton: true,
-      showCancelButton: true,
-      confirmButtonText: "Si, elminar",
-      cancelButtonText: "No, cancelar",
-    })
-    .then((result) => {
-      if (result.isConfirmed) {
-        //Eliminar pelicula de la lista principal//
-        const peliculasSeries = obtenerPeliculasSeriesDeLS();
-        const nuevasPeliculasSeries = peliculasSeries.filter(
-          (peliculaSerie) => peliculaSerie.code != idPeliculaSerie
-        );
-        localStorage.setItem(
-          "peliculasSeries",
-          JSON.stringify(nuevasPeliculasSeries)
-        );
+ export const eliminarPeliculaSerie = (idPeliculaSerie, tituloPeliculaSerie) => {
+   swal
+     .fire({
+       title: "Atencion",
+       text: `¿Estas seguro que deseas eliminar ${tituloPeliculaSerie}?`,
+       icon: "warning",
+       showConfimButton: true,
+       showCancelButton: true,
+       confirmButtonText: "Si, elminar",
+       cancelButtonText: "No, cancelar",
+     })
+     .then((result) => {
+       if (result.isConfirmed) {
+         //Eliminar pelicula de la lista principal
+         const peliculasSeries = obtenerPeliculasSeriesDeLS();
+         const nuevasPeliculasSeries = peliculasSeries.filter(
+           (peliculaSerie) => peliculaSerie.code != idPeliculaSerie
+         );
+         localStorage.setItem(
+           "peliculasSeries",
+           JSON.stringify(nuevasPeliculasSeries)
+         );
 
-        //Eliminar la pelicula de la lista de destacados, si esta presente
-        let peliculasDestacadas = obtenerPeliculasSeriesDestacadasDeLS();
-        const nuevasPeliculasDestacadas = peliculasDestacadas.filter(
-          (peliculaDestacada) => peliculaDestacada.code !== idPeliculaSerie
-        );
-        if (peliculasDestacadas.length !== nuevasPeliculasDestacadas.length) {
-          localStorage.setItem(
-            "peliculasDestacadas",
-            JSON.stringify(nuevasPeliculasDestacadas)
-          );
-        }
+         //Eliminar la pelicula de la lista de destacados, si esta presente
+         let peliculasDestacadas = obtenerPeliculasSeriesDestacadasDeLS();
+         const nuevasPeliculasDestacadas = peliculasDestacadas.filter(
+           (peliculaDestacada) => peliculaDestacada.code !== idPeliculaSerie
+         );
+         if (peliculasDestacadas.length !== nuevasPeliculasDestacadas.length) {
+           localStorage.setItem(
+             "peliculasDestacadas",
+             JSON.stringify(nuevasPeliculasDestacadas)
+           );
+         }
 
-        cargarTabla();
+         cargarTabla();
 
-        swal.fire({
-          title: "Exito",
-          text: `${tituloPeliculaSerie} eliminado correctamente`,
-          icon: "success",
-          showConfimButton: true,
-          showCancelButton: false,
-          confirmButtonText: "tremedo",
-        });
-      }
-    });
-};
+         swal.fire({
+           title: "Exito",
+           text: `${tituloPeliculaSerie} eliminado correctamente`,
+           icon: "success",
+           showConfimButton: true,
+           showCancelButton: false,
+           confirmButtonText: "tremedo",
+         });
+       }
+     });
+ };
+
+
+
+ 

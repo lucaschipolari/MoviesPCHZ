@@ -63,6 +63,7 @@ const cargarFilaTabla = (peliculaSerie, indice) => {
  
   $btnEdit.onclick = () => {
     prepararEdicion(peliculaSerie);
+    document.getElementById("titulo-formulario").scrollIntoView({behavior: "smooth"})
   };
   $btnDelete.onclick = () => {
     eliminarPeliculaSerie(peliculaSerie.code, peliculaSerie.title);
