@@ -54,7 +54,7 @@ export const cargarPeliculasDestacadas = () => {
     );
     const $iconoInfoSwiper = document.createElement("i");
     $iconoInfoSwiper.classList.add("ri-error-warning-line", "me-1");
-    $btnInfoSwiper.appendChild($btnReproducirSwiper);
+    $btnInfoSwiper.appendChild($iconoInfoSwiper);
     $btnInfoSwiper.appendChild(document.createTextNode("Ver más"));
 
     $highlightButtonSwiper.appendChild($btnReproducirSwiper);
@@ -71,27 +71,26 @@ export const cargarPeliculasDestacadas = () => {
   });
 };
 
-new Swiper('.swiper-hero', {
-    
-    direction: 'horizontal',
-    loop: true,
-    effect: "fade",
-   autoplay: {
-     delay: 10000,
-     pauseOnMouseEnter: true,
-     disableOnInteraction: false,
-   },
+new Swiper(".swiper-hero", {
+  direction: "horizontal",
+  loop: true,
+  effect: "fade",
+  autoplay: {
+    delay: 10000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: false,
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: "true",
+    dynamicBullets: "true",
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
   
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: "true",
-      dynamicBullets: "true",
-    },
-  
-    
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-  });
+});
