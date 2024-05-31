@@ -50,16 +50,23 @@ export const editarPeliculaSerie = (
     return;
   }
 
-  const nuevaPeliculasSerie = new PeliculaSerie(
-    title,
-    type,
-    image,
-    category,
-    description,
-    estaPublicada
-  );
+  // const nuevaPeliculasSerie = new PeliculaSerie(
+  //   title,
+  //   type,
+  //   image,
+  //   category,
+  //   description,
+  //   estaPublicada
+  // );
 
-  peliculasSeries.splice(posicionPeliculaSerie, 1, nuevaPeliculasSerie);
+  // peliculasSeries.splice(posicionPeliculaSerie, 1, nuevaPeliculasSerie);
+  peliculasSeries[posicionPeliculaSerie].title = title;
+  peliculasSeries[posicionPeliculaSerie].type = type;
+  peliculasSeries[posicionPeliculaSerie].image = image;
+  peliculasSeries[posicionPeliculaSerie].category = category;
+  peliculasSeries[posicionPeliculaSerie].description = description;
+  peliculasSeries[posicionPeliculaSerie].estaPublicada = estaPublicada;
+
 
   localStorage.setItem("peliculasSeries", JSON.stringify(peliculasSeries));
 
