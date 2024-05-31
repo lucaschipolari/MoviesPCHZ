@@ -1,3 +1,7 @@
+.bg-main {
+  background-color: #000;
+}
+
 .swiper-hero {
   width: 100%;
 }
@@ -124,7 +128,7 @@
   .swiper-cards .card {
     position: relative;
     width: 100%;
-    height: 100%; 
+    height: 371px; 
     overflow: hidden; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-right: 10px; 
@@ -132,7 +136,7 @@
   
   .swiper-cards .card img {
     width: 100%;
-    height: auto; 
+    height: 100%; 
     object-fit: cover; 
   }
   
@@ -142,7 +146,7 @@
     left: 0;
     right: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.76);
     color: white;
     padding: 20px;
     box-sizing: border-box; 
@@ -172,4 +176,39 @@
 
   .swiper-cards .swiper-slide{
    width: 250px;
+  }
+
+  .swiper-cards .swiper-button-prev,
+  .swiper-cards .swiper-button-next {
+    --swiper-navigation-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 70px;
+    width: 50px;
+    margin-top: -35px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .swiper-cards .swiper-button-prev {
+    border-radius: 0 65px 65px 0;
+    left: -20px;
+    --swiper-navigation-color: rgb(243, 108, 33);
+  }
+  .swiper-cards .swiper-button-next {
+    border-radius: 65px 0 0 65px;
+    right: -20px;
+    --swiper-navigation-color: rgb(243, 108, 33);
+  }
+  
+  .swiper-cards:hover .swiper-button-prev,
+  .swiper-cards:hover .swiper-button-next {
+    opacity: 1;
+  }
+
+  .botones-card{
+    color:rgb(243, 108, 33);
+
+    :hover {
+      color: #ff944d;;
+    }
   }
