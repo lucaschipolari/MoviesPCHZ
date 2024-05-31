@@ -1,4 +1,7 @@
-import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
+import {
+  obtenerPeliculasSeriesDeLS,
+  obtenerPeliculasSeriesDestacadasDeLS,
+} from "../commons/utilities.js";
 import { PeliculaSerie } from "./PeliculaSerie.js";
 import { cargarTabla } from "./utils.js";
 
@@ -75,7 +78,6 @@ export const editarPeliculaSerie = (
   peliculasSeries[posicionPeliculaSerie].banner = banner;
   peliculasSeries[posicionPeliculaSerie].video = video;
 
-
   localStorage.setItem("peliculasSeries", JSON.stringify(peliculasSeries));
 
   sessionStorage.removeItem("idPeliSerie");
@@ -100,17 +102,27 @@ export const eliminarPeliculaSerie = (idPeliculaSerie, tituloPeliculaSerie) => {
     })
     .then((result) => {
       if (result.isConfirmed) {
+        //Eliminar pelicula de la lista principal//
         const peliculasSeries = obtenerPeliculasSeriesDeLS();
         const nuevasPeliculasSeries = peliculasSeries.filter(
-          (peliculaSerie) => {
-            return peliculaSerie.code != idPeliculaSerie;
-          }
+          (peliculaSerie) => peliculaSerie.code != idPeliculaSerie
         );
-
         localStorage.setItem(
           "peliculasSeries",
           JSON.stringify(nuevasPeliculasSeries)
         );
+
+        //Eliminar la pelicula de la lista de destacados, si esta presente
+        let peliculasDestacadas = obtenerPeliculasSeriesDestacadasDeLS();
+        const nuevasPeliculasDestacadas = peliculasDestacadas.filter(
+          (peliculaDestacada) => peliculaDestacada.code !== idPeliculaSerie
+        );
+        if (peliculasDestacadas.length !== nuevasPeliculasDestacadas.length) {
+          localStorage.setItem(
+            "peliculasDestacadas",
+            JSON.stringify(nuevasPeliculasDestacadas)
+          );
+        }
 
         cargarTabla();
 
@@ -125,4 +137,3 @@ export const eliminarPeliculaSerie = (idPeliculaSerie, tituloPeliculaSerie) => {
       }
     });
 };
-
