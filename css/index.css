@@ -1,0 +1,175 @@
+.swiper-hero {
+  width: 100%;
+}
+
+.swiper-hero .swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.swiper-hero img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  
+}
+
+.swiper-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semitransparent black background */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  padding:  20px; 
+}
+
+.overlay .title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.overlay .description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.overlay .buttons .btn {
+  margin: 5px;
+}
+
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next {
+  --swiper-navigation-size: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.swiper-hero .swiper-button-prev {
+  border-radius: 0 65px 65px 0;
+  left: -10px;
+  --swiper-navigation-color: rgb(243, 108, 33);
+}
+.swiper-hero .swiper-button-next {
+  border-radius: 65px 0 0 65px;
+  right: -10px;
+  --swiper-navigation-color: rgb(243, 108, 33);
+}
+
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next {
+  opacity: 1;
+}
+
+.swiper-hero .swiper-pagination {
+  --swiper-pagination-color: rgb(243, 108, 33);
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+}
+
+.btn-orange {
+    background-color: rgb(243, 108, 33); /* Color de fondo naranja */
+    border-color: rgb(243, 108, 33); /* Color del borde */
+    color: rgb(3, 3, 3); /* Color del texto */
+    font-weight: 600;
+    border-radius: 0;
+  }
+  
+  .btn-orange:hover,
+  .btn-orange:focus,
+  .btn-orange:active {
+    background-color: #ff944d;
+    border-color: #ff944d;
+    color: rgb(0, 0, 0);
+    
+  }
+  
+  .btn-orange-outline {
+    border-color: rgb(243, 108, 33); /* Color del borde */
+    color: rgb(243, 108, 33); /* Color del texto */
+    font-weight: 600;
+    border-radius: 0;
+  }
+  
+  .btn-orange-outline:hover,
+  .btn-orange-outline:focus,
+  .btn-orange-outline:active {
+    background-color: #ff944d;
+    border-color: #ff944d;
+    color: rgb(0, 0, 0);
+  }
+
+  .swiper-cards {
+    width: 100%;
+    
+    overflow: hidden; 
+  }
+
+  .swiper-cards .card {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 10px; 
+  }
+  
+  .swiper-cards .card img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+  }
+  
+  .swiper-cards .overlay-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box; 
+    transition: transform 0.3s ease; 
+    transform: translateY(100%);
+  }
+  
+  .card:hover .overlay-card {
+    transform: translateY(0); 
+  }
+  
+  .text {
+    text-align: left; 
+  }
+  
+  .text h5 {
+    margin: 0 0 10px 0;
+  }
+  
+  .text p {
+    margin: 5px 0;
+  }
+  
+  .text p.details {
+    color: #d3d3d3; 
+  }
+
+  .swiper-cards .swiper-slide{
+   width: 250px;
+  }
