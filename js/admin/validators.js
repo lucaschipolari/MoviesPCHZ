@@ -37,7 +37,7 @@ export const validateUrl = (field) => {
   }
 
   const regex =
-    /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(:[0-9]{1,5})?(\/[^\s]*)?$/;
+    /^https?:\/\/.*\.(?:png|jpg|jpeg|gif|bmp|webp|svg|jpe)(\?.*)?$|https?:\/\/(?:www\.)?(youtube\.com\/watch\?v=|youtu\.be\/|vimeo\.com\/|dailymotion\.com\/video\/|facebook\.com\/.*\/videos\/|twitter\.com\/.*\/status\/|twitch\.tv\/videos\/)[\w\-]+$/;
   if (!regex.test(field.value)) {
     field.classList.add("is-invalid");
     field.classList.remove("is-valid");

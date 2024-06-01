@@ -1,7 +1,6 @@
 body {
-    color: #e0e0e0;
+  color: #e0e0e0;
 }
-
 
 .video-background {
   position: fixed;
@@ -12,7 +11,6 @@ body {
   overflow: hidden;
   z-index: -1;
 }
-
 
 video {
   width: 100%;
@@ -38,14 +36,14 @@ video {
 }
 
 .dropdown-menu {
-    background-color: #23252b;
-    a {
-        color: #dad7cf;
-      }
+  background-color: #23252b;
+  a {
+    color: #dad7cf;
+  }
 }
 
 .main-form {
-  margin-top: 56px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -58,42 +56,75 @@ video {
   padding: 20px;
 }
 
-label{
-    color: #f0a500;
+label {
+  color: #f0a500;
 }
 
 .btn-orange {
-    background-color: rgb(243, 108, 33); /* Color de fondo naranja */
-    border-color: rgb(243, 108, 33); /* Color del borde */
-    color: rgb(3, 3, 3); /* Color del texto */
-    font-weight: 600;
+  background-color: rgb(243, 108, 33); /* Color de fondo naranja */
+  border-color: rgb(243, 108, 33); /* Color del borde */
+  color: rgb(3, 3, 3); /* Color del texto */
+  font-weight: 600;
 }
 
 .btn-orange:hover,
 .btn-orange:focus,
 .btn-orange:active {
-    background-color: #FF944D; 
-    border-color:  #FF944D; 
-    color: rgb(0, 0, 0); 
+  background-color: #ff944d;
+  border-color: #ff944d;
+  color: rgb(0, 0, 0);
 }
 
 .btn-orange-cancelar {
-   
-    border-color: rgb(243, 108, 33); /* Color del borde */
-    color: rgb(243, 108, 33); /* Color del texto */
-    font-weight: 600;
+  border-color: rgb(243, 108, 33); /* Color del borde */
+  color: rgb(243, 108, 33); /* Color del texto */
+  font-weight: 600;
 }
 
 .btn-orange-cancelar:hover,
 .btn-orange-cancelar:focus,
 .btn-orange-cancelar:active {
-    background-color: #FF944D; 
-    border-color:  #FF944D; 
-    color: rgb(0, 0, 0); 
+  background-color: #ff944d;
+  border-color: #ff944d;
+  color: rgb(0, 0, 0);
 }
 
 .imagen-tabla {
   height: 50px;
   width: 50px;
   object-fit: cover;
+}
+
+.swal2-custom {
+  background-color: #343a40 !important; /* Color de fondo personalizado */
+  color: #bebebe; /* Color del texto personalizado */
+}
+.swal2-custom .swal2-title {
+  color: rgb(243, 108, 33); /* Color del título */
+}
+.swal2-custom .swal2-content {
+  color: #e9e8e8 !important; /* Color del contenido */
+}
+.swal2-custom .swal2-actions .swal2-confirm {
+  background-color: rgb(243, 108, 33); /* Color de fondo naranja */
+
+  border-radius: 0;
+  color: rgb(3, 3, 3); /* Color del texto */
+  font-weight: 600;
+}
+.swal2-custom .swal2-actions .swal2-cancel {
+  background-color: #cccccc; /* Color del botón de cancelación */
+  color: #333;
+  border-radius: 0;
+}
+
+.swal2-custom .swal2-success-circular-line-right {
+  background-color: #343a40 !important;
+}
+.swal2-custom .swal2-success-circular-line-left {
+  background-color: #343a40 !important;
+}
+
+.swal2-custom .swal2-success-fix {
+  background-color: #343a40 !important;
 }

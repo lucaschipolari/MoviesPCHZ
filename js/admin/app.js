@@ -17,6 +17,8 @@ const $inputImage = document.getElementById("input-image");
 const $inputCategory = document.getElementById("input-category");
 const $inputDescription = document.getElementById("input-drescription");
 const $inputEstaPublicada = document.getElementById("input-estaPublicada");
+const $inputBanner = document.getElementById("input-banner");
+const $inputVideo = document.getElementById("input-video");
 
 $inputTitle.addEventListener("blur", () => {
   validateTitle($inputTitle);
@@ -36,6 +38,12 @@ $inputDescription.addEventListener("blur", () => {
 $inputEstaPublicada.addEventListener("blur", () => {
   validateTitle($inputEstaPublicada);
 });
+$inputBanner.addEventListener("blur", () => {
+  validateUrl($inputBanner);
+});
+$inputVideo.addEventListener("blur", () => {
+  validateUrl($inputVideo);
+});
 
 //Event Listener del submit
 $form.addEventListener("submit", (event) => {
@@ -54,6 +62,8 @@ $form.addEventListener("submit", (event) => {
   const category = $inputCategory.value;
   const description = $inputDescription.value;
   const estaPublicada = $inputEstaPublicada.value;
+  const banner = $inputBanner.value;
+  const video = $inputVideo.value;
 
   if (estaEditando()) {
     console.log("editando");
@@ -63,7 +73,9 @@ $form.addEventListener("submit", (event) => {
       image,
       category,
       description,
-      estaPublicada
+      estaPublicada,
+      banner,
+      video
     );
   } else {
     agregarPeliculaSerie(
@@ -72,7 +84,9 @@ $form.addEventListener("submit", (event) => {
       image,
       category,
       description,
-      estaPublicada
+      estaPublicada,
+      banner,
+      video
     );
   }
 
@@ -84,21 +98,26 @@ $form.addEventListener("submit", (event) => {
   $inputCategory.classList.remove("is-valid", "is-invalid");
   $inputDescription.classList.remove("is-valid", "is-invalid");
   $inputEstaPublicada.classList.remove("is-valid", "is-invalid");
+  $inputBanner.classList.remove("is-valid", "is-invalid");
+  $inputVideo.classList.remove("is-valid", "is-invalid");
 
   //Actualizar tabla
   cargarTabla();
 
   //Notificar al usuario
 
-  let mensaje = `Pelicula/Serie agregada bajo el titulo de ${title}`;
-  if (estaEditando()) mensaje = "Pelicula/Serie editada exitosamente";
+  let mensaje = `${title} fue agregado exitosamente`;
+  if (estaEditando()) mensaje = `${title} editada exitosamente`;
   swal.fire({
     title: "Exito",
     text: mensaje,
     icon: "success",
     showConfimButton: true,
     showCancelButton: false,
-    confirmButtonText: "tremedo",
+    confirmButtonText: "Ooo... Sugoi!",
+    customClass: {
+      popup: "swal2-custom"
+    }
   });
 });
 

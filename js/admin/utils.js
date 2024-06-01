@@ -63,6 +63,7 @@ const cargarFilaTabla = (peliculaSerie, indice) => {
  
   $btnEdit.onclick = () => {
     prepararEdicion(peliculaSerie);
+    document.getElementById("titulo-formulario").scrollIntoView({behavior: "smooth"})
   };
   $btnDelete.onclick = () => {
     eliminarPeliculaSerie(peliculaSerie.code, peliculaSerie.title);
@@ -100,6 +101,8 @@ export const prepararEdicion = (peliculaSerie) => {
   const $inputCategory = document.getElementById("input-category");
   const $inputDescription = document.getElementById("input-drescription");
   const $inputEstaPublicada = document.getElementById("input-estaPublicada");
+  const $inputBanner = document.getElementById("input-banner");
+  const $inputVideo = document.getElementById("input-video");
 
   $inputTitle.value = peliculaSerie.title;
   $inputType.value = peliculaSerie.type;
@@ -107,6 +110,8 @@ export const prepararEdicion = (peliculaSerie) => {
   $inputCategory.value = peliculaSerie.category;
   $inputDescription.value = peliculaSerie.description;
   $inputEstaPublicada.value = peliculaSerie.estaPublicada;
+  $inputBanner.value = peliculaSerie.banner;
+  $inputVideo.value = peliculaSerie.video;
 
   sessionStorage.setItem("idPeliSerie", peliculaSerie.code);
 
