@@ -3,7 +3,9 @@ body {
     background-color: #f8f9fa;
     font-family: Arial, sans-serif;
 }
-
+.formulario{
+    background-color: #343434;
+}
 .contenedor-general {
     max-width: 1200px;
     margin: 0 auto;
@@ -12,18 +14,32 @@ body {
 .texto-centrado {
     text-align: center;
 }
-.acordion-formulario{
+.agregar-categoria-contenedor{
     width: 50%;
+    background-color: #0056b3;
+
+}
+.tbody-categoria td{
+    background-color: #404040;
+color: white;
+
+}
+.seccion-formulario{
+    display: flex;
+    justify-content: center;
 }
 
 .texto-blanco {
     color: #fff;
 }
+
 @media (max-width: 568px) {
     
-    .acordion-formulario{
+    .agregar-categoria-contenedor{
         width: 100% !important;
+        background-color: #007bff;
     }
+
 }
 
 .boton-accion {
@@ -54,7 +70,7 @@ body {
 
 /* Estilos específicos para la página */
 .fondo-pagina {
-    background-color: #212121;
+    background-color: #000000;
 }
 
 .tabla-contenedor {
@@ -97,6 +113,16 @@ body {
     text-align: center;
     vertical-align: middle;
 }
+.formulario-editar{
+    background-color: #343434;
+    border:1px solid rgb(255, 115, 0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 153, 0);
+}
 
 .fondo-oscuro {
     background-color: #343a40 !important;
@@ -116,4 +142,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.btn-guardar{
+    background-color: #ff7b00;
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
 }

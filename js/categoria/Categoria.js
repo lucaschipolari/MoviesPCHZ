@@ -1,7 +1,7 @@
 export class Categoria{
-    constructor(nombreDeCategoria, descripcion){
-        this.nombreDeCategoria = nombreDeCategoria;
+    constructor(nombreCategoria, descripcion){
+        this.nombreCategoria = nombreCategoria;
         this.descripcion = descripcion;
-        this.code = window.self.crypto.randomUUID();
+        this.id = window.self.crypto.randomUUID();
     }
 }
