@@ -5,6 +5,7 @@ import {
 import { PeliculaSerie } from "./PeliculaSerie.js";
 import { cargarTabla } from "./utils.js";
 
+
 export const agregarPeliculaSerie = (
   title,
   type,
@@ -59,16 +60,6 @@ export const editarPeliculaSerie = (
     return;
   }
 
-  // const nuevaPeliculasSerie = new PeliculaSerie(
-  //   title,
-  //   type,
-  //   image,
-  //   category,
-  //   description,
-  //   estaPublicada
-  // );
-
-  // peliculasSeries.splice(posicionPeliculaSerie, 1, nuevaPeliculasSerie);
   peliculasSeries[posicionPeliculaSerie].title = title;
   peliculasSeries[posicionPeliculaSerie].type = type;
   peliculasSeries[posicionPeliculaSerie].image = image;
@@ -99,6 +90,9 @@ export const editarPeliculaSerie = (
        showCancelButton: true,
        confirmButtonText: "Si, elminar",
        cancelButtonText: "No, cancelar",
+       customClass: {
+        popup: "swal2-custom"
+      }
      })
      .then((result) => {
        if (result.isConfirmed) {
@@ -132,7 +126,10 @@ export const editarPeliculaSerie = (
            icon: "success",
            showConfimButton: true,
            showCancelButton: false,
-           confirmButtonText: "tremedo",
+           confirmButtonText: "Sugoi!",
+           customClass: {
+            popup: "swal2-custom"
+          }
          });
        }
      });

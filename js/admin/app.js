@@ -106,15 +106,18 @@ $form.addEventListener("submit", (event) => {
 
   //Notificar al usuario
 
-  let mensaje = `Pelicula/Serie agregada bajo el titulo de ${title}`;
-  if (estaEditando()) mensaje = "Pelicula/Serie editada exitosamente";
+  let mensaje = `${title} fue agregado exitosamente`;
+  if (estaEditando()) mensaje = `${title} editada exitosamente`;
   swal.fire({
     title: "Exito",
     text: mensaje,
     icon: "success",
     showConfimButton: true,
     showCancelButton: false,
-    confirmButtonText: "tremedo",
+    confirmButtonText: "Ooo... Sugoi!",
+    customClass: {
+      popup: "swal2-custom"
+    }
   });
 });
 
