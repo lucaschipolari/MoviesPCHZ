@@ -4,12 +4,21 @@ export function saveToLocalStorage(usuario) {
         // 1. Traemos desde LS lo que haya guardado
         const usuarios= obtenerInfoDeLS("usuarios");
 
-      
-        // 2. Agregamos a lo que estaba guardado, lo nuevo
+        const usuarioExistente = usuarios.find(u => u.email === usuario.email);
+        if (usuarioExistente) {
+            return;
+        }
+    
+        // Verificar si ya existe un usuario administrador
+        const adminExistente = usuarios.find(u => u.isAdmin);
+        if (usuario.isAdmin && adminExistente) {
+            alert('Ya existe un usuario administrador.');
+            return;
+        }
+    
+        // Agregar el nuevo usuario al arreglo y guardar en localStorage
         usuarios.push(usuario);
-      
-        // 3. Actualizamos los formDatas en LS con los valores nuevos
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
     
 }
 

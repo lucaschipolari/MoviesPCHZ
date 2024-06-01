@@ -14,6 +14,7 @@ import { Usuario } from "./Usuario.js";
 const usuarioAdmin = new Usuario('admin@gmail.com','admin',true);
 saveToLocalStorage(usuarioAdmin);
 
+
 const $form = document.getElementById("form");
 const $email = document.getElementById("email");
 const $password = document.getElementById("password");
