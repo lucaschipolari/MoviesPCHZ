@@ -11,6 +11,9 @@ import { Usuario } from "./Usuario.js";
 //   clearLocalStorage();
 // });
 
+const usuarioAdmin = new Usuario('admin@gmail.com','admin',true);
+saveToLocalStorage(usuarioAdmin);
+
 const $form = document.getElementById("form");
 const $email = document.getElementById("email");
 const $password = document.getElementById("password");
@@ -48,7 +51,20 @@ $form.addEventListener("submit", (e) => {
       email: $email.value,
       password: $password.value
     }
-    const usuario = new Usuario(userData.email, userData.password);
+    const usuarios = loadFromLocalStorage();
+    const usuarioExistente= usuarios.find(user => user.$email === $email);
+    if(usuarioExistente){
+      Swal.fire({
+        title: 'Error',
+        text: "El usuario ya existe!!",
+        icon: 'error',
+        showConfirmButton: true,
+        showCancelButton: false,
+        confirmButtonText: 'Okey',
+      });
+      return;
+    }
+    const usuario = new Usuario(userData.email, userData.password, false);
     saveToLocalStorage(usuario);
     Swal.fire({
       title: 'Exito',
