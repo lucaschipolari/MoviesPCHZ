@@ -102,15 +102,15 @@ body, html {
     padding: 12px;
     margin: 12px 0;
     color: black;
-    background-color: rgb(255, 174, 0);
+    background-color: #f47521de;
     border: none;
     transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
 }
 
 .btn-enviar:hover {
     background-color: black;
-    color: rgb(255, 174, 0);
-    border: 1px solid rgb(255, 174, 0);
+    color: #f47521de;
+    border: 1px solid #f47521de;
 }
 
 .imgHinata {
