@@ -1,5 +1,5 @@
 import { obtenerCategoriasDeLS } from "../categoria/categoriaLst.js";
-
+import { currentUserValidate } from "../auth/auth.js";
 document.addEventListener("DOMContentLoaded", function(e){
     e.preventDefault();
     cargarTablaDeCategorias();
@@ -28,4 +28,6 @@ export const cargarCategoria =(categoria)=>{
     $a.textContent = categoria.nombre;
     $a.href = "./error404.html";
 }
+
+
 

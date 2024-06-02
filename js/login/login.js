@@ -12,11 +12,9 @@ $form.addEventListener("submit", function (e) {
 
   if (usuarioValido) {
       localStorage.setItem('currentUser', JSON.stringify(usuarioValido));
-      if (usuarioValido.isAdmin) {
-        window.location.href = 'admin.html'; // Redirigir al panel de admin
-    } else {
-        window.location.href = 'index.html'; // Redirigir a la página de usuario regular
-    }
+        // Redirigir al panel de admin
+        window.location.href = '../index.html'; // Redirigir a la página de usuario regular
+
   } else {
       alert('Correo electrónico o contraseña incorrectos');
   }
