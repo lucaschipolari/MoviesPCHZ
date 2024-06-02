@@ -1,0 +1,152 @@
+/* Estilos generales */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+.formulario{
+    background-color: #343434;
+}
+.contenedor-general {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.texto-centrado {
+    text-align: center;
+}
+.agregar-categoria-contenedor{
+    width: 50%;
+    background-color: #0056b3;
+
+}
+.tbody-categoria td{
+    background-color: #404040;
+color: white;
+
+}
+.seccion-formulario{
+    display: flex;
+    justify-content: center;
+}
+
+.texto-blanco {
+    color: #fff;
+}
+
+@media (max-width: 568px) {
+    
+    .agregar-categoria-contenedor{
+        width: 100% !important;
+        background-color: #007bff;
+    }
+
+}
+
+.boton-accion {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.boton-accion:hover {
+    background-color: #0056b3;
+}
+
+.caja-entrada {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    box-shadow:solid 5px #212121;
+}
+
+.mensaje-error {
+    color: #dc3545;
+    font-size: 12px;
+}
+
+/* Estilos específicos para la página */
+.fondo-pagina {
+    background-color: #000000;
+}
+
+.tabla-contenedor {
+    margin-top: 20px;
+}
+
+.formulario-agregar {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-agregar h2 {
+    margin-bottom: 20px;
+}
+
+.boton-primario {
+    background-color: #28a745;
+}
+
+.boton-secundario {
+    background-color: #6c757d;
+}
+
+.boton-primario:hover,
+.boton-secundario:hover {
+    background-color: #218838;
+}
+
+.tabla-categorias {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-categorias th,
+.tabla-categorias td {
+    text-align: center;
+    vertical-align: middle;
+}
+.formulario-editar{
+    background-color: #343434;
+    border:1px solid rgb(255, 115, 0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 153, 0);
+}
+
+.fondo-oscuro {
+    background-color: #343a40 !important;
+    color: #fff !important;
+}
+
+.texto-error {
+    color: #dc3545;
+    font-size: 12px;
+    background-color: #f8d7da;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+.agregar-categoria-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-guardar{
+    background-color: #ff7b00;
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}

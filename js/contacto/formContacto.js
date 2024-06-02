@@ -27,7 +27,6 @@ import { FormularioContacto } from './FormularioContacto.js';
   $form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (validateInputs()) {
-
         const formContacto = new FormularioContacto($name.value,$email.value,$asunto.value,$mensaje.value);
         saveToLocalStorage(formContacto);
         Swal.fire({

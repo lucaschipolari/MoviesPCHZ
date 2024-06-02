@@ -1,0 +1,54 @@
+.navbar {
+    background-color: #23252b; /* Color naranja similar al de Crunchyroll */
+} 
+.navbar-brand {
+    height: 45px;
+}
+
+.navbar-brand :nth-child(1) {
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+}
+.navbar-toggler-icon {
+        background-color: #f47521de;
+        border-radius: 5px;
+}
+.navbar-toggler {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+
+}
+
+.min-logo {
+    display: none;
+}
+
+header .nav-link {
+    color: #ffffff;
+}
+
+header .nav-link:hover {
+     color: #f47521de;
+
+}
+
+@media (max-width: 576px) {
+    .navbar-brand :nth-child(1) {
+        display: none;
+    }
+    .min-logo {
+        display: block;
+        margin: 0 auto; /* Centrando horizontalmente */
+        text-align: center; /* Asegurando el centrado */
+    }
+    
+    .navbar-brand {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+
+}
