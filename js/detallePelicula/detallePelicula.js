@@ -1,8 +1,10 @@
 import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js"
 
 
-export const cargarPaginaDetalles = () => {
+export const cargarPaginaDetalles = (index) => {
     const peliculas = obtenerPeliculasSeriesDeLS();
+    const pelicula = peliculas[index]
+
     const $sectionPelicula = document.getElementById("section-pelicula")
     $sectionPelicula.innerHTML = " ";
 
@@ -10,8 +12,8 @@ export const cargarPaginaDetalles = () => {
     $divContainer.classList.add("video-container");
 
     const $iframePelicula = document.createElement("iframe")
-    $iframePelicula.src = peliculas.video;
-    $iframePelicula.title = peliculas.title;
+    $iframePelicula.src = pelicula.video;
+    $iframePelicula.title = pelicula.title;
     $iframePelicula.frameBorder = "0"
     $iframePelicula.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     $iframePelicula.referrerpolicy = "strict-origin-when-cross-origin"
@@ -36,7 +38,7 @@ export const cargarPaginaDetalles = () => {
 
     const $title = document.createElement("h3")
     $title.classList.add("title")
-    $title.textContent = peliculas.title
+    $title.textContent = pelicula.title
 
     const $enlaceFavoritos = document.createElement("a")
     $enlaceFavoritos.href = "#"
@@ -91,7 +93,7 @@ export const cargarPaginaDetalles = () => {
 
     const $description = document.createElement("p")
     $description.classList.add("description","mt-3")
-    $description.textContent = peliculas.description
+    $description.textContent = pelicula.description
 
     $primerCol.appendChild($titleContainer)
     $primerCol.appendChild($iconContainer)
@@ -102,8 +104,8 @@ export const cargarPaginaDetalles = () => {
 
     const $imgPelicula = document.createElement("img")
     $imgPelicula.classList.add("img-detalle-pelicula")
-    $imgPelicula.src = peliculas.image;
-    $imgPelicula.alt = peliculas.title;
+    $imgPelicula.src = pelicula.image;
+    $imgPelicula.alt = pelicula.title;
 
     $segundaCol.appendChild($imgPelicula)
 
