@@ -66,7 +66,7 @@ $form.addEventListener("submit", (event) => {
   const video = $inputVideo.value;
 
   if (estaEditando()) {
-    console.log("editando");
+    
     editarPeliculaSerie(
       title,
       type,
