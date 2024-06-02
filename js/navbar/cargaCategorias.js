@@ -25,7 +25,7 @@ export const cargarCategoria =(categoria)=>{
     $a.classList.add("dropdown-item");
     $listadoCategorias.appendChild($li);
     $li.appendChild($a);
-    $a.textContent = categoria.nombre;
+    $a.textContent = categoria.nombreCategoria;
     $a.href = "./error404.html";
 }
 
