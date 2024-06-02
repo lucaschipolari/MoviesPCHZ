@@ -1,0 +1,90 @@
+body {
+  background-color: #000;
+}
+
+.video-container {
+  width: 100%;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+}
+
+.video-pelicula {
+  width: 100%;
+  height: 100%;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between; /* Espacia los likes/dislikes y el icono de share */
+  align-items: flex-end;
+  margin-top: 5px; /* Espacio entre el título y los iconos */
+}
+
+.like-dislike {
+  display: flex;
+  align-items: center;
+}
+
+.like-dislike i {
+  margin-right: 5px; /* Espacio entre los iconos de likes y dislikes */
+}
+
+.icon-container i {
+  color: #d3d3d3;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #ff944d;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-container,
+  .icon-container {
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+  }
+}
+
+.title {
+  color: rgb(243, 108, 33);
+}
+
+.description {
+  color: #d3d3d3;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .video-container {
+    height: 200px;
+  }
+}
+
+.img-container {
+  height: 300px; /* Establece la altura deseada */
+}
+
+.img-detalle-pelicula {
+  width: 100%;
+  height: 100%; /* Esto asegura que la imagen se ajuste correctamente */
+  object-fit: contain; /* Para que la imagen mantenga su relación de aspecto */
+}
+
+@media (max-width: 768px) {
+  .img-detalle-pelicula {
+    margin-bottom: 1rem;
+  }
+}
