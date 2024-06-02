@@ -1,15 +1,8 @@
-import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
-
-export const cargarPaginaDetalles = (index) => {
-  const peliculas = obtenerPeliculasSeriesDeLS();
-  const pelicula = peliculas[index]; 
-
-  if (!pelicula) {
-    console.error("Película no encontrada");
-    return;
-  }
-
+export const cargarPaginaDetalles = () => {
+  const pelicula = JSON.parse(localStorage.getItem("peliculaSeleccionada"));
+  
   const $sectionPelicula = document.getElementById("section-pelicula");
+  
   $sectionPelicula.innerHTML = " ";
 
   const $divContainer = document.createElement("div");
@@ -119,3 +112,5 @@ export const cargarPaginaDetalles = (index) => {
 
   $sectionInfoPelicula.appendChild($row);
 };
+
+cargarPaginaDetalles();
