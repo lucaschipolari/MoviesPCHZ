@@ -33,15 +33,21 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul id="" class="navbar-nav ms-auto">
+                    <li id="btn-admin" class="nav-item d-none">
+                        <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" href="./error404.html">admin</i></a>
+                        </button>
+                    </li>
                     <li class="nav-item dropdown">
                         <button class="btn btn-hover" data-bs-toggle="dropdown" aria-expanded="false" >
                             <a class="nav-link" href="./error404.html"><i class="fa-solid fa-user"></i></a>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="./login.html">Iniciar Sesion</a></li>
-                            <li><a class="dropdown-item" href="./registro.html">Crear cuenta</a></li>
-                          </ul>
+                            <li><a id="iniciar-sesion" class="dropdown-item" href="./login.html">Iniciar Sesion</a></li>
+                            <li><a id="crear-cuenta" class="dropdown-item" href="./registro.html">Crear cuenta</a></li>
+                            <li><a id="cerrar-sesion" class="dropdown-item d-none">Cerrar Sesion</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <button  class="btn" data-bs-toggle="dropdown" aria-expanded="false">
@@ -186,5 +192,6 @@
       </footer>
     <script type="module" src="../js/categoria/app.js"></script>
     <script type="module" src="../js/navbar/cargaCategorias.js"></script>
+    <script type="module" src="../js/auth/auth.js"></script>
 </body>
 </html>
