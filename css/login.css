@@ -111,24 +111,24 @@
     color: rgb(255, 174, 0);
     border:1px solid rgb(255, 174, 0);
 }
-.imgGoku{
+.imgHinata{
     position: absolute;
-    left: 300px;
-    top: -90px;
-    width: 400px;
+    left: -60px;
+    top: -50px;
+    width:100px;
     height: 400px;
     object-fit: cover;
     z-index: -1;
 }
 @media (max-width: 996px) {
-    .imgGoku {
-        width: 300px;
-        height: 300px;
+    .imgHinata {
+        width: 100px;
+        height: 400px;
         font-size: 12px;
     }
 }
 @media (max-width: 800px) {
-    .imgGoku {
+    .imgHinata {
         display: none;
     }
 }
