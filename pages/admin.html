@@ -23,6 +23,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../css/admin.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/navbar.css">
     <title>Admin</title>
   </head>
   <body>
@@ -36,51 +37,58 @@
     </div>
 
     <header>
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Crunchyroll</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+      <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="../index.html">
+             <img class="max-logo" src="../assets/crunchyrolljpg.jpg" alt="crunchyroll">
+             <img class="min-logo" src="../assets/crunchyroll-network-connection-communication-interaction-svgrepo-com.svg" alt="crunchyrollLogo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown link
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul id="" class="navbar-nav ms-auto">
+                  <li id="btn-admin" class="nav-item d-none">
+                      <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                          <a class="nav-link" href="./error404.html">admin</i></a>
+                      </button>
                   </li>
-                </ul>
-              </li>
-            </ul>
+                  <li class="nav-item dropdown">
+                      <button class="btn btn-hover" data-bs-toggle="dropdown" aria-expanded="false" >
+                          <a class="nav-link" href="./error404.html"><i class="fa-solid fa-user"></i></a>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a id="iniciar-sesion" class="dropdown-item" href="./login.html">Iniciar Sesion</a></li>
+                          <li><a id="crear-cuenta" class="dropdown-item" href="./registro.html">Crear cuenta</a></li>
+                          <li><a id="cerrar-sesion" class="dropdown-item d-none">Cerrar Sesion</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <button  class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                          <a class="nav-link" href="./error404.html">Explorar Categorias <i class="fa-solid fa-arrow-down"></i></a>
+                      </button>
+                      <ul id="listado-categorias" class="dropdown-menu dropdown-menu-dark">
+                          <!-- Aqui se tienen que agregar categorias dinamicamente -->
+                        </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <button  class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                          <a class="nav-link" href="./error404.html">Acerca de <i class="fa-solid fa-bolt"></i></a>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="./sobreNosotros.html">Acerca de nosotros</a></li>
+                          <li><a class="dropdown-item" href="./acercaDe.html">Acerca de la pagina</a></li>
+                        </ul>
+                  </li>
+                  <li class="nav-item">
+                      <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                          <a class="nav-link" href="./error404.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                      </button>
+                  </li>
+  
+              </ul>
           </div>
-        </div>
       </nav>
-    </header>
+  </header>
     <!-- Comienzo del main -->
     <main class="container">
       
@@ -313,5 +321,6 @@
       </div>
     </footer>
     <script type="module" src="../js/admin/app.js"></script>
+    <script type="module" src="../js/navbar/cargaCategorias.js"></script>
   </body>
 </html>
