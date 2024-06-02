@@ -25,6 +25,11 @@ import { cargarTabla, existeCategoria, estaEditando, btnCancelarCategoria} from 
     $btnCancelarCategoria.addEventListener('click', () =>{
       if (estaEditando()) {
         sessionStorage.removeItem('codigoCategoria');
+        const $alert = document.getElementById('form');
+   $alert.classList.add('formulario');
+   $alert.classList.remove('formulario-editar');
+   const $title = document.getElementById('categoria-a-editar');
+   $title.textContent = "";
       }
         $inputNombreCategoria.value = '';
         $inputDescripcionCategoria.value = '';
@@ -46,6 +51,7 @@ import { cargarTabla, existeCategoria, estaEditando, btnCancelarCategoria} from 
 
       if (estaEditando()) {
         editarCategoria(nombreCategoria, descripcionCategoria);
+        
         
       } else {
         if (!existeCategoria(nombreCategoria)) {
