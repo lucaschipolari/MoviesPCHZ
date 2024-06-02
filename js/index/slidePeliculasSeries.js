@@ -18,26 +18,36 @@ export const cargarSlider = () => {
       $imgCard.alt = peliculaSerie.title;
 
       const $overlayCard = document.createElement("div");
-      $overlayCard.classList.add("overlay-card","card");
+      $overlayCard.classList.add("overlay-card", "card");
 
       const $text = document.createElement("div");
-      $text.classList.add("text","card-body","d-flex","flex-column","justify-content-between");
+      $text.classList.add(
+        "text",
+        "card-body",
+        "d-flex",
+        "flex-column",
+        "justify-content-between"
+      );
 
       const $title = document.createElement("h5");
-      $title.classList.add("card-title")
+      $title.classList.add("card-title");
       $title.textContent = peliculaSerie.title;
 
       const $description = document.createElement("p");
-      $description.classList.add("card-text","mb-4","flex-grow-1")
+      $description.classList.add("card-text", "mb-4", "flex-grow-1");
       $description.textContent = peliculaSerie.description;
 
-      const $divBotonesCard = document.createElement("div")
-      $divBotonesCard.classList.add("d-flex","justify-content-start")
+      const $divBotonesCard = document.createElement("div");
+      $divBotonesCard.classList.add("d-flex", "justify-content-start");
 
       const $btnReproducirCard = document.createElement("a");
       $btnReproducirCard.href = "./pages/detallePeliculas.html";
       $btnReproducirCard.classList.add(
-        "text-decoration-none","botones-card","mx-1","fs-5"
+        "text-decoration-none",
+        "botones-card",
+        "mx-1",
+        "fs-5",
+        "btn-play"
       );
       const $iconoReproducirCard = document.createElement("i");
       $iconoReproducirCard.classList.add("ri-play-large-line");
@@ -46,7 +56,10 @@ export const cargarSlider = () => {
       const $btnFavoritoCard = document.createElement("a");
       $btnFavoritoCard.href = "#";
       $btnFavoritoCard.classList.add(
-        "text-decoration-none","botones-card","mx-1","fs-5"
+        "text-decoration-none",
+        "botones-card",
+        "mx-1",
+        "fs-5"
       );
       const $iconoFavoritoCard = document.createElement("i");
       $iconoFavoritoCard.classList.add("ri-bookmark-line");
@@ -55,7 +68,10 @@ export const cargarSlider = () => {
       const $btnDetallesCard = document.createElement("a");
       $btnDetallesCard.href = "#";
       $btnDetallesCard.classList.add(
-        "text-decoration-none","botones-card","mx-1","fs-5"
+        "text-decoration-none",
+        "botones-card",
+        "mx-1",
+        "fs-5"
       );
       const $iconoDetallesCard = document.createElement("i");
       $iconoDetallesCard.classList.add("ri-add-line");
@@ -84,7 +100,7 @@ new Swiper(".swiper-cards", {
   spaceBetween: 15,
 
   direction: "horizontal",
-  loop: true,
+  loop: false,
   autoplay: false,
 
   // Navigation arrows
