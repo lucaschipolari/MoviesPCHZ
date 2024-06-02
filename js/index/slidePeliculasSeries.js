@@ -35,7 +35,7 @@ export const cargarSlider = () => {
       $divBotonesCard.classList.add("d-flex","justify-content-start")
 
       const $btnReproducirCard = document.createElement("a");
-      $btnReproducirCard.href = "#";
+      $btnReproducirCard.href = "./pages/detallePeliculas.html";
       $btnReproducirCard.classList.add(
         "text-decoration-none","botones-card","mx-1","fs-5"
       );

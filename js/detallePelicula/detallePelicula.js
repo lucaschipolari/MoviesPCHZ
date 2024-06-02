@@ -1,117 +1,121 @@
-import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js"
-
+import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
 
 export const cargarPaginaDetalles = (index) => {
-    const peliculas = obtenerPeliculasSeriesDeLS();
-    const pelicula = peliculas[index]
+  const peliculas = obtenerPeliculasSeriesDeLS();
+  const pelicula = peliculas[index]; 
 
-    const $sectionPelicula = document.getElementById("section-pelicula")
-    $sectionPelicula.innerHTML = " ";
+  if (!pelicula) {
+    console.error("Película no encontrada");
+    return;
+  }
 
-    const $divContainer = document.createElement("div")
-    $divContainer.classList.add("video-container");
+  const $sectionPelicula = document.getElementById("section-pelicula");
+  $sectionPelicula.innerHTML = " ";
 
-    const $iframePelicula = document.createElement("iframe")
-    $iframePelicula.src = pelicula.video;
-    $iframePelicula.title = pelicula.title;
-    $iframePelicula.frameBorder = "0"
-    $iframePelicula.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    $iframePelicula.referrerpolicy = "strict-origin-when-cross-origin"
-    $iframePelicula.allowFullscreen = true;
-    $iframePelicula.classList.add("video-pelicula")
+  const $divContainer = document.createElement("div");
+  $divContainer.classList.add("video-container");
 
-    $divContainer.appendChild($iframePelicula)
-    $sectionPelicula.appendChild($divContainer)
+  const $iframePelicula = document.createElement("iframe");
+  $iframePelicula.src = pelicula.video;
+  $iframePelicula.title = pelicula.title;
+  $iframePelicula.frameBorder = "0";
+  $iframePelicula.allow =
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  $iframePelicula.referrerpolicy = "strict-origin-when-cross-origin";
+  $iframePelicula.allowFullscreen = true;
+  $iframePelicula.classList.add("video-pelicula");
 
-    const $sectionInfoPelicula = document.getElementById("section-info")
-    $sectionInfoPelicula.classList.add("container","my-4")
-    $sectionInfoPelicula.innerHTML = ""
+  $divContainer.appendChild($iframePelicula);
+  $sectionPelicula.appendChild($divContainer);
 
-    const $row = document.createElement("div")
-    $row.classList.add("row")
+  const $sectionInfoPelicula = document.getElementById("section-info");
+  $sectionInfoPelicula.classList.add("container", "my-4");
+  $sectionInfoPelicula.innerHTML = "";
 
-    const $primerCol = document.createElement("div")
-    $primerCol.classList.add("col-md-6","mb-3", "mb-md-0")
+  const $row = document.createElement("div");
+  $row.classList.add("row");
 
-    const $titleContainer = document.createElement("div")
-    $titleContainer.classList.add("title-container")
+  const $primerCol = document.createElement("div");
+  $primerCol.classList.add("col-md-6", "mb-3", "mb-md-0");
 
-    const $title = document.createElement("h3")
-    $title.classList.add("title")
-    $title.textContent = pelicula.title
+  const $titleContainer = document.createElement("div");
+  $titleContainer.classList.add("title-container");
 
-    const $enlaceFavoritos = document.createElement("a")
-    $enlaceFavoritos.href = "#"
-    $enlaceFavoritos.classList.add("title")
+  const $title = document.createElement("h3");
+  $title.classList.add("title");
+  $title.textContent = pelicula.title;
 
-    const $iconFavoritos = document.createElement("i")
-    $iconFavoritos.classList.add("far","fa-bookmark", "fs-5")
+  const $enlaceFavoritos = document.createElement("a");
+  $enlaceFavoritos.href = "#";
+  $enlaceFavoritos.classList.add("title");
 
-    $enlaceFavoritos.appendChild($iconFavoritos)
+  const $iconFavoritos = document.createElement("i");
+  $iconFavoritos.classList.add("far", "fa-bookmark", "fs-5");
 
-    $titleContainer.appendChild($title)
-    $titleContainer.appendChild($enlaceFavoritos)
+  $enlaceFavoritos.appendChild($iconFavoritos);
 
-    const $iconContainer = document.createElement("div")
-    $iconContainer.classList.add("icon-container")
+  $titleContainer.appendChild($title);
+  $titleContainer.appendChild($enlaceFavoritos);
 
-    const $likeDislike = document.createElement("div")
-    $likeDislike.classList.add("like-dislike")
+  const $iconContainer = document.createElement("div");
+  $iconContainer.classList.add("icon-container");
 
-    const $enlaceLike = document.createElement("a")
-    $enlaceLike.href = "#"
-    $enlaceLike.classList.add("text-decoration-none")
+  const $likeDislike = document.createElement("div");
+  $likeDislike.classList.add("like-dislike");
 
-    const $iconoLike = document.createElement("i")
-    $iconoLike.classList.add("far","fa-thumbs-up", "fs-5")
+  const $enlaceLike = document.createElement("a");
+  $enlaceLike.href = "#";
+  $enlaceLike.classList.add("text-decoration-none");
 
-    $enlaceLike.appendChild($iconoLike)
+  const $iconoLike = document.createElement("i");
+  $iconoLike.classList.add("far", "fa-thumbs-up", "fs-5");
 
-    const $enlaceDislike = document.createElement("a")
-    $enlaceDislike.href = "#"
-    $enlaceDislike.classList.add("text-decoration-none")
+  $enlaceLike.appendChild($iconoLike);
 
-    const $iconoDislike = document.createElement("i")
-    $iconoDislike.classList.add("far","fa-thumbs-down", "fs-5", "mx-3")
+  const $enlaceDislike = document.createElement("a");
+  $enlaceDislike.href = "#";
+  $enlaceDislike.classList.add("text-decoration-none");
 
-    $enlaceDislike.appendChild($iconoDislike)
+  const $iconoDislike = document.createElement("i");
+  $iconoDislike.classList.add("far", "fa-thumbs-down", "fs-5", "mx-3");
 
-    $likeDislike.appendChild($enlaceLike)
-    $likeDislike.appendChild($enlaceDislike)
+  $enlaceDislike.appendChild($iconoDislike);
 
-    const $enlaceShare = document.createElement("a")
-    $enlaceShare.href = "#"
-    $enlaceShare.classList.add("text-decoration-none")
+  $likeDislike.appendChild($enlaceLike);
+  $likeDislike.appendChild($enlaceDislike);
 
-    const $iconoShare = document.createElement("i")
-    $iconoShare.classList.add("fas","fa-share-alt")
+  const $enlaceShare = document.createElement("a");
+  $enlaceShare.href = "#";
+  $enlaceShare.classList.add("text-decoration-none");
 
-    $enlaceShare.appendChild($iconoShare)
+  const $iconoShare = document.createElement("i");
+  $iconoShare.classList.add("fas", "fa-share-alt");
 
-    $iconContainer.appendChild($likeDislike)
-    $iconContainer.appendChild($enlaceShare)
+  $enlaceShare.appendChild($iconoShare);
 
-    const $description = document.createElement("p")
-    $description.classList.add("description","mt-3")
-    $description.textContent = pelicula.description
+  $iconContainer.appendChild($likeDislike);
+  $iconContainer.appendChild($enlaceShare);
 
-    $primerCol.appendChild($titleContainer)
-    $primerCol.appendChild($iconContainer)
-    $primerCol.appendChild($description)
+  const $description = document.createElement("p");
+  $description.classList.add("description", "mt-3");
+  $description.textContent = pelicula.description;
 
-    const $segundaCol = document.createElement("div")
-    $segundaCol.classList.add("col-md-6","img-container")
+  $primerCol.appendChild($titleContainer);
+  $primerCol.appendChild($iconContainer);
+  $primerCol.appendChild($description);
 
-    const $imgPelicula = document.createElement("img")
-    $imgPelicula.classList.add("img-detalle-pelicula")
-    $imgPelicula.src = pelicula.image;
-    $imgPelicula.alt = pelicula.title;
+  const $segundaCol = document.createElement("div");
+  $segundaCol.classList.add("col-md-6", "img-container");
 
-    $segundaCol.appendChild($imgPelicula)
+  const $imgPelicula = document.createElement("img");
+  $imgPelicula.classList.add("img-detalle-pelicula");
+  $imgPelicula.src = pelicula.image;
+  $imgPelicula.alt = pelicula.title;
 
-    $row.appendChild($primerCol)
-    $row.appendChild($segundaCol)
+  $segundaCol.appendChild($imgPelicula);
 
-    $sectionInfoPelicula.appendChild($row)
+  $row.appendChild($primerCol);
+  $row.appendChild($segundaCol);
 
-} 
+  $sectionInfoPelicula.appendChild($row);
+};
