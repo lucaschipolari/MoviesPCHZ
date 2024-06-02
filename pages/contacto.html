@@ -33,6 +33,7 @@
     ></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer type="module" src="../js/contacto/formContacto.js"></script>
+    <script type="module" src="../js/navbar/cargaCategorias.js"></script>
   </head>
   <body>
     <header>
@@ -59,8 +60,8 @@
                   <button  class="btn" data-bs-toggle="dropdown" aria-expanded="false">
                       <a class="nav-link" href="./error404.html">Explorar <i class="fa-solid fa-arrow-down"></i></a>
                   </button>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" hhref="./error404.html">Categorias</a></li>
+                  <ul id="listado-categorias" class="dropdown-menu dropdown-menu-dark">
+                      
                       <!-- Aqui se tienen que agregar categorias dinamicamente -->
                     </ul>
               </li>
