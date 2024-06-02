@@ -1,9 +1,6 @@
 .navbar {
     background-color: #23252b; /* Color naranja similar al de Crunchyroll */
 } 
-.btn-hover:hover {
-    background-color: #F47521;
-}
 .navbar-brand {
     height: 45px;
 }
@@ -28,12 +25,13 @@
     display: none;
 }
 
-.nav-link {
-    color: #ffffff !important; /* Color blanco para los enlaces */
+header .nav-link {
+    color: #ffffff;
 }
 
-.nav-link:hover {
-    color: #f47521de !important; /* Color crema claro al pasar el mouse */
+header .nav-link:hover {
+     color: #f47521de;
+
 }
 
 @media (max-width: 576px) {

@@ -8,15 +8,69 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/abmCategorias.css" />
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <script 
     src="https://kit.fontawesome.com/d0041885e5.js"
     crossorigin="anonymous"
   ></script>
+  <link
+      rel="shortcut icon"
+      href="https://cdn.iconscout.com/icon/free/png-256/free-crunchyroll-4062809-3357695.png?f=webp"
+      type="image/png"
+    />
+  
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Categorias</title>
+    <title>Edicion de Categorias</title>
 </head>
 <body class="fondo-pagina">
-    <header></header>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+               <img class="max-logo" src="../assets/crunchyrolljpg.jpg" alt="crunchyroll">
+               <img class="min-logo" src="../assets/crunchyroll-network-connection-communication-interaction-svgrepo-com.svg" alt="crunchyrollLogo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-hover" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Iniciar Sesion</a></li>
+                            <li><a class="dropdown-item" href="#">Crear cuenta</a></li>
+                          </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button  class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" href="#">Explorar <i class="fa-solid fa-arrow-down"></i></a>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Categorias</a></li>
+                            <!-- Aqui se tienen que agregar categorias dinamicamente -->
+                          </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button  class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" href="#">Acerca de <i class="fa-solid fa-bolt"></i></a>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Acerca de nosotros</a></li>
+                            <li><a class="dropdown-item" href="#">Acerca de la pagina</a></li>
+                          </ul>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </button>
+                    </li>
+    
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main class="">
         <h1 class="text-center text-white my-4">Edición de categorías</h1>
         <!-- Formulario para agregar categoría -->
