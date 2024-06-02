@@ -11,17 +11,32 @@ import { cargarTabla, existeCategoria, estaEditando, btnCancelarCategoria} from 
   const $inputDescripcionCategoria = document.getElementById("inputDescripcionCategoria");
   const $btnCancelarCategoria = document.getElementById("btnCancelarCategoria");
 
-  if ($inputNombreCategoria) {
+  
+    $inputDescripcionCategoria.addEventListener('blur', () => {
+      validateCategoria($inputDescripcionCategoria);
+    });
+
+
     $inputNombreCategoria.addEventListener('blur', () => {
       validateCategoria($inputNombreCategoria);
     });
-  }
 
-  if ($btnCancelarCategoria) {
-    $btnCancelarCategoria.addEventListener('click', btnCancelarCategoria);
-  }
 
-  if ($form) {
+    $btnCancelarCategoria.addEventListener('click', () =>{
+      if (estaEditando()) {
+        sessionStorage.removeItem('codigoCategoria');
+        const $alert = document.getElementById('form');
+   $alert.classList.add('formulario');
+   $alert.classList.remove('formulario-editar');
+   const $title = document.getElementById('categoria-a-editar');
+   $title.textContent = "";
+      }
+        $inputNombreCategoria.value = '';
+        $inputDescripcionCategoria.value = '';
+      
+    });
+  
+
     $form.addEventListener('submit', (event) => {
       event.preventDefault();
       console.log('submit');
@@ -36,6 +51,8 @@ import { cargarTabla, existeCategoria, estaEditando, btnCancelarCategoria} from 
 
       if (estaEditando()) {
         editarCategoria(nombreCategoria, descripcionCategoria);
+        
+        
       } else {
         if (!existeCategoria(nombreCategoria)) {
           nombreCategoria = nombreCategoria.toUpperCase();
@@ -48,10 +65,4 @@ import { cargarTabla, existeCategoria, estaEditando, btnCancelarCategoria} from 
 
       cargarTabla();
     });
-  }
-
- /* $form.addEventListener('hidden.bs.modal', () => {
-    $inputNombreCategoria.classList.remove('is-valid', 'is-invalid');
-    $inputDescripcionCategoria.classList.remove('is-valid', 'is-invalid');
-  });
-*/
+  

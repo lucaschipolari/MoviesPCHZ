@@ -32,56 +32,57 @@
     ></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer type="module" src="../js/login/login.js"></script>
+    <script type="module" src="../js/navbar/cargaCategorias.js"></script>
   </head>
   <body>
-   <header>
-    <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#">
-         <img class="max-logo" src="../assets/crunchyrolljpg.jpg" alt="crunchyroll">
-         <img class="min-logo" src="../assets/crunchyroll-network-connection-communication-interaction-svgrepo-com.svg" alt="crunchyrollLogo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="../index.html">
+           <img class="max-logo" src="../assets/crunchyrolljpg.jpg" alt="crunchyroll">
+           <img class="min-logo" src="../assets/crunchyroll-network-connection-communication-interaction-svgrepo-com.svg" alt="crunchyrollLogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
               <li class="nav-item dropdown">
                   <button class="btn btn-hover" data-bs-toggle="dropdown" aria-expanded="false" >
-                      <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
+                      <a class="nav-link" href="./error404.html"><i class="fa-solid fa-user"></i></a>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Iniciar Sesion</a></li>
-                      <li><a class="dropdown-item" href="#">Crear cuenta</a></li>
+                      <li><a class="dropdown-item" href="./login.html">Iniciar Sesion</a></li>
+                      <li><a class="dropdown-item" href="./registro.html">Crear cuenta</a></li>
                     </ul>
               </li>
               <li class="nav-item dropdown">
                   <button  class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                      <a class="nav-link" href="#">Explorar <i class="fa-solid fa-arrow-down"></i></a>
+                      <a class="nav-link" href="./error404.html">Explorar <i class="fa-solid fa-arrow-down"></i></a>
                   </button>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Categorias</a></li>
+                  <ul id="listado-categorias" class="dropdown-menu dropdown-menu-dark">
+                      
                       <!-- Aqui se tienen que agregar categorias dinamicamente -->
                     </ul>
               </li>
               <li class="nav-item dropdown">
                   <button  class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                      <a class="nav-link" href="#">Acerca de <i class="fa-solid fa-bolt"></i></a>
+                      <a class="nav-link" href="./error404.html">Acerca de <i class="fa-solid fa-bolt"></i></a>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Acerca de nosotros</a></li>
-                      <li><a class="dropdown-item" href="#">Acerca de la pagina</a></li>
+                      <li><a class="dropdown-item" href="./sobreNosotros.html">Acerca de nosotros</a></li>
+                      <li><a class="dropdown-item" href="./acercaDe.html">Acerca de la pagina</a></li>
                     </ul>
               </li>
               <li class="nav-item">
                   <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                      <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                      <a class="nav-link" href="./error404.html"><i class="fa-solid fa-magnifying-glass"></i></a>
                   </button>
               </li>
 
           </ul>
       </div>
-  </nav>
-   </header>
+    </nav>
+    </header>
     <main class="mainRegistro d-flex flex-column">
       <div class="container">
         <form class="form" id="form" action="/">
@@ -102,7 +103,7 @@
             <span>N</span>
           </div>
           <div class="containerRegistro">
-            <img class="imgHinata" src="../assets/hinata.png" alt="hinata">
+            <img class="imgHinata" src="../assets/Goku-Gt-29.png" alt="hinata">
             <div id="input-control-1" class="input-control first mb-3">
               <input
                 type="text"
@@ -128,10 +129,11 @@
               <button type="submit"  class="btn-registrarse w-30">Iniciar Sesion</button>
               <div class="loginWidth w-100 mt-3 border-top py-2">
                 <button type="button" class="btn btn-light w-30 my-2">
-                  <i class="fa-brands fa-google"></i> Ingresar con Google
+                  <a href="./error404.html"> <i class="fa-brands fa-google"></i> Ingresar con Google</a>
                 </button>
                 <button type="button" class="btn btn-light w-30">
-                  <i class="fa-brands fa-facebook"></i> Ingresar con Facebook
+                  <a href="./error404.html"><i class="fa-brands fa-facebook"></i> Ingresar con Facebook</a>
+                  
                 </button>
               </div>
               </div>
@@ -146,11 +148,11 @@
                   <div class="row py-3">
                       <h5 class="col-sm-6 col-md-12">Navegación</h5>
                       <ul class="col-sm-6 col-md-12 list-unstyled">
-                          <li><a href="#"  class="link">Explorar lo más popular</a></li>
-                          <li><a href="#"  class="link">Explorar los Simulcasts</a></li>
-                          <li><a href="#"  class="link">Calendario de lanzamientos</a></li>
-                          <li><a href="#"  class="link">Noticias</a></li>
-                          <li><a href="#"  class="link">Juegos</a></li>
+                          <li><a href="./error404.html"  class="link">Explorar lo más popular</a></li>
+                          <li><a href="./error404.html"  class="link">Explorar los Simulcasts</a></li>
+                          <li><a href="./error404.html"  class="link">Calendario de lanzamientos</a></li>
+                          <li><a href="./error404.html"  class="link">Noticias</a></li>
+                          <li><a href="./error404.html"  class="link">Juegos</a></li>
                       </ul>
                   </div>
               </div>
@@ -172,16 +174,16 @@
                   <div class="row py-3">
                       <h5 class="col-sm-6 col-md-12">Crunchyroll</h5>
                       <ul class="col-sm-6 col-md-12 list-unstyled">
-                          <li><a href="#" class="freeTrial"> <i class="fa-solid fa-crown"></i> Comienza tu Prueba Gratuita</a></li>
-                          <li><a href="#" class="link">Acerca</a></li>
-                          <li><a href="#" class="link">Ayuda/FAQ</a></li>
-                          <li><a href="#" class="link">Términos de Uso</a></li>
-                          <li><a href="#" class="link">Política de Privacidad</a></li>
-                          <li><a href="#" class="link">Herramienta de aceptación de cookies</a></li>
-                          <li><a href="#" class="link">Contacto de prensa</a></li>
-                          <li><a href="#" class="link">Hazte con nuestras aplicaciones</a></li>
-                          <li><a href="#" class="link">Canjear Tarjeta Regalo</a></li>
-                          <li><a href="#" class="link">Empleo</a></li>
+                          <li><a href="./error404.html" class="freeTrial"> <i class="fa-solid fa-crown"></i> Comienza tu Prueba Gratuita</a></li>
+                          <li><a href="./error404.html" class="link">Acerca</a></li>
+                          <li><a href="./error404.html" class="link">Ayuda/FAQ</a></li>
+                          <li><a href="./error404.html" class="link">Términos de Uso</a></li>
+                          <li><a href="./error404.html" class="link">Política de Privacidad</a></li>
+                          <li><a href="./error404.html" class="link">Herramienta de aceptación de cookies</a></li>
+                          <li><a href="./error404.html" class="link">Contacto de prensa</a></li>
+                          <li><a href="./error404.html" class="link">Hazte con nuestras aplicaciones</a></li>
+                          <li><a href="./error404.html" class="link">Canjear Tarjeta Regalo</a></li>
+                          <li><a href="./error404.html" class="link">Empleo</a></li>
                       </ul>
                   </div>
               </div>
@@ -190,8 +192,8 @@
                 
               <h5 class="py-3">Cuenta</h5>
                 <ul class="list-unstyled">
-                  <li><a href="#" class="link" >Crear cuenta</a></li>
-                  <li><a href="#" class="link" >Acceder</a></li>
+                  <li><a href="./error404.html" class="link" >Crear cuenta</a></li>
+                  <li><a href="./error404.html" class="link" >Acceder</a></li>
                 </ul>
               </div>
             </div>

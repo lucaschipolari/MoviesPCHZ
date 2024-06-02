@@ -29,7 +29,7 @@ const cargarFilaTabla = (categoria, indice) => {
 
   const $tdNombre = document.createElement('td');
   $tdNombre.classList.add('text-white', 'w-25');
-  $tdNombre.textContent = categoria.nombre;
+  $tdNombre.textContent = categoria.nombreCategoria;
   $tr.appendChild($tdNombre);
 
   const $tdDescripcion = document.createElement('td');
@@ -41,7 +41,7 @@ const cargarFilaTabla = (categoria, indice) => {
   if (categoria.nombre !== "INDEFINIDA") {
     const $btnEditar = document.createElement('button');
     const $btnEliminar = document.createElement('button');
-    $btnEditar.classList.add('btn', 'btn-sm', 'btn-warning','mb-1','me-2','col-12', 'col-md-5');
+    $btnEditar.classList.add('btn', 'btn-sm', 'btn-editar','mb-1','me-2','col-12', 'col-md-5');
     $btnEliminar.classList.add('btn', 'btn-sm', 'btn-danger', 'mb-1','col-12','col-md-5');
     $btnEditar.innerHTML = 'Editar <i class="fas fa-pencil-alt"></i>'; 
     $btnEliminar.innerHTML = 'Eliminar <i class="fas fa-trash"></i>'; 
@@ -113,10 +113,6 @@ export const prepararEdicionCategoria = (categoria) => {
 
 };
 
-function mostrarModal() {
-  const modal = new bootstrap.Modal(document.getElementById('modalAgregarCategoria'));
-  modal.show();
-}
 export const estaEditando = () => {
   return !!sessionStorage.getItem('codigoCategoria');
 };
@@ -127,8 +123,9 @@ export function btnCancelarCategoria(){
     }
     $inputNombreCategoria.value = '';
     $inputDescripcionCategoria.value = '';
-    const $spanCategoria = document.getElementById('alert-edicion-categoria');
-    $spanCategoria.classList.add('d-none');
-    const modalInstance = bootstrap.Modal.getInstance($modalAgregarCategoria);
-    modalInstance.hide();
+    /*const $spanCategoria = document.getElementById('alert-edicion-categoria');
+    $spanCategoria.classList.add('d-none');*/
+    alert("hola");
+    /*const modalInstance = bootstrap.Modal.getInstance($modalAgregarCategoria);
+    modalInstance.hide();*/
 }

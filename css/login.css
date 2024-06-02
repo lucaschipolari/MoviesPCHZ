@@ -11,7 +11,7 @@
     background: rgb(14, 12, 12);
     /* background: linear-gradient(90deg, rgba(0,0,0,1) 15%, rgba(191,112,0,1) 39%, rgba(255,149,0,1) 45%, rgba(180,112,17,1) 46%, rgba(255,149,0,1) 50%, rgba(180,112,17,1) 54%, rgba(255,149,0,1) 55%, rgba(191,112,0,1) 61%, rgba(0,0,0,1) 85%); */
     display: flex;
-    min-height: 100vh;
+    min-height: 80vh;
     justify-content: center;
     align-items: center;
 }
@@ -113,16 +113,16 @@
 }
 .imgHinata{
     position: absolute;
-    left: -60px;
+    left: -65px;
     top: -50px;
-    width:100px;
+    width:120px;
     height: 400px;
     object-fit: cover;
     z-index: -1;
 }
 @media (max-width: 996px) {
     .imgHinata {
-        width: 100px;
+        width: 120px;
         height: 400px;
         font-size: 12px;
     }
