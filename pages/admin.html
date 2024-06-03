@@ -23,7 +23,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../css/admin.css" />
     <link rel="stylesheet" href="../css/footer.css" />
-    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/navbar.css" />
     <title>Admin</title>
   </head>
   <body>
@@ -38,65 +38,137 @@
 
     <header>
       <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="../index.html">
-             <img class="max-logo" src="../assets/crunchyrolljpg.jpg" alt="crunchyroll">
-             <img class="min-logo" src="../assets/crunchyroll-network-connection-communication-interaction-svgrepo-com.svg" alt="crunchyrollLogo">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul id="" class="navbar-nav ms-auto">
-                  <li id="btn-admin" class="nav-item d-none">
-                      <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                          <a class="nav-link" href="./error404.html">admin</i></a>
-                      </button>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <button class="btn btn-hover" data-bs-toggle="dropdown" aria-expanded="false" >
-                          <a class="nav-link" href="./error404.html"><i class="fa-solid fa-user"></i></a>
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a id="iniciar-sesion" class="dropdown-item" href="./login.html">Iniciar Sesion</a></li>
-                          <li><a id="crear-cuenta" class="dropdown-item" href="./registro.html">Crear cuenta</a></li>
-                          <li><a id="cerrar-sesion" class="dropdown-item d-none">Cerrar Sesion</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <button  class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                          <a class="nav-link" href="./error404.html">Explorar Categorias <i class="fa-solid fa-arrow-down"></i></a>
-                      </button>
-                      <ul id="listado-categorias" class="dropdown-menu dropdown-menu-dark">
-                          <!-- Aqui se tienen que agregar categorias dinamicamente -->
-                        </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <button  class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                          <a class="nav-link" href="./error404.html">Acerca de <i class="fa-solid fa-bolt"></i></a>
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item" href="./sobreNosotros.html">Acerca de nosotros</a></li>
-                          <li><a class="dropdown-item" href="./acercaDe.html">Acerca de la pagina</a></li>
-                        </ul>
-                  </li>
-                  <li class="nav-item">
-                      <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                          <a class="nav-link" href="./error404.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-                      </button>
-                  </li>
-  
+        <a class="navbar-brand" href="../index.html">
+          <img
+            class="max-logo"
+            src="../assets/crunchyrolljpg.jpg"
+            alt="crunchyroll"
+          />
+          <img
+            class="min-logo"
+            src="../assets/crunchyroll-network-connection-communication-interaction-svgrepo-com.svg"
+            alt="crunchyrollLogo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul id="" class="navbar-nav ms-auto">
+            <li id="btn-admin" class="nav-item d-none">
+              <button
+                class="btn"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <a class="nav-link" href="./error404.html">admin</a>
+              </button>
+            </li>
+            <li class="nav-item dropdown">
+              <button
+                class="btn btn-hover"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <a class="nav-link" href="./error404.html"
+                  ><i class="fa-solid fa-user"></i
+                ></a>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a
+                    id="iniciar-sesion"
+                    class="dropdown-item"
+                    href="./login.html"
+                    >Iniciar Sesion</a
+                  >
+                </li>
+                <li>
+                  <a
+                    id="crear-cuenta"
+                    class="dropdown-item"
+                    href="./registro.html"
+                    >Crear cuenta</a
+                  >
+                </li>
+                <li>
+                  <a id="cerrar-sesion" class="dropdown-item d-none"
+                    >Cerrar Sesion</a
+                  >
+                </li>
               </ul>
-          </div>
+            </li>
+            <li class="nav-item dropdown">
+              <button
+                class="btn"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <a class="nav-link" href="./error404.html"
+                  >Explorar Categorias <i class="fa-solid fa-arrow-down"></i
+                ></a>
+              </button>
+              <ul
+                id="listado-categorias"
+                class="dropdown-menu dropdown-menu-dark"
+              >
+                <!-- Aqui se tienen que agregar categorias dinamicamente -->
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <button
+                class="btn"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <a class="nav-link" href="./error404.html"
+                  >Acerca de <i class="fa-solid fa-bolt"></i
+                ></a>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item" href="./sobreNosotros.html"
+                    >Acerca de nosotros</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./acercaDe.html"
+                    >Acerca de la pagina</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <a class="nav-link" href="./error404.html"
+                  ><i class="fa-solid fa-magnifying-glass"></i
+                ></a>
+              </button>
+            </li>
+          </ul>
+        </div>
       </nav>
-  </header>
+    </header>
     <!-- Comienzo del main -->
     <main class="container">
-      
       <!-- Section formulario -->
-
-      <section class="main-form ">
-        <h1 class="text-center" id="titulo-formulario">Cargar pelicula o serie</h1>
-      <hr />
+      <section class="main-form">
+        <h1 class="text-center" id="titulo-formulario">
+          Cargar pelicula o serie
+        </h1>
+        <hr />
         <section class="p-3 rounded text-light w-50 form-section">
           <article id="alert-edicion" class="alert alert-warning d-none">
             Atencion! estas editando <span id="nombre-pelicula-serie"></span>
@@ -105,7 +177,7 @@
             <div class="mb-2">
               <label for="input-title" class="form-label">Titulo</label>
               <input
-                placeholder="Harry Potter"
+                placeholder="Boku no Hero"
                 type="text"
                 id="input-title"
                 class="form-control"
@@ -117,7 +189,7 @@
               <div class="mb-2">
                 <label for="input-type" class="form-label">Tipo</label>
                 <select class="form-select" id="input-type" required>
-                  <option selected disabled value="">Choose...</option>
+                  <option selected disabled value="">Serie o Pelicula</option>
                   <option>Pelicula</option>
                   <option>Serie</option>
                 </select>
@@ -138,8 +210,9 @@
             <div class="mb-2">
               <label for="input-category" class="form-label">Categoria</label>
               <select class="form-select" id="input-category" required>
-                <option selected disabled value="">Seleccione una categoria</option>
-                
+                <option selected disabled value="">
+                  Seleccione una categoria
+                </option>
               </select>
               <div class="invalid-feedback">
                 Seleccione una categoria valida
@@ -158,7 +231,9 @@
                   >Publicar</label
                 >
                 <select class="form-select" id="input-estaPublicada" required>
-                  <option selected disabled value="">Choose...</option>
+                  <option selected disabled value="">
+                    Desea publicar el titulo?
+                  </option>
                   <option>Si</option>
                   <option>No</option>
                 </select>
@@ -322,6 +397,5 @@
     </footer>
     <script type="module" src="../js/admin/app.js"></script>
     <script type="module" src="../js/navbar/cargaCategorias.js"></script>
-    
   </body>
 </html>

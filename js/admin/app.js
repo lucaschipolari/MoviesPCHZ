@@ -4,7 +4,8 @@ import { cargarTabla, estaEditando } from "./utils.js";
 import {
   validateDescription,
   validateTitle,
-  validateUrl,
+  validateUrlImages,
+  validateUrlVideos,
 } from "./validators.js";
 
 //Cargar tabla
@@ -28,7 +29,7 @@ $inputType.addEventListener("blur", () => {
   validateTitle($inputType);
 });
 $inputImage.addEventListener("blur", () => {
-  validateUrl($inputImage);
+  validateUrlImages($inputImage);
 });
 $inputCategory.addEventListener("blur", () => {
   validateTitle($inputCategory);
@@ -40,10 +41,10 @@ $inputEstaPublicada.addEventListener("blur", () => {
   validateTitle($inputEstaPublicada);
 });
 $inputBanner.addEventListener("blur", () => {
-  validateUrl($inputBanner);
+  validateUrlImages($inputBanner);
 });
 $inputVideo.addEventListener("blur", () => {
-  validateUrl($inputVideo);
+  validateUrlVideos($inputVideo);
 });
 
 //Event Listener del submit
@@ -51,7 +52,13 @@ $form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // Validar los campos
-  if (!validateTitle($inputTitle) || !validateUrl($inputImage)) {
+  if (
+    !validateTitle($inputTitle) ||
+    !validateUrlImages($inputImage) ||
+    !validateUrlImages($inputBanner) ||
+    !validateUrlVideos($inputVideo) ||
+    !validateDescription($inputDescription)
+  ) {
     alert("Revisar los campos");
     return;
   }
@@ -131,7 +138,7 @@ document.getElementById("btn-cancelar").addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const categorias = obtenerCategoriasDeLS();
-  
+
   const $inputCategory = document.getElementById("input-category");
 
   categorias.forEach((categoria) => {
