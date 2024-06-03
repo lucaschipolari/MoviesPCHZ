@@ -1,9 +1,11 @@
+import { obtenerCategoriasDeLS } from "../categoria/categoriaLst.js";
 import { agregarPeliculaSerie, editarPeliculaSerie } from "./abm.js";
 import { cargarTabla, estaEditando } from "./utils.js";
 import {
   validateDescription,
   validateTitle,
-  validateUrl,
+  validateUrlImages,
+  validateUrlVideos,
 } from "./validators.js";
 
 //Cargar tabla
@@ -27,7 +29,7 @@ $inputType.addEventListener("blur", () => {
   validateTitle($inputType);
 });
 $inputImage.addEventListener("blur", () => {
-  validateUrl($inputImage);
+  validateUrlImages($inputImage);
 });
 $inputCategory.addEventListener("blur", () => {
   validateTitle($inputCategory);
@@ -39,10 +41,10 @@ $inputEstaPublicada.addEventListener("blur", () => {
   validateTitle($inputEstaPublicada);
 });
 $inputBanner.addEventListener("blur", () => {
-  validateUrl($inputBanner);
+  validateUrlImages($inputBanner);
 });
 $inputVideo.addEventListener("blur", () => {
-  validateUrl($inputVideo);
+  validateUrlVideos($inputVideo);
 });
 
 //Event Listener del submit
@@ -50,7 +52,13 @@ $form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // Validar los campos
-  if (!validateTitle($inputTitle) || !validateUrl($inputImage)) {
+  if (
+    !validateTitle($inputTitle) ||
+    !validateUrlImages($inputImage) ||
+    !validateUrlImages($inputBanner) ||
+    !validateUrlVideos($inputVideo) ||
+    !validateDescription($inputDescription)
+  ) {
     alert("Revisar los campos");
     return;
   }
@@ -66,7 +74,6 @@ $form.addEventListener("submit", (event) => {
   const video = $inputVideo.value;
 
   if (estaEditando()) {
-    
     editarPeliculaSerie(
       title,
       type,
@@ -116,8 +123,8 @@ $form.addEventListener("submit", (event) => {
     showCancelButton: false,
     confirmButtonText: "Ooo... Sugoi!",
     customClass: {
-      popup: "swal2-custom"
-    }
+      popup: "swal2-custom",
+    },
   });
 });
 
@@ -127,4 +134,19 @@ document.getElementById("btn-cancelar").addEventListener("click", () => {
   document.getElementById("btn-cancelar").classList.add("d-none"); // Oculta el botón Cancelar
   document.getElementById("alert-edicion").classList.add("d-none"); // Oculta el mensaje de edición
   document.getElementById("formMoviesSeries").onsubmit = agregarPeliculaSerie; // Restaura el evento de submit para agregar una película o serie
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const categorias = obtenerCategoriasDeLS();
+
+  const $inputCategory = document.getElementById("input-category");
+
+  categorias.forEach((categoria) => {
+    const $option = document.createElement("option");
+
+    $option.value = categoria.nombreCategoria;
+    $option.textContent = categoria.nombreCategoria;
+
+    $inputCategory.appendChild($option);
+  });
 });
