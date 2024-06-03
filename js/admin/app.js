@@ -1,3 +1,4 @@
+import { obtenerCategoriasDeLS } from "../categoria/categoriaLst.js";
 import { agregarPeliculaSerie, editarPeliculaSerie } from "./abm.js";
 import { cargarTabla, estaEditando } from "./utils.js";
 import {
@@ -66,7 +67,6 @@ $form.addEventListener("submit", (event) => {
   const video = $inputVideo.value;
 
   if (estaEditando()) {
-    
     editarPeliculaSerie(
       title,
       type,
@@ -116,8 +116,8 @@ $form.addEventListener("submit", (event) => {
     showCancelButton: false,
     confirmButtonText: "Ooo... Sugoi!",
     customClass: {
-      popup: "swal2-custom"
-    }
+      popup: "swal2-custom",
+    },
   });
 });
 
@@ -127,4 +127,19 @@ document.getElementById("btn-cancelar").addEventListener("click", () => {
   document.getElementById("btn-cancelar").classList.add("d-none"); // Oculta el botón Cancelar
   document.getElementById("alert-edicion").classList.add("d-none"); // Oculta el mensaje de edición
   document.getElementById("formMoviesSeries").onsubmit = agregarPeliculaSerie; // Restaura el evento de submit para agregar una película o serie
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const categorias = obtenerCategoriasDeLS();
+  
+  const $inputCategory = document.getElementById("input-category");
+
+  categorias.forEach((categoria) => {
+    const $option = document.createElement("option");
+
+    $option.value = categoria.nombreCategoria;
+    $option.textContent = categoria.nombreCategoria;
+
+    $inputCategory.appendChild($option);
+  });
 });
