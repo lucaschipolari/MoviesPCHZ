@@ -99,13 +99,13 @@
     margin-top: 12px;
     margin-bottom: 12px;
     color: black;
-    background-color: rgb(255, 174, 0);
+    background-color: rgb(243, 108, 33);
     border: none;
 }
 .btn-registrarse:hover{
     background-color: black;
-    color: rgb(255, 174, 0);
-    border:1px solid rgb(255, 174, 0);
+    color: rgb(243, 108, 33);
+    border:1px solid rgb(243, 108, 33);
 }
 .imgGoku{
     position: absolute;
@@ -144,27 +144,7 @@
     margin-bottom: 12px;
     width: 50%;
 }
-/*
-.input-control {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
 
-.input-control input {
-    border: none;
-    outline:none;
-    color: #23242a;
-    display: block;
-    font-size: 15px;
-    padding: 12px;
-    width: 100%;
-}
-
-.input-control input:focus {
-    outline: 0;
-}
-*/
 .input-control{
     position: relative;
     height: 2em;
