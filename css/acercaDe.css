@@ -29,6 +29,16 @@
   border-color: #ff944d;
   color: rgb(0, 0, 0);
 }
+.text-title{
+  color: #ff944d;
+}
+.card-title{
+  color: #ff944d;
+}
+
+.card-text {
+  color: beige;
+}
 
 .footer {
   padding: 20px;

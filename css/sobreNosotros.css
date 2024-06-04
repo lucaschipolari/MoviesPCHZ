@@ -14,6 +14,9 @@
 .textLarge{
   font-size: large;
 }
+.text-title{
+  color: #ff944d;
+}
 .card-link{
 color: #ff944d;
 }
@@ -39,7 +42,7 @@ color: #ff944d;
     object-fit: cover;
 }
 
-.cardsTexts{
+.card-text{
     font-size: large;
 }
 
