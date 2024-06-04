@@ -39,7 +39,7 @@ import { cargarTabla, existeCategoria, estaEditando, btnCancelarCategoria} from 
 
     $form.addEventListener('submit', (event) => {
       event.preventDefault();
-      console.log('submit');
+     
 
       if (!validateCategoria($inputNombreCategoria)) {
         alert('Revisá los campos');

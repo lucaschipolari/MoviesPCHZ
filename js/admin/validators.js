@@ -23,7 +23,7 @@ export const validateTitle = (field) => {
   return true;
 };
 
-export const validateUrl = (field) => {
+export const validateUrlImages = (field) => {
   if (!field || !field.value.trim()) {
     field.classList.add("is-invalid");
     field.classList.remove("is-valid");
@@ -37,7 +37,32 @@ export const validateUrl = (field) => {
   }
 
   const regex =
-    /^https?:\/\/.*\.(?:png|jpg|jpeg|gif|bmp|webp|svg|jpe)(\?.*)?$|https?:\/\/(?:www\.)?(youtube\.com\/watch\?v=|youtu\.be\/|vimeo\.com\/|dailymotion\.com\/video\/|facebook\.com\/.*\/videos\/|twitter\.com\/.*\/status\/|twitch\.tv\/videos\/)[\w\-]+$/;
+    /\bhttps?:\/\/\S+?\.(?:jpg|jpeg|png|gif|bmp|tiff|svg|webp)(?:\?\S+)?\b/;
+  if (!regex.test(field.value)) {
+    field.classList.add("is-invalid");
+    field.classList.remove("is-valid");
+    return false;
+  }
+
+  field.classList.remove("is-invalid");
+  field.classList.add("is-valid");
+  return true;
+};
+export const validateUrlVideos = (field) => {
+  if (!field || !field.value.trim()) {
+    field.classList.add("is-invalid");
+    field.classList.remove("is-valid");
+    return false;
+  }
+
+  if (field.value.trim().length < 2) {
+    field.classList.add("is-invalid");
+    field.classList.remove("is-valid");
+    return false;
+  }
+
+  const regex =
+    /\bhttps?:\/\/(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|embed)\/|[^\/\n\s]+[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})\b/;
   if (!regex.test(field.value)) {
     field.classList.add("is-invalid");
     field.classList.remove("is-valid");

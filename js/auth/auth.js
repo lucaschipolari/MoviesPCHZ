@@ -1,4 +1,4 @@
-
+import { cargarAdminPages } from "../navbar/cargaCategorias.js";
 const currentUserValidate= () => {    
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (currentUser) {
@@ -12,6 +12,7 @@ const currentUserValidate= () => {
         if (currentUser.isAdmin) {
             $btnAdmin.classList.remove('d-none');
             $cerrarSesion.classList.remove('d-none');
+            cargarAdminPages();
             // Lógica para usuarios administradores
         } else {
             $cerrarSesion.classList.remove('d-none');

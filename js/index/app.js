@@ -1,5 +1,4 @@
 import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
-import { cargarPaginaDetalles } from "../detallePelicula/detallePelicula.js";
 import { cargarPeliculasDestacadas } from "./destacarCarousel.js";
 import { cargarSlider } from "./slidePeliculasSeries.js";
 
@@ -7,15 +6,25 @@ cargarPeliculasDestacadas();
 
 cargarSlider();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const botonesPlay = document.querySelectorAll('.btn-play');
 
-    botonesPlay.forEach((boton, index) => {
-        boton.addEventListener('click', (event) => {
-            event.preventDefault();
-            cargarPaginaDetalles(index); // Pasamos el índice de la película seleccionada
-            window.location.href = 'detalles.html'; // Redirigir a la página de detalles
-        });
+  const botonesPlay = document.querySelectorAll(".btn-play");
+
+  botonesPlay.forEach((boton) => {
+    boton.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const peliculaId = boton.dataset.id
+      
+      const peliculas = obtenerPeliculasSeriesDeLS();
+
+      const pelicula = peliculas.find(p => p.code === peliculaId)
+
+      if(pelicula){
+      localStorage.setItem("peliculaSeleccionada", JSON.stringify(pelicula));
+      window.location.href = "./pages/detallePeliculas.html";
+    } else {
+      console.error(`No se encontró la película con id ${peliculaId}`);
+    }
     });
-});
+  });
 

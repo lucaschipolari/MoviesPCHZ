@@ -25,9 +25,27 @@ export const cargarCategoria =(categoria)=>{
     $a.classList.add("dropdown-item");
     $listadoCategorias.appendChild($li);
     $li.appendChild($a);
-    $a.textContent = categoria.nombre;
+    $a.textContent = categoria.nombreCategoria;
     $a.href = "./error404.html";
 }
 
+export const cargarAdminPages = () => {
+  const $adminPages = document.getElementById("admin-pages");
+  const $li = document.createElement("li");
+  const $a = document.createElement("a");
+  $a.classList.add("dropdown-item");
+  $adminPages.appendChild($li);
+  $li.appendChild($a);
+  $a.textContent = "Categorias ABM";
+  $a.href = "../pages/abmCategoria.html";
 
+  const $li2 = document.createElement("li");
+  const $a2 = document.createElement("a");
+  $a2.classList.add("dropdown-item");
+  $adminPages.appendChild($li2);
+  $li2.appendChild($a2);
+  $a2.textContent = "Carga y Edicion de P/S";
+  $a2.href = "../pages/admin.html";
+
+};
 

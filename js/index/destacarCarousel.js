@@ -10,7 +10,7 @@ export const cargarPeliculasDestacadas = () => {
     $swiperSlide.classList.add("swiper-slide");
 
     const $defaultBanner = document.createElement("img");
-    $defaultBanner.classList.add("img-banner-crunchy")
+    $defaultBanner.classList.add("img-banner-crunchy");
     $defaultBanner.src = "./assets/BannerBienvenidos.jpg";
     $defaultBanner.alt = "Banner por defecto Crunchyroll";
 
@@ -43,10 +43,16 @@ export const cargarPeliculasDestacadas = () => {
       $btnReproducirSwiper.href = "#";
       $btnReproducirSwiper.classList.add(
         "btn",
-        "btn-primary",
+        "btn-play",
         "btn-lg",
-        "btn-orange"
+        "btn-orange",
+        "btn-secondary"
       );
+
+      
+        $btnReproducirSwiper.dataset.id = pelicula.code;
+    
+      
       const $iconoReproducirSwiper = document.createElement("i");
       $iconoReproducirSwiper.classList.add(
         "fa-regular",

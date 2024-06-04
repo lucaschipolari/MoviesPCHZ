@@ -6,7 +6,6 @@ const $inputNombreCategoria=document.getElementById("inputNombreCategoria");
 const $inputDescripcionCategoria=document.getElementById("inputDescripcionCategoria");
 const $btnAgregarCategoria=document.getElementById("btnAgregarCategoria");
 const $btnCancelarCategoria=document.getElementById("btnCancelarCategoria");
-//const $modalAgregarCategoria=document.getElementById("modalAgregarCategoria");
 
 
 
@@ -38,11 +37,11 @@ const cargarFilaTabla = (categoria, indice) => {
   $tr.appendChild($tdDescripcion);
 
   const $tdAcciones = document.createElement('td');
-  if (categoria.nombre !== "INDEFINIDA") {
+  if (categoria.nombreCategoria !== "INDEFINIDA") {
     const $btnEditar = document.createElement('button');
     const $btnEliminar = document.createElement('button');
     $btnEditar.classList.add('btn', 'btn-sm', 'btn-editar','mb-1','me-2','col-12', 'col-md-5');
-    $btnEliminar.classList.add('btn', 'btn-sm', 'btn-danger', 'mb-1','col-12','col-md-5');
+    $btnEliminar.classList.add('btn', 'btn-sm', 'btn-eliminar', 'mb-1','col-12','col-md-5');
     $btnEditar.innerHTML = 'Editar <i class="fas fa-pencil-alt"></i>'; 
     $btnEliminar.innerHTML = 'Eliminar <i class="fas fa-trash"></i>'; 
     $btnEditar.onclick = () => {
@@ -55,7 +54,7 @@ const cargarFilaTabla = (categoria, indice) => {
     $tdAcciones.appendChild($btnEliminar);
   } else{
     $tdAcciones.classList.add('text-white', 'text-center', 'fw-bold');
-    $tdAcciones.textContent = 'No se puede eliminar ni editar';
+    $tdAcciones.textContent = 'Esta categoria es indefinida';
   }
   $tr.appendChild($tdAcciones);
   $tbody.appendChild($tr);
@@ -80,7 +79,7 @@ export function existeCategoria(nombreCategoria) {
   nombreCategoria = nombreCategoria.toUpperCase();
   const categorias = obtenerCategoriasDeLS();
   for (const cat of categorias) {
-    if (cat.nombre === nombreCategoria) {
+    if (cat.nombreCategoria === nombreCategoria) {
       const mensaje = `Esa categoría ya existe, por favor, intente de nuevo`;
       swal.fire({
         title: 'Error',
@@ -88,7 +87,10 @@ export function existeCategoria(nombreCategoria) {
         icon: 'error',
         showConfirmButton: true,
         showCancelButton: false,
-        confirmButtonText: '¡OK!',
+        confirmButtonText: 'oka!',
+        customClass: {
+          popup: "swal2-custom"
+        },
       });
       return true; 
     }
@@ -123,9 +125,5 @@ export function btnCancelarCategoria(){
     }
     $inputNombreCategoria.value = '';
     $inputDescripcionCategoria.value = '';
-    /*const $spanCategoria = document.getElementById('alert-edicion-categoria');
-    $spanCategoria.classList.add('d-none');*/
-    alert("hola");
-    /*const modalInstance = bootstrap.Modal.getInstance($modalAgregarCategoria);
-    modalInstance.hide();*/
+
 }
