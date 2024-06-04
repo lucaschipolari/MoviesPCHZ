@@ -1,7 +1,110 @@
-/* Estilos generales */
-body {
-    background-color: #f8f9fa;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.title {
+    font-family: "Poetsen One", sans-serif;
+    margin-top: 20px;
+    margin-bottom:20px;
+    color: #111;
+    text-align: center;
+    font-size: 30px;
+}
+.title > span {
+    animation: glow 2s ease-in-out infinite;
+}
+@keyframes glow {
+    0%,100%{
+        color: orange;
+        text-shadow: 0 0 12px orange, 0 0 50px orange, 0 0 100pz orange;
+    }
+    10%,90%{
+        color: #ffffff;
+        text-shadow: none;
+    }
+}
+.title > span:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.title > span:nth-child(3){
+    animation-delay: 0.4s;
+}
+
+.title > span:nth-child(4){
+    animation-delay: 0.6s;
+}
+
+.title > span:nth-child(5){
+    animation-delay: 0.8s;
+}
+
+.title > span:nth-child(6){
+    animation-delay: 1s;
+}
+
+.title > span:nth-child(7){
+    animation-delay: 1.2s;
+}
+
+.title > span:nth-child(8){
+    animation-delay: 1.4s;
+}
+
+.title > span:nth-child(9){
+    animation-delay: 1.6s;
+}
+
+.title > span:nth-child(10){
+    animation-delay: 1.8s;
+}
+
+.title > span:nth-child(11){
+    animation-delay: 2s;
+}
+
+.title > span:nth-child(12){
+    animation-delay: 2.2s;
+}
+.title > span:nth-child(13){
+    animation-delay: 2.4s;
+}
+
+.title > span:nth-child(14){
+    animation-delay: 2.6s;
+}
+
+.title > span:nth-child(15){
+    animation-delay: 2.8s;
+}
+
+.title > span:nth-child(16){
+    animation-delay: 3s;
+}
+
+.title > span:nth-child(17){
+    animation-delay: 3.2s;
+}
+
+.title > span:nth-child(18){
+    animation-delay: 3.4s;
+}
+
+.title > span:nth-child(19){
+    animation-delay: 3.6s;
+}
+
+.title > span:nth-child(20){
+    animation-delay: 3.8s;
+}
+
+.title > span:nth-child(21){
+    animation-delay: 4s;
 }
 .formulario{
     background-color: #343434;
@@ -68,7 +171,6 @@ color: white;
     font-size: 12px;
 }
 
-/* Estilos específicos para la página */
 .fondo-pagina {
     background-color: #000000;
 }
@@ -138,44 +240,202 @@ form h2{
     margin-left: 4px;
 }
 .btn-editar{
-    background-color: #ff7b00;
-    color: #000000;
-    padding: 4px 10px;
+    background-color: rgb(243, 108, 33);
+    border-color: rgb(243, 108, 33);
+    color: rgb(3, 3, 3);
+    font-weight: 600;
+    border-radius: 0;
+    padding: 5px 10px;
 }
 
 .btn-editar:hover{
     background-color: #e29e5e;
     color: #000000;
 }
+.btn-eliminar{
+    background-color: rgb(243, 33, 33);
+    border-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border-radius: 0;
+    padding: 5px 10px;
+}
+.btn-eliminar:hover{
+    background-color: #fe1a13;
+    color: #ffffff;
+}
 .agregar-categoria-contenedor{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.btn-cancelar{
-    background-color: #bcbcbc;
-    color: #000000;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    margin-right: 5px;
+.btn-cancelar {
+  background-color: rgb(204, 204, 204);
+  border-color: rgb(255, 255, 255);
+  color: rgb(3, 3, 3);
+  font-weight: 600;
+  border-radius: 0;
+  margin-right: 10px;
+  padding: 5px 10px;
 }
 
-.btn-cancelar:hover{
-    background-color: #a9a9a9;
-    
+.btn-cancelar:hover,
+.btn-cancelar:focus,
+.btn-cancelar:active {
+  background-color: #ffffff;
 }
-.btn-guardar{
-    background-color: #ff7b00;
-    color: #000000;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
+
+.btn-cancelar-outline {
+  border-color: rgb(243, 108, 33);
+  color: rgb(243, 108, 33);
+  font-weight: 600;
+  border-radius: 0;
 }
-.btn-guardar:hover{
-    background-color: #e29e5e;    
-    color: #000000;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
+
+.btn-cancelar-outline:hover,
+.btn-cancelar-outline:focus,
+.btn-cancelar-outline:active {
+  background-color: #ff944d;
+  border-color: #ff944d;
+  color: rgb(0, 0, 0);
 }
+
+.btn-guardar {
+    background-color: rgb(243, 108, 33);
+    border-color: rgb(243, 108, 33);
+    color: rgb(3, 3, 3);
+    font-weight: 600;
+    border-radius: 0;
+    padding: 5px 10px;
+  }
+  
+  .btn-guardar:hover,
+  .btn-guardar:focus,
+  .btn-guardar:active {
+    background-color: #ff944d;
+    border-color: #ff944d;
+    color: rgb(0, 0, 0);
+  }
+  
+  .btn-guardar-outline {
+    border-color: rgb(243, 108, 33);
+    color: rgb(243, 108, 33);
+    font-weight: 600;
+    border-radius: 0;
+  }
+  
+  .btn-guardar-outline:hover,
+  .btn-guardar-outline:focus,
+  .btn-guardar-outline:active {
+    background-color: #ff944d;
+    border-color: #ff944d;
+    color: rgb(0, 0, 0);
+  }
+  .input-control {
+    position: relative;
+    height: 2em;
+    line-height: 2em;
+    margin-top: 4em;
+}
+
+.first {
+    position: relative;
+    height: 2em;
+    line-height: 2em;
+    margin-top: 1.5em;
+}
+.input-control input,
+.input-control textarea {
+    position: absolute;
+    width: 100%;
+    outline: none;
+    font-size: 115x;
+    padding: 5px 12px;
+    line-height: 1.8em;
+    border: 12px;
+    border-bottom: 2px solid white;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+}
+
+.input-container-label {
+    position: absolute;
+    font-size: 15px;
+    padding: 0px 12px;
+    margin: 0 7px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    transition: 0.2s ease;
+}
+
+.input-control input:focus,
+.input-control input:valid,
+.input-control textarea:focus,
+.input-control textarea:valid {
+    color: rgb(255, 255, 255);
+    border-bottom: 4px solid orange;
+}
+
+.input-control input:focus ~ .input-container-label,
+.input-control input:valid ~ .input-container-label,
+.input-control textarea:focus ~ .input-container-label,
+.input-control textarea:valid ~ .input-container-label {
+    color: rgb(150, 150, 150);
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-20px, -20px);
+    z-index: 1111;
+}
+
+.input-control.success input,
+.input-control.success textarea {
+    border-color: #09c372;
+}
+
+.input-control.error input,
+.input-control.error textarea {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 15x;
+    height: 13px;
+    transform: translateY(35px);
+}
+.swal2-custom {
+    background-color: #343a40 !important; /* Color de fondo personalizado */
+    color: #bebebe; /* Color del texto personalizado */
+  }
+  .swal2-custom .swal2-title {
+    color: rgb(243, 108, 33); /* Color del título */
+  }
+  .swal2-custom .swal2-content {
+    color: #e9e8e8 !important; /* Color del contenido */
+  }
+  .swal2-custom .swal2-actions .swal2-confirm {
+    background-color: rgb(243, 108, 33); /* Color de fondo naranja */
+  
+    border-radius: 0;
+    color: rgb(3, 3, 3); /* Color del texto */
+    font-weight: 600;
+  }
+  .swal2-custom .swal2-actions .swal2-cancel {
+    background-color: #cccccc; /* Color del botón de cancelación */
+    color: #333;
+    border-radius: 0;
+  }
+  
+  .swal2-custom .swal2-success-circular-line-right {
+    background-color: #343a40 !important;
+  }
+  .swal2-custom .swal2-success-circular-line-left {
+    background-color: #343a40 !important;
+  }
+  
+  .swal2-custom .swal2-success-fix {
+    background-color: #343a40 !important;
+  }
+  
+  

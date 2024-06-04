@@ -148,27 +148,7 @@
     margin-bottom: 12px;
     width: 50%;
 }
-/*
-.input-control {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
 
-.input-control input {
-    border: none;
-    outline:none;
-    color: #23242a;
-    display: block;
-    font-size: 15px;
-    padding: 12px;
-    width: 100%;
-}
-
-.input-control input:focus {
-    outline: 0;
-}
-*/
 .input-control{
     position: relative;
     height: 2em;
