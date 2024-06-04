@@ -11,9 +11,9 @@ import { Usuario } from "./Usuario.js";
 //   clearLocalStorage();
 // });
 
-const usuarioAdmin = new Usuario('admin@gmail.com','admin',true);
+/*const usuarioAdmin = new Usuario('admin@gmail.com','admin',true);
 saveToLocalStorage(usuarioAdmin);
-
+*/
 
 const $form = document.getElementById("form");
 const $email = document.getElementById("email");

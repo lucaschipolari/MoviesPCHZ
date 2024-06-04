@@ -1,9 +1,12 @@
 import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
 import { cargarPeliculasDestacadas } from "./destacarCarousel.js";
 import { cargarSlider } from "./slidePeliculasSeries.js";
+import {saveToLocalStorage} from "../registro/registroStorage.js";
 
 cargarPeliculasDestacadas();
 
+const usuarioAdmin = new Usuario('admin@admin.com','admin',true);
+saveToLocalStorage(usuarioAdmin);
 cargarSlider();
 
 
