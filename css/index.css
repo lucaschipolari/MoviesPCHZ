@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 .bg-main {
   background-color: #000;
 }
@@ -18,7 +25,6 @@
   width: 100%;
   height: 500px;
   object-fit: cover;
-  
 }
 
 .swiper-hero .overlay {
@@ -27,14 +33,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semitransparent black background */
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
   text-align: center;
-  padding:  20px; 
+  padding: 20px;
 }
 
 .overlay .title {
@@ -88,127 +94,153 @@
 }
 
 .btn-orange {
-    background-color: rgb(243, 108, 33); /* Color de fondo naranja */
-    border-color: rgb(243, 108, 33); /* Color del borde */
-    color: rgb(3, 3, 3); /* Color del texto */
-    font-weight: 600;
-    border-radius: 0;
-  }
-  
-  .btn-orange:hover,
-  .btn-orange:focus,
-  .btn-orange:active {
-    background-color: #ff944d;
-    border-color: #ff944d;
-    color: rgb(0, 0, 0);
-    
-  }
-  
-  .btn-orange-outline {
-    border-color: rgb(243, 108, 33); /* Color del borde */
-    color: rgb(243, 108, 33); /* Color del texto */
-    font-weight: 600;
-    border-radius: 0;
-  }
-  
-  .btn-orange-outline:hover,
-  .btn-orange-outline:focus,
-  .btn-orange-outline:active {
-    background-color: #ff944d;
-    border-color: #ff944d;
-    color: rgb(0, 0, 0);
-  }
+  background-color: rgb(243, 108, 33);
+  border-color: rgb(243, 108, 33);
+  color: rgb(3, 3, 3);
+  font-weight: 600;
+  border-radius: 0;
+}
 
-  .swiper-cards {
-    width: 100%;
-    
-    overflow: hidden; 
-  }
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active {
+  background-color: #ff944d;
+  border-color: #ff944d;
+  color: rgb(0, 0, 0);
+}
 
-  .swiper-cards .card {
-    position: relative;
-    width: 100%;
-    height: 371px; 
-    overflow: hidden; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-right: 10px; 
-  }
-  
-  .swiper-cards .card img {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover; 
-  }
-  
-  .swiper-cards .overlay-card {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.76);
-    color: white;
-    padding: 20px;
-    box-sizing: border-box; 
-    transition: transform 0.3s ease; 
-    transform: translateY(100%);
-  }
-  
-  .card:hover .overlay-card {
-    transform: translateY(0); 
-  }
-  
-  .text {
-    text-align: left; 
-  }
-  
-  .text h5 {
-    margin: 0 0 10px 0;
-  }
-  
-  .text p {
-    margin: 5px 0;
-  }
-  
-  .text p.details {
-    color: #d3d3d3; 
-  }
+.btn-orange-outline {
+  border-color: rgb(243, 108, 33);
+  color: rgb(243, 108, 33);
+  font-weight: 600;
+  border-radius: 0;
+}
 
-  .swiper-cards .swiper-slide{
-   width: 250px;
-  }
+.btn-orange-outline:hover,
+.btn-orange-outline:focus,
+.btn-orange-outline:active {
+  background-color: #ff944d;
+  border-color: #ff944d;
+  color: rgb(0, 0, 0);
+}
 
-  .swiper-cards .swiper-button-prev,
-  .swiper-cards .swiper-button-next {
-    --swiper-navigation-size: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 70px;
-    width: 50px;
-    margin-top: -35px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .swiper-cards .swiper-button-prev {
-    border-radius: 0 65px 65px 0;
-    left: -20px;
-    --swiper-navigation-color: rgb(243, 108, 33);
-  }
-  .swiper-cards .swiper-button-next {
-    border-radius: 65px 0 0 65px;
-    right: -20px;
-    --swiper-navigation-color: rgb(243, 108, 33);
-  }
-  
-  .swiper-cards:hover .swiper-button-prev,
-  .swiper-cards:hover .swiper-button-next {
-    opacity: 1;
-  }
+.swiper-cards {
+  width: 100%;
 
-  .botones-card{
-    color:rgb(243, 108, 33);
+  overflow: hidden;
+}
 
-    :hover {
-      color: #ff944d;;
-    }
+.swiper-cards .card {
+  position: relative;
+  width: 100%;
+  height: 371px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-right: 10px;
+}
+
+.swiper-cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-cards .overlay-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.76);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  transform: translateY(100%);
+}
+
+.card:hover .overlay-card {
+  transform: translateY(0);
+}
+
+.text {
+  text-align: left;
+}
+
+.text h5 {
+  margin: 0 0 10px 0;
+}
+
+.text p {
+  margin: 5px 0;
+}
+
+.text p.details {
+  color: #d3d3d3;
+}
+
+.swiper-cards .swiper-slide {
+  width: 250px;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  --swiper-navigation-size: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.swiper-button-prev-custom {
+  border-radius: 0 65px 65px 0;
+  left: -15px;
+  --swiper-navigation-color: rgb(243, 108, 33);
+}
+
+.swiper-button-next-custom {
+  border-radius: 65px 0 0 65px;
+  right: -15px;
+  --swiper-navigation-color: rgb(243, 108, 33);
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  opacity: 1;
+}
+
+.swiper-cards .swiper-button-next {
+  --swiper-navigation-size: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.swiper-cards .swiper-button-prev {
+  border-radius: 0 65px 65px 0;
+  left: -20px;
+  --swiper-navigation-color: rgb(243, 108, 33);
+}
+.swiper-cards .swiper-button-next {
+  border-radius: 65px 0 0 65px;
+  right: -20px;
+  --swiper-navigation-color: rgb(243, 108, 33);
+}
+
+.swiper-cards:hover .swiper-button-prev,
+.swiper-cards:hover .swiper-button-next {
+  opacity: 1;
+}
+
+.botones-card {
+  color: rgb(243, 108, 33);
+
+  :hover {
+    color: #ff944d;
   }
+}
