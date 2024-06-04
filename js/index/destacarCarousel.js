@@ -46,7 +46,7 @@ export const cargarPeliculasDestacadas = () => {
         "btn-play",
         "btn-lg",
         "btn-orange",
-        "btn-primary"
+        "btn-secondary"
       );
       const $iconoReproducirSwiper = document.createElement("i");
       $iconoReproducirSwiper.classList.add(
