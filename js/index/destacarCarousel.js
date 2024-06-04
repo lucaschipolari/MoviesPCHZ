@@ -48,6 +48,11 @@ export const cargarPeliculasDestacadas = () => {
         "btn-orange",
         "btn-secondary"
       );
+
+      
+        $btnReproducirSwiper.dataset.id = pelicula.code;
+    
+      
       const $iconoReproducirSwiper = document.createElement("i");
       $iconoReproducirSwiper.classList.add(
         "fa-regular",
