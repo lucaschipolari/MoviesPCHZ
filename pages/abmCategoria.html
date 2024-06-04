@@ -80,35 +80,63 @@
         </nav>
     </header>
     <main class="">
-        <h1 class="text-center text-white my-4">Edición de categorías</h1>
+        <div class="title">
+            <span>E</span>
+            <span>D</span>
+            <span>I</span>
+            <span>C</span>
+            <span>I</span>
+            <span>O</span>
+            <span>N</span>
+            <span>-</span>
+            <span>D</span>
+            <span>E</span>
+            <span>-</span>
+            <span>C</span>
+            <span>A</span>
+            <span>T</span>
+            <span>E</span>
+            <span>G</span>
+            <span>O</span>
+            <span>R</span>
+            <span>I</span>
+            <span>A</span>
+            <span>S</span>
+          </div>
         <!-- Formulario para agregar categoría -->
         <section id="seccion-formulario" class="seccion-formulario w-100">
-        <article id="contenedor-categoria" class="agregar-categoria-contenedor">
-            
-            <form class="formulario w-100 p-3" id="form" action="/">
-                <div id="contenedor-categoria-a-editar" class="text-center">
-                    <h2 id="categoria-a-editar"></h2>
-                </div>
-                    <div class="mb-3">
-                        <label for="inputNombreCategoria" class="form-label text-white">Nombre de la Categoría</label>
-                        <input type="text" class="caja-entrada" id="inputNombreCategoria" required>
-                    <div class="mensaje-error">
-                        <span class="text-white badge"></span>
+            <article id="contenedor-categoria" class="agregar-categoria-contenedor">
+                <form class="formulario w-100 p-3" id="form" action="/">
+                    <div id="contenedor-categoria-a-editar" class="text-center">
+                        <h2 id="categoria-a-editar"></h2>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <label for="inputDescripcionCategoria" class="form-label text-white">Descripción</label>
-                    <textarea class="caja-entrada" id="inputDescripcionCategoria" rows="3"></textarea>
-                    
-                </div>
-                <div class="d-flex justify-content-end">
-                    <button id="btnCancelarCategoria" class="btn-cancelar">Cancelar</button>
-                    <button id="btnAgregarCategoria" type="submit" class="btn-guardar">Guardar</button>
-                    
-                </div>
-            </form>
-        </article>
-    </section>
+                    <div id="input-control-1" class="input-control first mb-3">
+                        <input
+                            type="text"
+                            id="inputNombreCategoria"
+                            name="nombreCategoria"
+                            required="required"
+                        />
+                        <div for="nombreCategoria" class="input-container-label">Nombre de la Categoría</div>
+                        <div class="error"></div>
+                    </div>
+                    <div id="input-control-2" class="input-control mb-3">
+                        <textarea
+                            id="inputDescripcionCategoria"
+                            name="descripcionCategoria"
+                            rows="2"
+                            required="required"
+                        ></textarea>
+                        <div for="descripcionCategoria" class="input-container-label">Descripción</div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="d-flex justify-content-end pt-5">
+                        <button id="btnCancelarCategoria" class="btn-cancelar">Cancelar</button>
+                        <button id="btnAgregarCategoria" type="submit" class="btn-guardar">Guardar</button>
+                    </div>
+                </form>
+            </article>
+        </section>
         
             <!-- Fin del formulario de agregar categoría -->
         <div class="contenedor-general tabla-contenedor">

@@ -1,7 +1,11 @@
 import { obtenerCategoriasDeLS, obtenerPeliculaSerieDeLs } from './categoriaLst.js';
 import { Categoria } from './Categoria.js';
 import { agregarCategoriasALS, cargarTabla, existeCategoria} from './utilsCategoria.js';
+import { clearLocalStorage } from '../contacto/formContactoStorage.js';
 
+/*document.addEventListener('DOMContentLoaded', function (){
+  clearLocalStorage();
+});*/
 
 export const agregarCategoria = (nombre, descripcion) => {
   const categoria = new Categoria(nombre, descripcion);
@@ -13,7 +17,10 @@ export const agregarCategoria = (nombre, descripcion) => {
     icon: 'success',
     showConfirmButton: true,
     showCancelButton: false,
-    confirmButtonText: '¡OK!',
+    confirmButtonText: 'oka',
+    customClass: {
+      popup: "swal2-custom"
+    },
   });
   
 };
@@ -46,6 +53,9 @@ export const editarCategoria = (nombreCategoria, descripcionCategoria) => {
     showConfirmButton: true,
     showCancelButton: false,
     confirmButtonText: '¡OK!',
+    customClass: {
+      popup: "swal2-custom"
+    },
   });
 
   sessionStorage.removeItem('codigoCategoria');
@@ -70,6 +80,9 @@ export const eliminarCategoria = (idCategoria, nombreCategoria) => {
       showCancelButton: true,
       confirmButtonText: 'Si, eliminar',
       cancelButtonText: 'No, cancelar',
+      customClass: {
+        popup: "swal2-custom"
+      },
     })
     .then((result) => {
       if (result.isConfirmed) {
@@ -98,7 +111,10 @@ export const eliminarCategoria = (idCategoria, nombreCategoria) => {
           icon: 'success',
           showConfirmButton: true,
           showCancelButton: false,
-          confirmButtonText: '¡OK!',
+          confirmButtonText: 'oka!',
+          customClass: {
+            popup: "swal2-custom"
+          },
         });
       }
     });
