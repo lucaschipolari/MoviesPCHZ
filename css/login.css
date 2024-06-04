@@ -98,12 +98,12 @@
 
 
 .btn-registrarse {
-    padding: 12px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    padding: 6px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 16px;
     color: black;
-    background-color: rgb(255, 174, 0);
+    background-color:rgb(243, 108, 33);
     border: none;
 }
 .btn-registrarse:hover{
@@ -266,4 +266,45 @@
         font-size: 12px;
     }
 }
+.btn-google {
+    background-color: #db4437;
+    color: white;
+}
 
+.btn-google:hover {
+    background-color: #c23321;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.btn-facebook:hover {
+    background-color: #30487b;
+}
+
+.btn-google a, .btn-facebook a {
+    color: white;
+    text-decoration: none;
+}
+.btn-crearCuenta{
+    color: rgb(243, 108, 33);
+    font-size: 12px;
+    padding: 5px;
+    text-decoration: none;
+}
+.btn-crearCuenta:hover{
+    padding: 5px;
+    background-color: #000;
+    border:1px solid  rgb(243, 108, 33);
+
+}
+.botones-google-facebook{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+
+}
