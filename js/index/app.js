@@ -2,6 +2,7 @@ import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
 import { cargarPeliculasDestacadas } from "./destacarCarousel.js";
 import { cargarSlider } from "./slidePeliculasSeries.js";
 import {saveToLocalStorage} from "../registro/registroStorage.js";
+import { Usuario } from "../registro/Usuario.js";
 
 cargarPeliculasDestacadas();
 
