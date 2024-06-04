@@ -7,6 +7,13 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.btn-lupa{
+    background-color: #f47521de;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-top: 6px;
+    margin-right: 5px;
+}
 
 .navbar {
     background-color: #23252b; /* Color naranja similar al de Crunchyroll */

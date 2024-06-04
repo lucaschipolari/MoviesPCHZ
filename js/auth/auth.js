@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentUserValidate();
     if (!currentUser || !currentUser.isAdmin) {
 
-
+        
       window.location.href = '../index.html';
     } else {
       console.log('Welcome Admin');
