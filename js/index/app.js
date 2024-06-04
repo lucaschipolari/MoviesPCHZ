@@ -6,19 +6,25 @@ cargarPeliculasDestacadas();
 
 cargarSlider();
 
-document.addEventListener("DOMContentLoaded", () => {
+
   const botonesPlay = document.querySelectorAll(".btn-play");
 
-  botonesPlay.forEach((boton, index) => {
+  botonesPlay.forEach((boton) => {
     boton.addEventListener("click", (event) => {
       event.preventDefault();
 
+      const peliculaId = boton.dataset.id
+      
       const peliculas = obtenerPeliculasSeriesDeLS();
-      const pelicula = peliculas[index];
 
+      const pelicula = peliculas.find(p => p.code === peliculaId)
+
+      if(pelicula){
       localStorage.setItem("peliculaSeleccionada", JSON.stringify(pelicula));
-
       window.location.href = "./pages/detallePeliculas.html";
+    } else {
+      console.error(`No se encontró la película con id ${peliculaId}`);
+    }
     });
   });
-});
+

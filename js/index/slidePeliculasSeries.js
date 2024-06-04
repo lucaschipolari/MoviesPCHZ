@@ -74,6 +74,10 @@ export const cargarSlider = () => {
           "fs-5",
           "btn-play"
         );
+      
+          $btnReproducirCard.dataset.id = peliculaSerie.code;
+      
+  
         const $iconoReproducirCard = document.createElement("i");
         $iconoReproducirCard.classList.add("ri-play-large-line");
         $btnReproducirCard.appendChild($iconoReproducirCard);
