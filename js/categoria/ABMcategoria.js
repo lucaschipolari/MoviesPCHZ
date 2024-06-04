@@ -53,6 +53,7 @@ export const editarCategoria = (nombreCategoria, descripcionCategoria) => {
   const $title = document.getElementById('categoria-a-editar');
   $title.textContent = '';
   
+  
   $alert.classList.remove('formulario-editar');
 
   $alert.classList.add('formulario');
