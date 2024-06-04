@@ -26,10 +26,16 @@ export const cargarCategoria =(categoria)=>{
     $listadoCategorias.appendChild($li);
     $li.appendChild($a);
     $a.textContent = categoria.nombreCategoria;
-    $a.href = "./error404.html";
+    if(window.location.pathname==='/index.html'){
+      $a.href = `./pages/error404.html`;
+    }else{
+      $a.href = `./error404.html`;
+    }
+
 }
 
 export const cargarAdminPages = () => {
+
   const $adminPages = document.getElementById("admin-pages");
   const $li = document.createElement("li");
   const $a = document.createElement("a");

@@ -6,14 +6,10 @@
 }
 
 .bg-main {
-  margin-top: 70px;
   background-color: #000;
 }
 
 @media screen and (max-width: 993px) {
-  .bg-main{
-    margin-top: 61px;
-  }
 }
 
 .swiper-hero {

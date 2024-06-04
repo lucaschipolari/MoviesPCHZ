@@ -32,6 +32,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
       crossorigin=""
     />
+    <link
+    rel="shortcut icon"
+    href="https://cdn.iconscout.com/icon/free/png-256/free-crunchyroll-4062809-3357695.png?f=webp"
+    type="image/png"
+  />
     <title>Document</title>
   </head>
   <body>
@@ -46,10 +51,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul id="" class="navbar-nav ms-auto">
-                  <li id="btn-admin" class="nav-item d-none">
+                  <li id="btn-admin" class="nav-item dropdown d-none">
                       <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
                           <a class="nav-link" href="./error404.html">admin</i></a>
                       </button>
+                      <ul id="admin-pages" class="dropdown-menu dropdown-menu-dark">
+                          
+                      </ul>
                   </li>
                   <li class="nav-item dropdown">
                       <button class="btn btn-hover" data-bs-toggle="dropdown" aria-expanded="false" >
@@ -79,9 +87,9 @@
                         </ul>
                   </li>
                   <li class="nav-item">
-                      <button class="btn" data-bs-toggle="dropdown" aria-expanded="false">
-                          <a class="nav-link" href="./error404.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-                      </button>
+                    <a class="nav-link btn btn-lupa" href="./busqueda.html">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
                   </li>
   
               </ul>
@@ -241,6 +249,7 @@
     </footer>
     <script type="module" src="../js/detallePelicula/detallePelicula.js"></script>
     <script type="module" src="../js/navbar/cargaCategorias.js"></script>
+    <script type="module" src="../js/auth/auth.js"></script>
   </body>
 
 </html>
