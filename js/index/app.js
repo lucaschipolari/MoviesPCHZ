@@ -1,5 +1,4 @@
 import { obtenerPeliculasSeriesDeLS } from "../commons/utilities.js";
-
 import { cargarPeliculasDestacadas } from "./destacarCarousel.js";
 import { cargarSlider } from "./slidePeliculasSeries.js";
 
