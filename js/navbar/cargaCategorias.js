@@ -36,7 +36,7 @@ export const cargarAdminPages = () => {
   $a.classList.add("dropdown-item");
   $adminPages.appendChild($li);
   $li.appendChild($a);
-  $a.textContent = "Categorias";
+  $a.textContent = "Categorias ABM";
   $a.href = "../pages/abmCategoria.html";
 
   const $li2 = document.createElement("li");
@@ -46,7 +46,6 @@ export const cargarAdminPages = () => {
   $li2.appendChild($a2);
   $a2.textContent = "Carga y Edicion de P/S";
   $a2.href = "../pages/admin.html";
-
 
 };
 
